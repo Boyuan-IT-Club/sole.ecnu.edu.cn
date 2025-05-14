@@ -1,0 +1,37 @@
+.list-head {
+    display: flex;
+    border-bottom: #e0e0e0 1px solid;
+}
+
+.list-path {
+    margin-left: auto;
+}
+
+.current-path {
+    margin-right: auto;
+    color: #a6384a;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.list-path a {
+    color: gray;
+    text-decoration: none;
+}
+
+.news {
+    display: flex;
+    padding: 12px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: #e0e0e0 1px solid;
+}
+
+.news a {
+    color: black;
+    text-decoration: none;
+}
+
+.column-right {
+    border-bottom: none;
+}

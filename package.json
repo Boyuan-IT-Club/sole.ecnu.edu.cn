@@ -1,0 +1,23 @@
+{
+  "name": "kjy.ecnu.edu.cn",
+  "version": "1.0.0",
+  "main": "pack.js",
+  "scripts": {
+    "start": "node pack.js",
+    "build": "node pack.js --build"
+  },
+  "keywords": [],
+  "author": "lllzh,74suiko",
+  "license": "ISC",
+  "dependencies": {
+    "jszip": "^3.10.1",
+    "node-watch": "^0.7.4"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.5.29",
+    "@types/node": "^20.11.19",
+    "swiper": "^11.0.6"
+  },
+  "description": "frontier for ECNU kjy.ecnu.edu.cn",
+  "packageManager": "npm@10.8.1+sha512.0e9d42e92bd2318408ed81eaff2da5f78baf23ee7d12a6eed44a6e2901d0f29d7ab715d1b918ade601f72e769a824d9a5c322383f22bbbda5dd396e79de2a077"
+}

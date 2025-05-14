@@ -1,0 +1,30 @@
+.column-right {
+    width: 50.3vw;
+}
+
+.titles{
+    border-bottom: #a6384a 4px solid;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-info {
+    font-size: 25px;
+    font-weight: bold;
+    color: #a6384a;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: none;
+    text-align: center;
+}
+
+.time {
+    font-size: 14px;
+    color: #000;
+    margin-left: auto;
+    margin-right: auto;
+}
