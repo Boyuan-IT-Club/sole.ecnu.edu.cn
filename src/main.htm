@@ -1,89 +1,608 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>华东师范大学 国家大学科技园</title>
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/body.css">
-    <link rel="stylesheet" href="css/footer.css">
+    <title>华东师范大学 开放教育学院/教师发展学院</title>
+    <link rel="stylesheet" href="css/header_footer.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/banner.css" />
-    <script src="js/swiper-bundle.min.js"></script>
     <script src="js/banner.js"></script>
 </head>
 
 <body>
-    <header>
-
-        <div frag="面板1">
-            <div frag="窗口1" portletmode="simpleSiteAttri">
-                <div frag="窗口内容">
-                    <a href="{站点URL}" title="华东师范大学 国家大学科技园" class="header-container">
-                        <div class="logo"><img src="images/ecnu_logo.png" alt="华东师范大学标志"></div>
-                        <div class="logo"><img src="images/logo.png" alt="国家大学科技园"></div>
-                    </a>
+    <!-- 头部区域 -->
+    <header class="header">
+        <div><img src="icons/homepage/logo.png" alt="华东师范大学开放教育学院/教师发展学院" class="logo"></div>
+        <div><img src="icons/homepage/pic-bg.png" class="building-bg"></div>
+        <section class="banner">
+            <div class="banner-content">
+                <h1 class="title">华东师范大学<br>开放教育学院/教师发展学院</h1>
+                <p class="desc">学院自成立伊始就确立了 “有科研引领、有技术支撑、有质量保障、有社会影响、有文化自信” 的发展愿景。</p>
+                <div class="btn-group">
+                    <button class="btn">点击查看<img src="icons/homepage/view-common.png" class="arrow"></button>
+                    <button class="btn">联系我们<img src="icons/homepage/微信图片_20250706184810_279.png"
+                            class="arrow"></button>
                 </div>
             </div>
-        </div>
-        <div frag="面板3">
-            <div frag="窗口3" portletmode="simpleSudyNavi">
-                <div frag="窗口内容">
-                    <nav>
-                        <!--[NaviStructBegin]-->
-                        <ul>
-                            <li class="active">
-                                <a href="/_s908/main.psp" target="_self" title="网站首页">首页</a>
-                            </li>
-                            <!--[NaviItemCycleBegin]-->
-                            <li class="dropdown {级别样式}">
-                                <a class="menu-link" href="{栏目URL}" target="{打开方式}">
-                                    {栏目名称}
-                                </a>
-                                <!--[MenuStructBegin]-->
-                                <ul class="dropdown-menu">
-                                    <!--[MenuItemCycleBegin]-->
-                                    <li class="{级别样式}">
-                                        <a href="{栏目URL}" target="{打开方式}">
-                                            {栏目名称}
-                                        </a>
-                                        <!--[SubMenuList]-->
-                                    </li>
-                                    <!--[MenuItemCycleEnd]-->
-                                </ul>
-                                <!--[MenuStructEnd]-->
-                            </li>
-                            <!--[NaviItemCycleEnd]-->
-                        </ul>
-                        <!--[NaviStructEnd]-->
-                    </nav>
-                </div>
-            </div>
-        </div>
+            <!-- 导航栏区域 -->
+            <section class="nav-container">
+                <nav class="nav" id="nav">
+                    <ul class="nav-list">
+                        <li><a href="main.htm" class="nav-item-home"><img src="icons/nav-btn/sy.png"
+                                    class="nav-btn-icon">&nbsp;&nbsp;&nbsp;&nbsp;首页&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                        <li><a href="#" class="nav-item-profile"><img src="icons/nav-btn/xy.png"
+                                    class="nav-btn-icon">学院概况</a></li>
+                        <li><a href="#" class="nav-item-party"><img src="icons/nav-btn/dz.png"
+                                    class="nav-btn-icon">党政建设</a></li>
+                        <li><a href="https://solezs.ecnu.edu.cn/" class="nav-item-degree"><img
+                                    src="icons/nav-btn/xl.png" class="nav-btn-icon">学历教育</a></li>
+                        <li><a href="#" class="nav-item-exam"><img src="icons/nav-btn/zx.png"
+                                    class="nav-btn-icon">自学考试</a></li>
+                        <li><a href="https://solezs.ecnu.edu.cn/" class="nav-item-training"><img
+                                    src="icons/nav-btn/zz.png" class="nav-btn-icon">在职研修</a></li>
+                        <li><a href="#" class="nav-item-teacher"><img src="icons/nav-btn/js.png"
+                                    class="nav-btn-icon">教师培训</a></li>
+                        <li><a href="#" class="nav-item-social"><img src="icons/nav-btn/sh.png"
+                                    class="nav-btn-icon">社会培训</a></li>
+                        <li><a href=":https://px.ecnusole.com/portal/projectClassList/listUI?selectProjectType=&columnld=6479a26d5f90b50f23628b53&wfwfid=215034&pageld=643917&websiteld=366066&uid=343294798&mhType=1&publicld=02fb6b542fb6a111ed2839e2a3d41f37b056&mhEnc=f0efb4e9081ce22573d7b7ee926a4e39"
+                                class="nav-item-family"><img src="icons/nav-btn/jt.png" class="nav-btn-icon">家庭教育</a>
+                        </li>
+                        <li><a href="#" class="nav-item-international"><img src="icons/nav-btn/gj.png"
+                                    class="nav-btn-icon">国际本科</a>
+                        </li>
+                        <li><a href="https://www.ecnusole.com" class="nav-item-cloud"><img src="icons/nav-btn/hs.png"
+                                    class="nav-btn-icon">华师云校</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </section>
+    </header>
 
-    </header >
-    <div id="swiper-container">
-        <div id="banner" class="swiper swiper-banner">
-            <div frag="窗口4" class="swiper-wrapper" portletmode="simpleNews">
-                <div frag="窗口内容">
-                    <!--[InfoCycleBegin]-->
-                    <div class="swiper-slide">
-                        <a href="{文章URL}" title="{标题}">
-                            <!--<div class="swiper-title">{标题}</div>-->
-                            <img src="{图片路径}" alt="{标题}" />
-                        </a>
+    <!-- 中间内容板块 -->
+    <main class="main-content">
+        <!-- 学院新闻 -->
+        <section class="news-section">
+            <div class="section-header">
+                <div>
+                    <img src="icons/icon-collegen.png">
+                    <p class="section-subtitle">COLLEGE NEWS</p>
+                    <p class="section-title">学院新闻</p>
+                </div>
+                <button class="section-btn">查看全部<img src="icons/homepage/view-common.png" class="arrow"></button>
+            </div>
+            <div class="news-list">
+                <figure class="figure-container">
+                    <!-- 替换为实际图片路径 -->
+                    <img
+                        src="https://p3-sign.toutiaoimg.com/tos-cn-i-axegupay5k/df4e08db814746e08f45bc21584084c8~tplv-tt-origin-web:gif.jpeg?_iz=58558&from=article.pc_detail&lk3s=953192f4&x-expires=1752626407&x-signature=eSnaGhx8%2Bzucl%2FUUirUx20LE%2BqE%3D">
+                    <!-- 文字区域 -->
+                    <div class="text-group">
+                        <h2>四川师范大学学科教学论教师专业素养提升培训班开班仪式</h2>
+                        <div class="meta-info">
+                            <span class="tags">光华百年</span>
+                            <span>2025-05-18</span>
+                        </div>
                     </div>
-                    <!--[InfoCycleEnd]-->
+                </figure>
+                <div class="news-card">
+                    <!-- 新闻图片 -->
+                    <img src="https://p3-sign.toutiaoimg.com/tos-cn-i-axegupay5k/df4e08db814746e08f45bc21584084c8~tplv-tt-origin-web:gif.jpeg?_iz=58558&from=article.pc_detail&lk3s=953192f4&x-expires=1752626407&x-signature=eSnaGhx8%2Bzucl%2FUUirUx20LE%2BqE%3D"
+                        alt="会议现场" />
+                    <!-- 文字内容区域 -->
+                    <div class="content">
+                        <!-- 第一行：标题 -->
+                        <h2>用科技守护教育的温度！华东师大助力家长成长再升级</h2>
+                        <!-- 第二行：标签 + 时间 -->
+                        <div class="meta-info">
+                            <div class="tags-box">
+                                <span class="tags">卓越育人</span>
+                                <span class="tags">生态</span>
+                            </div>
+                            <span class="time">2025-05-22</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <!-- 新闻图片 -->
+                    <img src="https://p3-sign.toutiaoimg.com/tos-cn-i-axegupay5k/df4e08db814746e08f45bc21584084c8~tplv-tt-origin-web:gif.jpeg?_iz=58558&from=article.pc_detail&lk3s=953192f4&x-expires=1752626407&x-signature=eSnaGhx8%2Bzucl%2FUUirUx20LE%2BqE%3D"
+                        alt="会议现场" />
+                    <!-- 文字内容区域 -->
+                    <div class="content">
+                        <!-- 第一行：标题 -->
+                        <h2>用科技守护教育的温度！华东师大助力家长成长再升级</h2>
+                        <!-- 第二行：标签 + 时间 -->
+                        <div class="meta-info">
+                            <div class="tags-box">
+                                <span class="tags">卓越育人</span>
+                                <span class="tags">生态</span>
+                            </div>
+                            <span class="time">2025-05-22</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <!-- 新闻图片 -->
+                    <img src="https://p3-sign.toutiaoimg.com/tos-cn-i-axegupay5k/df4e08db814746e08f45bc21584084c8~tplv-tt-origin-web:gif.jpeg?_iz=58558&from=article.pc_detail&lk3s=953192f4&x-expires=1752626407&x-signature=eSnaGhx8%2Bzucl%2FUUirUx20LE%2BqE%3D"
+                        alt="会议现场" />
+                    <!-- 文字内容区域 -->
+                    <div class="content">
+                        <!-- 第一行：标题 -->
+                        <h2>用科技守护教育的温度！华东师大助力家长成长再升级</h2>
+                        <!-- 第二行：标签 + 时间 -->
+                        <div class="meta-info">
+                            <div class="tags-box">
+                                <span class="tags">卓越育人</span>
+                                <span class="tags">生态</span>
+                            </div>
+                            <span class="time">2025-05-22</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <!-- 新闻图片 -->
+                    <img src="https://p3-sign.toutiaoimg.com/tos-cn-i-axegupay5k/df4e08db814746e08f45bc21584084c8~tplv-tt-origin-web:gif.jpeg?_iz=58558&from=article.pc_detail&lk3s=953192f4&x-expires=1752626407&x-signature=eSnaGhx8%2Bzucl%2FUUirUx20LE%2BqE%3D"
+                        alt="会议现场" />
+                    <!-- 文字内容区域 -->
+                    <div class="content">
+                        <!-- 第一行：标题 -->
+                        <h2>用科技守护教育的温度！华东师大助力家长成长再升级</h2>
+                        <!-- 第二行：标签 + 时间 -->
+                        <div class="meta-info">
+                            <div class="tags-box">
+                                <span class="tags">卓越育人</span>
+                                <span class="tags">生态</span>
+                            </div>
+                            <span class="time">2025-05-22</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <!-- 新闻图片 -->
+                    <img src="https://p3-sign.toutiaoimg.com/tos-cn-i-axegupay5k/df4e08db814746e08f45bc21584084c8~tplv-tt-origin-web:gif.jpeg?_iz=58558&from=article.pc_detail&lk3s=953192f4&x-expires=1752626407&x-signature=eSnaGhx8%2Bzucl%2FUUirUx20LE%2BqE%3D"
+                        alt="会议现场" />
+                    <!-- 文字内容区域 -->
+                    <div class="content">
+                        <!-- 第一行：标题 -->
+                        <h2>用科技守护教育的温度！华东师大助力家长成长再升级</h2>
+                        <!-- 第二行：标签 + 时间 -->
+                        <div class="meta-info">
+                            <div class="tags-box">
+                                <span class="tags">卓越育人</span>
+                                <span class="tags">生态</span>
+                            </div>
+                            <span class="time">2025-05-22</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <!-- 新闻图片 -->
+                    <img src="https://p3-sign.toutiaoimg.com/tos-cn-i-axegupay5k/df4e08db814746e08f45bc21584084c8~tplv-tt-origin-web:gif.jpeg?_iz=58558&from=article.pc_detail&lk3s=953192f4&x-expires=1752626407&x-signature=eSnaGhx8%2Bzucl%2FUUirUx20LE%2BqE%3D"
+                        alt="会议现场" />
+                    <!-- 文字内容区域 -->
+                    <div class="content">
+                        <!-- 第一行：标题 -->
+                        <h2>用科技守护教育的温度！华东师大助力家长成长再升级</h2>
+                        <!-- 第二行：标签 + 时间 -->
+                        <div class="meta-info">
+                            <div class="tags-box">
+                                <span class="tags">卓越育人</span>
+                                <span class="tags">生态</span>
+                            </div>
+                            <span class="time">2025-05-22</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-        </div>
-    </div>
-    <div id="content">
+        </section>
+
+        <!-- 学院业务 -->
+        <section class="business-section">
+            <div class="section-header">
+                <div>
+                    <img src="icons/icon-collegeb.png">
+                    <p class="section-subtitle">COLLEGE BUSINESS</p>
+                    <p class="section-title">学院业务</p>
+                </div>
+            </div>
+
+            <div class="business-list">
+                <div class="business-item">
+                    <div class="business-icon-container">
+                        <img src="icons/college-icon/xl.png" alt="" class="icon1">
+                    </div>
+                    <div class="box">
+                        <h4>学历继续教育</h4>
+                        <p>招生通道→</p>
+                    </div>
+                </div>
+                <div class="business-item">
+                    <div class="business-icon-container">
+                        <img src="icons/college-icon/zz.png" alt="" class="icon2">
+                    </div>
+                    <h4>在职课程研修</h4>
+                </div>
+                <div class="business-item">
+                    <div class="business-icon-container">
+                        <img src="icons/college-icon/js.png" alt="" class="icon3">
+                    </div>
+                    <h4>教师培训</h4>
+                </div>
+                <div class="business-item">
+                    <div class="business-icon-container">
+                        <img src="icons/college-icon/sh.png" alt="" class="icon4">
+                    </div>
+                    <h4>社会培训</h4>
+                </div>
+                <div class="business-item">
+                    <div class="business-icon-container">
+                        <img src="icons/college-icon/gj.png" alt="" class="icon5">
+                    </div>
+                    <h4>国际合作办学</h4>
+                </div>
+                <div class="business-item">
+                    <div class="business-icon-container">
+                        <img src="icons/college-icon/zx.png" alt="" class="icon6">
+                    </div>
+                    <h4>自学考试</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- 招生公告 -->
+        <section class="enrollment-section">
+            <div class="section-header">
+                <div>
+                    <img src="icons/icon-enrollment.png">
+                    <p class="section-subtitle">ENROLLMENT ANNOUNCEMENT</p>
+                    <p class="section-title">招生公告</p>
+                </div>
+                <div class="btn-box">
+                    <div class="section-part-container">
+                        <button class="section-part">国际合作办学</button>
+                        <button class="section-part">&nbsp;&nbsp;&nbsp;&nbsp;在职研修&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                        <button class="section-part">&nbsp;&nbsp;&nbsp;&nbsp;社会培训&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                    </div>
+                    <button class="section-btn">查看全部<img src="icons/homepage/view-common.png" class="arrow"></button>
+                </div>
+            </div>
+            <!-- Grid 布局容器 -->
+            <div class="enrollment-grid">
+                <!-- 国际合作办学卡片 -->
+                <div class="enrollment international">
+                    <figure class="international-badge">
+                        <img class="enrollment-badge" src="icons/enrollment-icon/icon-blue.png">
+                        <span>国际合作办学</span>
+                    </figure>
+                    <div class="enrollment-content">
+                        <div class="enrollment-date">
+                            <h2>05.25</h2>
+                            <h5>2024</h5>
+                        </div>
+                        <h3 class="enrollment-title">澳大利亚麦考瑞大学(2+2)项目定向班招生简章</h3>
+                    </div>
+                </div>
+                <div class="enrollment international">
+                    <figure class="international-badge">
+                        <img class="enrollment-badge" src="icons/enrollment-icon/icon-blue.png">
+                        <span>国际合作办学</span>
+                    </figure>
+                    <div class="enrollment-content">
+                        <div class="enrollment-date">
+                            <h2>05.25</h2>
+                            <h5>2024</h5>
+                        </div>
+                        <h3 class="enrollment-title">英国伯明翰大学(2+2)项目定向班招生简章</h3>
+                    </div>
+                </div>
+                <div class="enrollment international">
+                    <figure class="international-badge">
+                        <img class="enrollment-badge" src="icons/enrollment-icon/icon-blue.png">
+                        <span>国际合作办学</span>
+                    </figure>
+                    <div class="enrollment-content">
+                        <div class="enrollment-date">
+                            <h2>05.25</h2>
+                            <h5>2024</h5>
+                        </div>
+                        <h3 class="enrollment-title">英国高等教育文凭项目招生简章(3+1)</h3>
+                    </div>
+                </div>
+
+                <!-- 在职研修卡片 -->
+                <div class="enrollment on-job">
+                    <figure class="on-job-badge">
+                        <img class="enrollment-badge" src="icons/enrollment-icon/icon-red.png">
+                        <span>&nbsp;&nbsp;&nbsp;&nbsp;在职研修&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    </figure>
+                    <div class="enrollment-content">
+                        <div class="enrollment-date">
+                            <h2>05.25</h2>
+                            <h5>2024</h5>
+                        </div>
+                        <h3 class="enrollment-title">华东师范大学在职课程研修班全专业招生简章...</h3>
+                    </div>
+                </div>
+                <div class="enrollment on-job">
+                    <figure class="on-job-badge">
+                        <img class="enrollment-badge" src="icons/enrollment-icon/icon-red.png">
+                        <span>&nbsp;&nbsp;&nbsp;&nbsp;在职研修&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    </figure>
+                    <div class="enrollment-content">
+                        <div class="enrollment-date">
+                            <h2>05.25</h2>
+                            <h5>2024</h5>
+                        </div>
+                        <h3 class="enrollment-title">华东师范大学“GenAI赋能教育创新”高级研修班</h3>
+                    </div>
+                </div>
+                <div class="enrollment on-job">
+                    <figure class="on-job-badge">
+                        <img class="enrollment-badge" src="icons/enrollment-icon/icon-red.png">
+                        <span>&nbsp;&nbsp;&nbsp;&nbsp;在职研修&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    </figure>
+                    <div class="enrollment-content">
+                        <div class="enrollment-date">
+                            <h2>05.25</h2>
+                            <h5>2024</h5>
+                        </div>
+                        <h3 class="enrollment-title">英国高等教育文凭项目招生简章(3+1)</h3>
+                    </div>
+                </div>
+
+                <!-- 社会培训卡片 -->
+                <div class="enrollment training">
+                    <figure class="training-badge">
+                        <img class="enrollment-badge" src="icons/enrollment-icon/icon-purple.png">
+                        <span>&nbsp;&nbsp;&nbsp;&nbsp;社会培训&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    </figure>
+                    <div class="enrollment-content">
+                        <div class="enrollment-date">
+                            <h2>05.25</h2>
+                            <h5>2024</h5>
+                        </div>
+                        <h3 class="enrollment-title">2025“蔚蓝探秘”海洋生态研学营</h3>
+                    </div>
+                </div>
+                <div class="enrollment training">
+                    <figure class="training-badge">
+                        <img class="enrollment-badge" src="icons/enrollment-icon/icon-purple.png">
+                        <span>&nbsp;&nbsp;&nbsp;&nbsp;社会培训&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    </figure>
+                    <div class="enrollment-content">
+                        <div class="enrollment-date">
+                            <h2>05.25</h2>
+                            <h5>2024</h5>
+                        </div>
+                        <h3 class="enrollment-title">收藏科创暑期集训营（2025夏）</h3>
+                    </div>
+                </div>
+                <div class="enrollment training">
+                    <figure class="training-badge">
+                        <img class="enrollment-badge" src="icons/enrollment-icon/icon-purple.png">
+                        <span>&nbsp;&nbsp;&nbsp;&nbsp;社会培训&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    </figure>
+                    <div class="enrollment-content">
+                        <div class="enrollment-date">
+                            <h2>05.25</h2>
+                            <h5>2024</h5>
+                        </div>
+                        <h3 class="enrollment-title">2025音乐剧夏令营</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 品牌项目 -->
+        <section class="brand-section">
+            <div class="section-header">
+                <div>
+                    <img src="icons/icon-brand.png">
+                    <p class="section-subtitle">BRAND PROJECT</p>
+                    <p class="section-title">品牌项目</p>
+                </div>
+                <div class="btn-box">
+                    <div class="section-part-container">
+                        <button class="section-part">&nbsp;&nbsp;&nbsp;&nbsp;教师培训&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                        <button class="section-part">&nbsp;&nbsp;&nbsp;&nbsp;社会培训&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                    </div>
+                    <button class="section-btn">查看全部<img src="icons/homepage/view-common.png" class="arrow"></button>
+                </div>
+            </div>
+
+            <div class="brand-grid">
+                <!-- 卡片 1 -->
+                <div class="brand-item">
+                    <img class="brand-pic"
+                        src="https://th.bing.com/th/id/OIP.uBRVCFphAWZd19Iuszu3YwHaE7?w=263&h=180&c=7&r=0&o=7&dpr=2&pid=1.7&rm=3"
+                        alt="会议现场" />
+                    <figure class="badge">
+                        <img class="brand-badge" src="icons/brand-icon/icon-blue.png">
+                        <span>教师培训</span>
+                    </figure>
+                    <h2 class="brand-title">教师数字素养提升项目</h2>
+                    <p class="brand-subtitle">以数据优化教学</p>
+                    <div class="brand-footer">
+                        <span class="brand-date">2025-05-22</span>
+                        <img class="brand-arrow" src="icons/brand-icon/view.png">
+                    </div>
+                </div>
+                <!-- 卡片 2 -->
+                <div class="brand-item">
+                    <img class="brand-pic"
+                        src="https://th.bing.com/th/id/OIP.uBRVCFphAWZd19Iuszu3YwHaE7?w=263&h=180&c=7&r=0&o=7&dpr=2&pid=1.7&rm=3"
+                        alt="会议现场" />
+                    <figure class="badge">
+                        <img class="brand-badge" src="icons/brand-icon/icon-blue.png">
+                        <span>教师培训</span>
+                    </figure>
+                    <h2 class="brand-title">教师数字素养提升项目</h2>
+                    <p class="brand-subtitle">以数据优化教学</p>
+                    <div class="brand-footer">
+                        <span class="brand-date">2025-05-22</span>
+                        <img class="brand-arrow" src="icons/brand-icon/view.png">
+                    </div>
+                </div>
+                <!-- 卡片 3 -->
+                <div class="brand-item">
+                    <img class="brand-pic"
+                        src="https://th.bing.com/th/id/OIP.uBRVCFphAWZd19Iuszu3YwHaE7?w=263&h=180&c=7&r=0&o=7&dpr=2&pid=1.7&rm=3"
+                        alt="会议现场" />
+                    <figure class="badge">
+                        <img class="brand-badge" src="icons/brand-icon/icon-blue.png">
+                        <span>教师培训</span>
+                    </figure>
+                    <h2 class="brand-title">教师数字素养提升项目</h2>
+                    <p class="brand-subtitle">以数据优化教学</p>
+                    <div class="brand-footer">
+                        <span class="brand-date">2025-05-22</span>
+                        <img class="brand-arrow" src="icons/brand-icon/view.png">
+                    </div>
+                </div>
+                <!-- 卡片 4 -->
+                <div class="brand-item">
+                    <img class="brand-pic"
+                        src="https://th.bing.com/th/id/OIP.uBRVCFphAWZd19Iuszu3YwHaE7?w=263&h=180&c=7&r=0&o=7&dpr=2&pid=1.7&rm=3"
+                        alt="会议现场" />
+                    <figure class="badge">
+                        <img class="brand-badge" src="icons/brand-icon/icon-blue.png">
+                        <span>教师培训</span>
+                    </figure>
+                    <h2 class="brand-title">教师数字素养提升项目</h2>
+                    <p class="brand-subtitle">以数据优化教学</p>
+                    <div class="brand-footer">
+                        <span class="brand-date">2025-05-22</span>
+                        <img class="brand-arrow" src="icons/brand-icon/view.png">
+                    </div>
+                </div>
+                <!-- 卡片 5 -->
+                <div class="brand-item">
+                    <img class="brand-pic"
+                        src="https://th.bing.com/th/id/OIP.uBRVCFphAWZd19Iuszu3YwHaE7?w=263&h=180&c=7&r=0&o=7&dpr=2&pid=1.7&rm=3"
+                        alt="会议现场" />
+                    <figure class="badge">
+                        <img class="brand-badge" src="icons/brand-icon/icon-blue.png">
+                        <span>教师培训</span>
+                    </figure>
+                    <h2 class="brand-title">教师数字素养提升项目</h2>
+                    <p class="brand-subtitle">以数据优化教学</p>
+                    <div class="brand-footer">
+                        <span class="brand-date">2025-05-22</span>
+                        <img class="brand-arrow" src="icons/brand-icon/view.png">
+                    </div>
+                </div>
+                <!-- 卡片 6 -->
+                <div class="brand-item">
+                    <img class="brand-pic"
+                        src="https://th.bing.com/th/id/OIP.uBRVCFphAWZd19Iuszu3YwHaE7?w=263&h=180&c=7&r=0&o=7&dpr=2&pid=1.7&rm=3"
+                        alt="会议现场" />
+                    <figure class="badge">
+                        <img class="brand-badge" src="icons/brand-icon/icon-blue.png">
+                        <span>教师培训</span>
+                    </figure>
+                    <h2 class="brand-title">教师数字素养提升项目</h2>
+                    <p class="brand-subtitle">以数据优化教学</p>
+                    <div class="brand-footer">
+                        <span class="brand-date">2025-05-22</span>
+                        <img class="brand-arrow" src="icons/brand-icon/view.png">
+                    </div>
+                </div>
+                <!-- 社会培训部分-->
+                <div class="brand-item">
+                    <img class="brand-pic"
+                        src="https://th.bing.com/th/id/OIP.uBRVCFphAWZd19Iuszu3YwHaE7?w=263&h=180&c=7&r=0&o=7&dpr=2&pid=1.7&rm=3"
+                        alt="会议现场" />
+                    <figure class="badge">
+                        <img class="brand-badge" src="icons/brand-icon/icon-red.png">
+                        <span>社会培训</span>
+                    </figure>
+                    <h2 class="brand-title">教师数字素养提升项目</h2>
+                    <p class="brand-subtitle">以数据优化教学</p>
+                    <div class="brand-footer">
+                        <span class="brand-date">2025-05-22</span>
+                        <img class="brand-arrow" src="icons/brand-icon/view.png">
+                    </div>
+                </div>
+                <div class="brand-item">
+                    <img class="brand-pic"
+                        src="https://th.bing.com/th/id/OIP.uBRVCFphAWZd19Iuszu3YwHaE7?w=263&h=180&c=7&r=0&o=7&dpr=2&pid=1.7&rm=3"
+                        alt="会议现场" />
+                    <figure class="badge">
+                        <img class="brand-badge" src="icons/brand-icon/icon-red.png">
+                        <span>社会培训</span>
+                    </figure>
+                    <h2 class="brand-title">教师数字素养提升项目</h2>
+                    <p class="brand-subtitle">以数据优化教学</p>
+                    <div class="brand-footer">
+                        <span class="brand-date">2025-05-22</span>
+                        <img class="brand-arrow" src="icons/brand-icon/view.png">
+                    </div>
+                </div>
+                <div class="brand-item">
+                    <img class="brand-pic"
+                        src="https://th.bing.com/th/id/OIP.uBRVCFphAWZd19Iuszu3YwHaE7?w=263&h=180&c=7&r=0&o=7&dpr=2&pid=1.7&rm=3"
+                        alt="会议现场" />
+                    <figure class="badge">
+                        <img class="brand-badge" src="icons/brand-icon/icon-red.png">
+                        <span>社会培训</span>
+                    </figure>
+                    <h2 class="brand-title">教师数字素养提升项目</h2>
+                    <p class="brand-subtitle">以数据优化教学</p>
+                    <div class="brand-footer">
+                        <span class="brand-date">2025-05-22</span>
+                        <img class="brand-arrow" src="icons/brand-icon/view.png">
+                    </div>
+                </div>
+                <div class="brand-item">
+                    <img class="brand-pic"
+                        src="https://th.bing.com/th/id/OIP.uBRVCFphAWZd19Iuszu3YwHaE7?w=263&h=180&c=7&r=0&o=7&dpr=2&pid=1.7&rm=3"
+                        alt="会议现场" />
+                    <figure class="badge">
+                        <img class="brand-badge" src="icons/brand-icon/icon-red.png">
+                        <span>社会培训</span>
+                    </figure>
+                    <h2 class="brand-title">教师数字素养提升项目</h2>
+                    <p class="brand-subtitle">以数据优化教学</p>
+                    <div class="brand-footer">
+                        <span class="brand-date">2025-05-22</span>
+                        <img class="brand-arrow" src="icons/brand-icon/view.png">
+                    </div>
+                </div>
+                <div class="brand-item">
+                    <img class="brand-pic"
+                        src="https://th.bing.com/th/id/OIP.uBRVCFphAWZd19Iuszu3YwHaE7?w=263&h=180&c=7&r=0&o=7&dpr=2&pid=1.7&rm=3"
+                        alt="会议现场" />
+                    <figure class="badge">
+                        <img class="brand-badge" src="icons/brand-icon/icon-red.png">
+                        <span>社会培训</span>
+                    </figure>
+                    <h2 class="brand-title">教师数字素养提升项目</h2>
+                    <p class="brand-subtitle">以数据优化教学</p>
+                    <div class="brand-footer">
+                        <span class="brand-date">2025-05-22</span>
+                        <img class="brand-arrow" src="icons/brand-icon/view.png">
+                    </div>
+                </div>
+                <div class="brand-item">
+                    <img class="brand-pic"
+                        src="https://th.bing.com/th/id/OIP.uBRVCFphAWZd19Iuszu3YwHaE7?w=263&h=180&c=7&r=0&o=7&dpr=2&pid=1.7&rm=3"
+                        alt="会议现场" />
+                    <figure class="badge">
+                        <img class="brand-badge" src="icons/brand-icon/icon-red.png">
+                        <span>社会培训</span>
+                    </figure>
+                    <h2 class="brand-title">教师数字素养提升项目</h2>
+                    <p class="brand-subtitle">以数据优化教学</p>
+                    <div class="brand-footer">
+                        <span class="brand-date">2025-05-22</span>
+                        <img class="brand-arrow" src="icons/brand-icon/view.png">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- 删除了原注释中的尖括号以方便整段注释，下面是原来网站群配置的样式-->
+    <!-- <div id="content">
         <div class="list">
             <div class="left">
                 <div class="moments" frag="面板5">
@@ -93,39 +612,39 @@
                     </div>
                     <div frag="窗口5" portlemode="simpleNews" class="content">
                         <div frag="窗口内容">
-                            <!--[InfoCycleBegin]-->
+                            !--[InfoCycleBegin]--
                             <div class="moment">
                                 <a href="{文章URL}" title="{标题}">
                                     <div class="moment-title">{标题}</div>
                                     <div class="moment-time">{发布时间}</div>
                                 </a>
                             </div>
-                            <!--[InfoCycleEnd]-->
+                            !--[InfoCycleEnd]--
                         </div>
                     </div>
                 </div>
             </div>
             <div class="right">
-                    <div frag = "窗口88" class="search-box">
-                        <div frag="窗口内容">
+                <div frag="窗口88" class="search-box">
+                    <div frag="窗口内容">
 
-                        </div>
                     </div>
+                </div>
                 <div class="moments">
                     <div class="title">
                         <div class="moments-title">信息公告</div>
                         <a href="/_s908/47068/list.psp" target="{打开方式}" class="more">更多>></a>
                     </div>
-                    <div frag = "面板7"></div>
+                    <div frag="面板7"></div>
                     <div frag="窗口7" portletmode="simpleNews">
                         <div frag="窗口内容">
-                            <!--[InfoCycleBegin]-->
+                            !--[InfoCycleBegin]--
                             <div class="moment">
                                 <a href="{文章URL}" title="{标题}">
                                     <div class="moment-title">{标题}</div>
                                 </a>
                             </div>
-                            <!--[InfoCycleEnd]-->
+                            !--[InfoCycleEnd]--
                         </div>
                     </div>
                 </div>
@@ -139,45 +658,85 @@
             <div frag="面板9">
                 <div class="recommend-content" frag="窗口9" portletmode="simpleNews">
                     <div frag="窗口内容">
-                        <!--[InfoCycleBegin]-->
+                        !--[InfoCycleBegin]--
                         <div class="recommend-info">
                             <a href="{文章URL}" title="{标题}">
-                                <img src="{图片路径}" alt="{标题}" class="recommend-img"/>
+                                <img src="{图片路径}" alt="{标题}" class="recommend-img" />
                                 <div class="recommend-title">{标题}</div>
                             </a>
                         </div>
-                        <!--[InfoCycleEnd]-->
+                        !--[InfoCycleEnd]--
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="footer-text">
-        <p>友情链接</p>
-        <hr class="footer-hr">
-        <div class="link-container">
-            <ul class="link-list">
-                <li><a href="https://www.ecnu.edu.cn/" target="_blank">华东师范大学</a></li>
-                <li><a href="https://gzc.ecnu.edu.cn/" target="_blank">华东师范大学国有资产管理处</a></li>
-                <li><a href="https://zcjy.ecnu.edu.cn/" target="_blank">华东师范大学资产经营有限公司</a></li>
-                <li><a href="https://kjc.ecnu.edu.cn/" target="_blank">华东师范大学科技处</a></li>
-            </ul>
-            <ul class="link-list">
-                <li><a href="http://www.moe.gov.cn/" target="_blank">国家教育部</a></li>
-                <li><a href="https://stcsm.sh.gov.cn/" target="_blank">上海市科学技术委员会</a></li>
-                <li><a href="https://edu.sh.gov.cn/" target="_blank">上海市教育委员会</a></li>
-                <li><a href="https://stdc.shec.edu.cn/home/index/mainPage/type/" target="_blank">上海市高校科技发展中心</a></li>
-            </ul>
-        </div>
-        <hr>
-    </div>
-
+    </div> -->
     <footer>
-        <p>地址：上海市金沙江路1006号15楼 电话：021-52718779 52718795</p>
-        <p>Copyright ©2024 East China Normal University of China All rights reserved</p>
-        <p>华东师范大学 版权所有</p>
+        <div class="footer">
+            <!-- 左侧：联系我们 -->
+            <div class="footer-left">
+                <h2>联系我们</h2>
+                <div class="contact-info">
+                    <div class="contact-left">
+                        <div class="contact-item">
+                            <p>招生热线: 021-62232037 / 021-62233921</p>
+                        </div>
+                        <div class="contact-item">
+                            <p>学院地址: 上海市普陀区中山北路3663号</p>
+                        </div>
+                        <div class="contact-item">
+                            <p>在读咨询: 021-62232679 / hsdcj@189.cn</p>
+                        </div>
+                    </div>
+                    <div class="contact-right">
+                        <div class="contact-item">
+                            <p>社会培训一部: 021-62233381 / 社会培训二部: 021-62234053</p>
+                        </div>
+                        <div class="contact-item">
+                            <p>教师培训一部: 021-62237327 / 教师培训二部: 021-62232549</p>
+                        </div>
+                        <div class="contact-item">
+                            <p>自学考试: 021-62234011 / 021-62234012</p>
+                        </div>
+                        <div class="contact-item">
+                            <p>国际本科: 021-62233497</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 中间：友情链接 -->
+            <div class="footer-middle">
+                <h2>友情链接</h2>
+                <ul>
+                    <li><a href="https://edu.sh.gov.cn/">教育部</a></li>
+                    <li><a href="https://www.ecnu.edu.cn/">华东师范大学</a></li>
+                    <li><a href="https://www.chsi.com.cn/">学信网</a></li>
+                </ul>
+            </div>
+            <!-- 右侧：官方微信 -->
+            <div class="footer-right">
+                <h2>官方微信</h2>
+                <div class="qrcode-box">
+                    <div class="qrcode-item">
+                        <img src="icons/homepage/微信图片_20250706191703_243.png" alt="官方微信二维码" class="qrcode-img">
+                        <p>官方微信号</p>
+                    </div>
+                    <div class="qrcode-item">
+                        <img src="icons/homepage/微信图片_20250706191712_242.png" alt="华师e学堂二维码" class="qrcode-img">
+                        <p>华师e学堂</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 底部版权、logo 栏 -->
+        <div class="footer-line-container">
+            <div class="footer-line"></div>
+        </div>
+        <div class="footer-bottom">
+            <div><img src="icons/homepage/logo.png" alt="华东师范大学开放教育学院/教师发展学院" class="logo-bottom"></div>
+            <div class="copyright">Copyright @ 华东师范大学开放教育学院&nbsp; 备案号: 沪ICP备05003394号-26</div>
+        </div>
     </footer>
-
 </body>
 
 </html>
