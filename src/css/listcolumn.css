@@ -9,7 +9,7 @@
 
 .current-path {
     margin-right: auto;
-    color: #a6384a;
+    color: #408AE1;
     font-size: 20px;
     margin-left: 10px;
 }
@@ -35,3 +35,433 @@
 .column-right {
     border-bottom: none;
 }
+
+/* 统一左侧栏目样式 */
+.column-list-wrap {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.column-item {
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.column-item-link {
+    display: block;
+    text-decoration: none;
+    padding: 8px 0;
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.3s ease;
+}
+
+.column-item-link:hover {
+    background-color: #f8f9fa;
+}
+
+.sub-list {
+    padding-left: 15px;
+    margin-top: 5px;
+}
+
+.sub-item {
+    padding: 0;
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+.sub-item-link {
+    display: block;
+    text-decoration: none;
+    padding: 5px 0;
+    transition: background-color 0.3s ease;
+}
+
+.sub-item-link:hover {
+    background-color: #f8f9fa;
+}
+
+.column-name {
+    font-size: 18px;
+    color: #408AE1;
+}
+
+.sub-item .column-name {
+    font-size: 16px;
+}
+
+/* 列布局基础样式 */
+.column {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column-left {
+    width: 12vw;
+    flex-shrink: 0;
+}
+
+.column-body {
+    padding: 10px;
+    border-left: #408AE1 1.2vw solid;
+    border-right: #408AE1 2px solid;
+    border-bottom: #408AE1 2px solid;
+    border-top: #408AE1 2px solid;
+    background-color: white;
+}
+
+.column-body ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.column-body li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* Listcolumn页面的Header导航栏样式 */
+header {
+    background-color: #ffffff;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    position: relative;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Logo区域样式 */
+header div[frag="窗口1"] {
+    flex: 0 0 auto;
+    padding-left: 20px;
+}
+
+header .header-container {
+    display: inline-block;
+}
+
+header .logo {
+    position: static;
+    width: auto;
+    height: auto;
+}
+
+header .logo img {
+    height: 50px;
+    width: auto;
+}
+
+/* 导航栏区域样式 */
+header div[frag="窗口3"] {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding-right: 20px;
+}
+
+header nav {
+    width: 100%;
+    max-width: 800px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav > div[frag="窗口内容"] > nav > ul > li {
+    position: relative;
+    margin: 0 5px;
+}
+
+header nav ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: #408AE1;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+header nav ul li a:hover,
+header nav ul li.active a {
+    background-color: #f8f9fa;
+    color: #408AE1;
+}
+
+/* 下拉菜单样式 */
+header nav ul li.dropdown {
+    position: relative;
+}
+
+header .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    min-width: 200px;
+    border: 1px solid #e0e0e0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    list-style: none;
+    margin: 0;
+    padding: 5px 0;
+}
+
+header .dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+header .dropdown-menu li {
+    margin: 0;
+    padding: 0;
+}
+
+header .dropdown-menu li a {
+    color: #408AE1;
+    padding: 10px 20px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+header .dropdown-menu li a:hover {
+    background-color: #f8f9fa;
+    color: #408AE1;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+    
+    header div[frag="窗口1"] {
+        padding: 10px 0;
+    }
+    
+    header div[frag="窗口3"] {
+        width: 100%;
+        padding: 0 10px;
+    }
+    
+    header nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    header nav ul li {
+        margin: 2px;
+    }
+    
+    header nav ul li a {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    
+    /* 列布局移动端适配 */
+    .column {
+        flex-direction: column;
+    }
+    
+    .column-left {
+        width: 100%;
+        margin-bottom: 20px;
+        order: 1;
+    }
+    
+    .column-right {
+        width: 100%;
+        order: 2;
+    }
+    
+    #text {
+        width: 95vw;
+        margin: 10px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    header nav ul li a {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+    
+    #text {
+        width: 98vw;
+        margin: 5px auto;
+    }
+    
+    .current-path {
+        font-size: 16px;
+        margin-left: 5px;
+    }
+    
+    .news {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px;
+    }
+    
+    .news-title {
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+    
+    .news-time {
+        font-size: 12px;
+        color: #666;
+    }
+    
+    /* Footer移动端样式 */
+    .footer {
+        flex-direction: column;
+        padding: 20px 10px;
+    }
+    
+    .footer-left,
+    .footer-middle,
+    .footer-right {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+    }
+    
+    .contact-left,
+    .contact-right {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .contact-item p {
+        font-size: 12px;
+        margin: 5px 0;
+    }
+    
+    .footer-middle ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 10px;
+    }
+    
+    .qrcode-box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .qrcode-item {
+        margin-bottom: 15px;
+    }
+    
+    .qrcode-img {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: left;
+        padding: 15px 10px;
+    }
+    
+    .logo-bottom {
+        height: 40px;
+        margin-bottom: 10px;
+    }
+    
+    .copyright {
+        font-size: 12px;
+    }
+}
+
+/* Listcolumn页面布局 - 让footer始终贴在底部 */
+html, body {
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0;
+}
+
+body {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 100vh !important;
+}
+
+#content {
+    flex: 1 !important;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
+}
+
+/* Listcolumn页面特定的footer样式 - 白底黑字 */
+body .footer {
+    background-color: #ffffff !important;
+    color: #333333 !important;
+}
+
+body .footer-left h2,
+body .footer-middle h2,
+body .footer-right h2 {
+    color: #333333 !important;
+}
+
+body .footer-left h2::after,
+body .footer-middle h2::after,
+body .footer-right h2::after {
+    background-color: #408AE1 !important;
+}
+
+body .contact-item p {
+    color: #333333 !important;
+}
+
+body .footer-middle ul li a {
+    color: #408AE1 !important;
+}
+
+body .qrcode-item p {
+    color: #333333 !important;
+}
+
+body .footer-bottom {
+    background-color: #ffffff !important;
+}
+
+body .copyright {
+    color: #333333 !important;
+}
+
+body .footer-line {
+    border-top: 1px solid #e0e0e0 !important;
+}
+
+body .footer-line-container {
+    background-color: #ffffff !important;
+}
+
+

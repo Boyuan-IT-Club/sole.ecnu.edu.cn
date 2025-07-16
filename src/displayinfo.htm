@@ -4,22 +4,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>华东师范大学 国家大学科技园</title>
-  <link rel="stylesheet" href="css/header.css">
+  <title>华东师范大学 </title>
   <link rel="stylesheet" href="css/body.css">
-  <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/displayinfo.css" />
   <link rel="stylesheet" href="css/center.css">
+  <link rel="stylesheet" href="css/listcolumn.css">
+  <link rel="stylesheet" href="css/header_footer.css">
+  <script src="js/listcolumn.js"></script>
 </head>
 
 <body>
 <header>
   <div frag="窗口1" portletmode="simpleSiteAttri">
     <div frag="窗口内容">
-      <a href="{站点URL}" title="华东师范大学 国家大学科技园" class="header-container">
-        <div class="logo"><img src="images/ecnu_logo.png" alt="华东师范大学标志"></div>
-        <div class="logo"><img src="images/logo.png" alt="国家大学科技园"></div>
+      <a href="{站点URL}" title="华东师范大学" class="header-container">
+        <div class="logo"><img src="icons/homepage/logo.png" alt="华东师范大学标志"></div>
       </a>
     </div>
   </div>
@@ -62,6 +62,37 @@
 <div id="content">
   <div id="text">
     <div class="column">
+      <div class="column-left">
+        <div class="column-body">
+          <div frag="窗口4" portletmode="simpleColumnList">
+            <div frag="窗口内容">
+              <!--[ColumnStructBegin]-->
+              <ul class="column-list-wrap">
+                <!--[ColumnCycleBegin]-->
+                <li class="column-item {级别样式} {选中样式}">
+                  <a title="{栏目名称}" class="column-item-link {选中样式}" href="{栏目URL}" target="{打开方式}">
+                    <span class="column-name">{栏目名称}>></span>
+                  </a>
+                  <!--[SubColumnStructBegin]-->
+                  <ul class="sub-list">
+                    <!--[ColumnCycleBegin]-->
+                    <li class="sub-item {级别样式} {选中样式}">
+                      <a title="{栏目名称}" class="sub-item-link {选中样式}" href="{栏目URL}" target="{打开方式}">
+                        <span class="column-name"> {栏目名称} </span>
+                      </a>
+                      <!--[SubColumnList]-->
+                    </li>
+                    <!--[ColumnCycleEnd]-->
+                  </ul>
+                  <!--[SubColumnStructEnd]-->
+                </li>
+                <!--[ColumnCycleEnd]-->
+              </ul>
+              <!--[ColumnStructEnd]-->
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="column-right">
         <div class="column-news">
           <div frag="窗口9" portletmode="simpleArticleAttri">
@@ -78,9 +109,70 @@
 </div>
 
 <footer>
-  <p>地址：上海市金沙江路1006号15楼 电话：021-52718779 52718795</p>
-  <p>Copyright ©2024 East China Normal University of China All rights reserved</p>
-  <p>华东师范大学 版权所有</p>
+  <div class="footer">
+      <!-- 左侧：联系我们 -->
+      <div class="footer-left">
+          <h2>联系我们</h2>
+          <div class="contact-info">
+              <div class="contact-left">
+                  <div class="contact-item">
+                      <p>招生热线: 021-62232037 / 021-62233921</p>
+                  </div>
+                  <div class="contact-item">
+                      <p>学院地址: 上海市普陀区中山北路3663号</p>
+                  </div>
+                  <div class="contact-item">
+                      <p>在读咨询: 021-62232679 / hsdcj@189.cn</p>
+                  </div>
+              </div>
+              <div class="contact-right">
+                  <div class="contact-item">
+                      <p>社会培训一部: 021-62233381 / 社会培训二部: 021-62234053</p>
+                  </div>
+                  <div class="contact-item">
+                      <p>教师培训一部: 021-62237327 / 教师培训二部: 021-62232549</p>
+                  </div>
+                  <div class="contact-item">
+                      <p>自学考试: 021-62234011 / 021-62234012</p>
+                  </div>
+                  <div class="contact-item">
+                      <p>国际本科: 021-62233497</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- 中间：友情链接 -->
+      <div class="footer-middle">
+          <h2>友情链接</h2>
+          <ul>
+              <li><a href="https://edu.sh.gov.cn/">教育部</a></li>
+              <li><a href="https://www.ecnu.edu.cn/">华东师范大学</a></li>
+              <li><a href="https://www.chsi.com.cn/">学信网</a></li>
+          </ul>
+      </div>
+      <!-- 右侧：官方微信 -->
+      <div class="footer-right">
+          <h2>官方微信</h2>
+          <div class="qrcode-box">
+              <div class="qrcode-item">
+                  <img src="icons/homepage/微信图片_20250706191703_243.png" alt="官方微信二维码" class="qrcode-img">
+                  <p>官方微信号</p>
+              </div>
+              <div class="qrcode-item">
+                  <img src="icons/homepage/微信图片_20250706191712_242.png" alt="华师e学堂二维码" class="qrcode-img">
+                  <p>华师e学堂</p>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- 底部版权、logo 栏 -->
+  <div class="footer-line-container">
+      <div class="footer-line"></div>
+  </div>
+  <div class="footer-bottom">
+      <div><img src="icons/homepage/logo.png" alt="华东师范大学开放教育学院/教师发展学院" class="logo-bottom"></div>
+      <div class="copyright">Copyright @ 华东师范大学开放教育学院&nbsp; 备案号: 沪ICP备05003394号-26</div>
+  </div>
 </footer>
 
 </body>

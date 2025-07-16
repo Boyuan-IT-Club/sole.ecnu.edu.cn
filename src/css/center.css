@@ -3,7 +3,7 @@
 }
 
 .titles{
-    border-bottom: #a6384a 4px solid;
+    border-bottom: #408AE1 4px solid;
     margin-bottom: 20px;
     margin-top: 20px;
     display: flex;
@@ -15,7 +15,7 @@
 .title-info {
     font-size: 25px;
     font-weight: bold;
-    color: #a6384a;
+    color: #408AE1;
     margin-left: auto;
     margin-right: auto;
     border-bottom: none;
