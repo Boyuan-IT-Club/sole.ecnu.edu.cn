@@ -19,10 +19,23 @@
 
 .logo {
   position: absolute;
-  top: 0.5vh;
+  top: 1vh;
   left: 12%;
   width: 14vw;
   height: auto;
+  z-index: 1;
+}
+
+.toggle-btn {
+  display: none;
+}
+
+.media-nav {
+  display: none;
+}
+
+.side-panel {
+  display: none;
 }
 
 .building-bg {
@@ -48,7 +61,7 @@
   position: relative;
   font-family: "Source Han Sans SC";
   color: #333333;
-  font-size: 43px;
+  font-size: 2.6rem;
   line-height: 1.3;
   margin-bottom: 20px;
   z-index: 2;
@@ -57,7 +70,7 @@
 .desc {
   position: relative;
   font-family: "Source Han Serif SC", "Source Han Serif", sans-serif;
-  font-size: 18px;
+  font-size: 1.09rem;
   line-height: 1.6;
   font-weight: 550;
   margin-top: 35px;
@@ -72,44 +85,35 @@
   gap: 18px;
 }
 
-.btn:nth-of-type(1) {
+.btn {
+  display: inline-flex;  /* 使文字和图片水平排列 */
+  align-items: center;
   padding: 9px 17px;
   font-weight: 420;
   font-size: 13px;
   border: none;
   border-radius: 11px;
+  text-decoration: none;     /* 去掉链接下划线 */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* 第一个按钮样式（蓝底白字） */
+.btn.blue {
   background-color: rgb(64, 138, 225);
   color: #fff;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-.btn:nth-of-type(2) {
-  padding: 9px 17px;
-  font-weight: 420;
-  font-size: 13px;
-  border: none;
-  border-radius: 11px;
+/* 第二个按钮样式（白底蓝字） */
+.btn.white {
   background-color: rgb(255, 255, 255);
   color: rgb(64, 138, 225);
-  cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-.arrow:nth-of-type(1) {
+.arrow {
   width: 11px;
   height: 11px;
   margin-left: 12px;
-  color: rgb(255, 255, 255);
-  transition: transform 0.3s ease;
-}
-
-.arrow:nth-of-type(2) {
-  width: 11px;
-  height: 11px;
-  margin-left: 12px;
-  color: rgb(64, 138, 225);
-  transition: transform 0.3s ease;
 }
 
 .btn:focus {
@@ -127,7 +131,6 @@
 .nav {
   position: relative;
   top: 0;
-  bottom: 120px;
   z-index: 999;
   width: 100%;
   /* 确保导航栏宽度与容器一致 */
@@ -135,7 +138,8 @@
 
 .nav-list {
   display: flex;
-  flex-wrap: wrap;
+  min-width: 94px;
+  /* flex-wrap: wrap; */
   justify-content: center;
 }
 
@@ -370,4 +374,12 @@
   font-size: 12px;
   margin: 10px 0;
   color: #ffffff;
+}
+
+.copyright-media {
+  display: none;
+}
+
+.contact-info-media {
+  display: none;
 }
