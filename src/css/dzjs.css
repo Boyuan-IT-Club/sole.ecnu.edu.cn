@@ -1,0 +1,248 @@
+#content {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 30px;
+    margin: 0;
+    background-color: #f5f5f5 !important; 
+}
+
+/* 顶部图片样式 */
+.hero-image {
+    width: 100%;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.hero-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+/* 通用标题样式 */
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.moments-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.title-highlight {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 2px;
+}
+
+.more {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.more:hover {
+    color: #0056b3;
+}
+
+/* 党建活动样式 - 左侧图片，右侧内容 */
+.party-activities {
+    width: 100%;
+    margin: 0 20px 40px 20px;
+    padding: 20px;
+    background: #fff;
+}
+
+.activity-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #f0f0f0;
+}
+
+
+
+.activity-item a {
+    display: flex;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+.activity-img {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.activity-content {
+    flex: 1;
+}
+
+.activity-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.activity-desc {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 8px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.activity-time {
+    font-size: 12px;
+    color: #999;
+}
+
+/* 荣誉奖励样式 - 方块网格布局 */
+.honors {
+    width: 100%;
+    margin: 0 20px 40px 20px;
+    padding: 20px;
+    background: #fff;
+}
+
+.honors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.honor-item {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    overflow: hidden;
+}
+
+
+
+.honor-item a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.honor-img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+
+.honor-title {
+    padding: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    line-height: 1.4;
+}
+
+/* 两列布局样式 */
+.two-column-section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 0 20px 40px 20px;
+}
+
+.system-building,
+.party-study {
+    padding: 20px;
+    background: #fff;
+}
+
+/* 制度建设和党员学习列表项样式 */
+.system-item,
+.study-item {
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.3s;
+}
+
+.system-item:last-child,
+.study-item:last-child {
+    border-bottom: none;
+}
+
+.system-item:hover,
+.study-item:hover {
+    background-color: #f8f9fa;
+}
+
+.system-item a,
+.study-item a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.system-title,
+.study-title {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.4;
+    flex: 1;
+    margin-right: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.system-time,
+.study-time {
+    font-size: 12px;
+    color: #999;
+    flex-shrink: 0;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .two-column-section {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .honors-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 15px;
+    }
+    
+    .activity-item {
+        flex-direction: column;
+    }
+    
+    .activity-img {
+        width: 100%;
+        height: 150px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    .title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+} 

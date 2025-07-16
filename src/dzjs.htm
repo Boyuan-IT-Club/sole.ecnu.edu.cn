@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/displayinfo.css" />
     <link rel="stylesheet" href="css/listcolumn.css" />
     <link rel="stylesheet" href="css/header_footer.css">
+    <link rel="stylesheet" href="css/dzjs.css">
     <script src="js/listcolumn.js"></script>
 </head>
 
@@ -59,8 +60,99 @@
 </header>
 
     <div id="content">
-        <!-- 页面主要内容区域 -->
-        <!-- 这里可以添加具体的页面内容 -->
+        <!-- 顶部图片 -->
+        <div class="hero-image">
+            <img src="./images/dzjs.jpg" alt="党支部建设" class="hero-img">
+        </div>
+        
+        <!-- 党建活动 - 左侧图片，右侧内容 -->
+        <div class="party-activities">
+            <div class="title">
+                <div class="moments-title"><span class="title-highlight">党建</span>活动</div>
+                <a href="/_s908/djhd/list.psp" target="{打开方式}" class="more">更多>></a>
+            </div>
+            <div frag="窗口10" portletmode="simpleNews" class="content">
+                <div frag="窗口内容">
+                    <!--[InfoCycleBegin]-->
+                    <div class="activity-item">
+                        <a href="{文章URL}" title="{标题}">
+                            <img src="{图片路径}" alt="{标题}" class="activity-img" />
+                            <div class="activity-content">
+                                <div class="activity-title">{标题}</div>
+                                <div class="activity-desc">{内容摘要}</div>
+                                <div class="activity-time">{发布时间}</div>
+                            </div>
+                        </a>
+                    </div>
+                    <!--[InfoCycleEnd]-->
+                </div>
+            </div>
+        </div>
+
+        <!-- 荣誉奖励 - 方块样式，上面图片下面标题 -->
+        <div class="honors">
+            <div class="title">
+                <div class="moments-title"><span class="title-highlight">荣誉</span>奖励</div>
+                <a href="/_s908/ryjl/list.psp" target="{打开方式}" class="more">更多>></a>
+            </div>
+            <div frag="窗口11" portletmode="simpleNews" class="content">
+                <div frag="窗口内容">
+                    <div class="honors-grid">
+                        <!--[InfoCycleBegin]-->
+                        <div class="honor-item">
+                            <a href="{文章URL}" title="{标题}">
+                                <img src="{图片路径}" alt="{标题}" class="honor-img" />
+                                <div class="honor-title">{标题}</div>
+                            </a>
+                        </div>
+                        <!--[InfoCycleEnd]-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 制度建设和党员学习 - 两列布局 -->
+        <div class="two-column-section">
+            <!-- 制度建设 -->
+            <div class="system-building">
+                <div class="title">
+                    <div class="moments-title"><span class="title-highlight">制度</span>建设</div>
+                    <a href="/_s908/zdjs/list.psp" target="{打开方式}" class="more">更多>></a>
+                </div>
+                <div frag="窗口12" portletmode="simpleNews" class="content">
+                    <div frag="窗口内容">
+                        <!--[InfoCycleBegin]-->
+                        <div class="system-item">
+                            <a href="{文章URL}" title="{标题}">
+                                <div class="system-title">{标题}</div>
+                                <div class="system-time">{发布时间}</div>
+                            </a>
+                        </div>
+                        <!--[InfoCycleEnd]-->
+                    </div>
+                </div>
+            </div>
+
+            <!-- 党员学习 -->
+            <div class="party-study">
+                <div class="title">
+                    <div class="moments-title"><span class="title-highlight">党员</span>学习</div>
+                    <a href="/_s908/dyxx/list.psp" target="{打开方式}" class="more">更多>></a>
+                </div>
+                <div frag="窗口13" portletmode="simpleNews" class="content">
+                    <div frag="窗口内容">
+                        <!--[InfoCycleBegin]-->
+                        <div class="study-item">
+                            <a href="{文章URL}" title="{标题}">
+                                <div class="study-title">{标题}</div>
+                                <div class="study-time">{发布时间}</div>
+                            </a>
+                        </div>
+                        <!--[InfoCycleEnd]-->
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <footer>
