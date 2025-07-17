@@ -470,6 +470,10 @@ img {
   color: #fff;
 }
 
+.news-card:first-child .content h2 > a {
+  color: white;
+}
+
 /* 除第一个 news-card 外的样式 */
 .news-card:not(:first-child) {
   overflow: hidden;

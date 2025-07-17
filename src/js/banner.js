@@ -192,15 +192,15 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.text').forEach(el => {
     const text = el.textContent.trim();
     const tomodifyimg = el.previousElementSibling;
-    const tomodifyclass = el.closest('.enrollmrnt');
+    const tomodifyclass = el.closest('.enrollment');
 
-    if (text === '国际合作办学') {
+    if (text.includes('国际合作办学')) {
       tomodifyimg.src = '/_upload/tpl/17/77/6007/template6007/icons/enrollment-icon/icon-blue.png';
       tomodifyclass.classList.add('international');
-    } else if (text === '在职研修') {
+    } else if (text.includes('在职研修')) {
       tomodifyimg.src = '/_upload/tpl/17/77/6007/template6007/icons/enrollment-icon/icon-red.png';
       tomodifyclass.classList.add('on-job');
-    } else if (text === '社会培训') {
+    } else if (text.includes('社会培训')) {
       tomodifyimg.src = '/_upload/tpl/17/77/6007/template6007/icons/enrollment-icon/icon-purple.png';
       tomodifyclass.classList.add('training');
     }

@@ -19,7 +19,7 @@
     text-decoration: none;
 }
 
-.news {
+.list-news {
     display: flex;
     padding: 12px;
     align-items: center;
@@ -27,7 +27,7 @@
     border-bottom: #e0e0e0 1px solid;
 }
 
-.news a {
+.list-news a {
     color: black;
     text-decoration: none;
 }
@@ -109,7 +109,7 @@
 }
 
 /* 保留原有的带图片新闻布局样式以防其他地方使用 */
-.news-with-image {
+.list-news-with-image {
     display: flex !important;
     align-items: flex-start !important;
     justify-content: flex-start !important;
@@ -117,7 +117,7 @@
     padding: 15px 12px;
 }
 
-.news-image {
+.list-news-image {
     flex-shrink: 0;
     width: 120px;
     height: 80px;
@@ -125,21 +125,21 @@
     border-radius: 4px;
 }
 
-.news-image img {
+.list-news-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
 }
 
-.news-content {
+.list-news-content {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-.news-content .news-title {
+.list-news-content .list-news-title {
     font-size: 16px;
     font-weight: 600;
     color: #333;
@@ -151,13 +151,13 @@
     overflow: hidden;
 }
 
-.news-content .news-time {
+.list-news-content .list-news-time {
     font-size: 14px;
     color: #666;
     margin: 0;
 }
 
-.news-content .news-summary {
+.list-news-content .list-news-summary {
     font-size: 14px;
     color: #555;
     line-height: 1.5;
@@ -474,18 +474,18 @@ header .dropdown-menu li a:hover {
         margin-left: 5px;
     }
     
-    .news {
+    .list-news {
         flex-direction: column;
         align-items: flex-start;
         padding: 8px;
     }
     
-    .news-title {
+    .list-news-title {
         margin-bottom: 5px;
         font-size: 14px;
     }
     
-    .news-time {
+    .list-news-time {
         font-size: 12px;
         color: #666;
     }
@@ -521,27 +521,27 @@ header .dropdown-menu li a:hover {
     }
     
     /* 移动端新闻布局调整 */
-    .news-with-image {
+    .list-news-with-image {
         flex-direction: row !important;
         gap: 12px;
         padding: 12px 8px;
     }
     
-    .news-image {
+    .list-news-image {
         width: 80px;
         height: 60px;
     }
     
-    .news-content .news-title {
+    .list-news-content .list-news-title {
         font-size: 14px;
         -webkit-line-clamp: 1;
     }
     
-    .news-content .news-time {
+    .list-news-content .list-news-time {
         font-size: 12px;
     }
     
-    .news-content .news-summary {
+    .list-news-content .list-news-summary {
         font-size: 12px;
         -webkit-line-clamp: 1;
     }
