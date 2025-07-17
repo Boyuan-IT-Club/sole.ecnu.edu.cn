@@ -195,13 +195,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const tomodifyclass = el.closest('.enrollmrnt');
 
     if (text === '国际合作办学') {
-      tomodifyimg.src = 'icons/enrollment-icon/icon-blue.png';
+      tomodifyimg.src = '/_upload/tpl/17/77/6007/template6007/icons/enrollment-icon/icon-blue.png';
       tomodifyclass.classList.add('international');
     } else if (text === '在职研修') {
-      tomodifyimg.src = 'icons/enrollment-icon/icon-red.png';
+      tomodifyimg.src = '/_upload/tpl/17/77/6007/template6007/icons/enrollment-icon/icon-red.png';
       tomodifyclass.classList.add('on-job');
     } else if (text === '社会培训') {
-      tomodifyimg.src = 'icons/enrollment-icon/icon-purple.png';
+      tomodifyimg.src = '/_upload/tpl/17/77/6007/template6007/icons/enrollment-icon/icon-purple.png';
       tomodifyclass.classList.add('training');
     }
   });
@@ -214,10 +214,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const tomodifyclass = el.closest('.brand-item');
 
     if (text === '教师培训') {
-      tomodifyimg.src = 'icons/brand-icon/icon-blue.png';
+      tomodifyimg.src = '/_upload/tpl/17/77/6007/template6007/icons/brand-icon/icon-blue.png';
       tomodifyclass.classList.add('teacher');
     } else if (text === '社会培训') {
-      tomodifyimg.src = 'icons/brand-icon/icon-red.png';
+      tomodifyimg.src = '/_upload/tpl/17/77/6007/template6007/icons/brand-icon/icon-red.png';
       tomodifyclass.classList.add('social');
     }
   });
