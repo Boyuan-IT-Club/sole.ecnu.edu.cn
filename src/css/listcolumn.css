@@ -8,9 +8,33 @@ a {
     text-decoration: none;
 }
 
-.wp_paging {
+#wp_paging_w9 {
     width: 100%;
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    margin: 0 auto;
+    float: none !important;
+    padding: 10px 0;
 }
+
+.news {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px  solid #e0e0e0;
+}
+
+.news-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+    line-height: 1.4;
+}
+
 
 .list-path {
     margin-left: auto;

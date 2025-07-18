@@ -17,6 +17,10 @@ img {
   overflow: hidden;
 }
 
+li {
+  list-style: none;
+}
+
 .text > a {
   color: white;
 }
