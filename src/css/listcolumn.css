@@ -8,6 +8,148 @@ a {
     text-decoration: none;
 }
 
+header {
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+nav {
+    margin-left: 10px;
+    background-color: #fff;
+    color: #333;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 15px 15px;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    cursor: pointer;
+}
+
+nav ul li:not(:last-child) {
+    margin-right: 8px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li:hover {
+    background-color: rgb(0, 128, 255);
+    color: #fff;
+}
+
+nav ul li:hover a {
+    color: #fff;
+}
+
+nav ul li.active::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3.5px;
+    background-color: rgb(0, 128, 255);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown::after {
+    content: '▼';
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 10px;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+}
+
+.dropdown:hover::after {
+    color: #fff;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background-color: rgb(0, 128, 255);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 120px;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease-in-out;
+    z-index: 999;
+}
+
+.dropdown-menu li {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.dropdown-menu li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-menu a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 12px 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+.dropdown-menu a:hover {
+    color: #fff;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown.hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 移动端激活状态的下拉菜单 */
+.dropdown.active .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
 #wp_paging_w9 {
     width: 100%;
     grid-column: 1 / -1;
@@ -311,7 +453,7 @@ header {
     padding: 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     height: 70px;
     position: relative;
     border-bottom: 1px solid #e0e0e0;
@@ -337,93 +479,6 @@ header .logo img {
     width: auto;
 }
 
-/* 导航栏区域样式 */
-header div[frag="窗口3"] {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    padding-right: 20px;
-}
-
-header nav {
-    width: 100%;
-    max-width: 800px;
-}
-
-header nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-header nav > div[frag="窗口内容"] > nav > ul > li {
-    position: relative;
-    margin: 0 5px;
-}
-
-header nav ul li a {
-    display: block;
-    padding: 15px 20px;
-    color: #408AE1;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-header nav ul li a:hover,
-header nav ul li.active a {
-    background-color: #f8f9fa;
-    color: #408AE1;
-}
-
-/* 下拉菜单样式 */
-header nav ul li.dropdown {
-    position: relative;
-}
-
-header .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #ffffff;
-    min-width: 200px;
-    border: 1px solid #e0e0e0;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: all 0.3s ease;
-    z-index: 1000;
-    list-style: none;
-    margin: 0;
-    padding: 5px 0;
-}
-
-header .dropdown:hover .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-header .dropdown-menu li {
-    margin: 0;
-    padding: 0;
-}
-
-header .dropdown-menu li a {
-    color: #408AE1;
-    padding: 10px 20px;
-    font-size: 14px;
-    transition: background-color 0.3s ease;
-}
-
-header .dropdown-menu li a:hover {
-    background-color: #f8f9fa;
-    color: #408AE1;
-}
 
 /* 响应式设计 */
 @media (min-width: 1400px) {
@@ -498,6 +553,36 @@ header .dropdown-menu li a:hover {
         font-size: 14px;
     }
     
+    /* 移动端下拉菜单样式调整 */
+    .dropdown-menu {
+        width: 100px;
+        left: 50%;
+        transform: translateX(-50%) translateY(-10px);
+    }
+    
+    .dropdown:hover .dropdown-menu,
+    .dropdown.active .dropdown-menu {
+        transform: translateX(-50%) translateY(0);
+    }
+    
+    .dropdown::after {
+        font-size: 8px;
+        right: 3px;
+    }
+    
+    /* 移动端下拉菜单激活状态 */
+    .dropdown.active {
+        background-color: rgb(0, 128, 255);
+    }
+    
+    .dropdown.active a {
+        color: #fff;
+    }
+    
+    .dropdown.active::after {
+        color: #fff;
+    }
+    
     /* 列布局移动端适配 */
     .column {
         flex-direction: column;
@@ -524,6 +609,21 @@ header .dropdown-menu li a:hover {
     header nav ul li a {
         padding: 8px 12px;
         font-size: 12px;
+    }
+    
+    /* 小屏幕下拉菜单进一步调整 */
+    .dropdown-menu {
+        width: 80px;
+        font-size: 12px;
+    }
+    
+    .dropdown-menu a {
+        padding: 8px 10px;
+    }
+    
+    .dropdown::after {
+        font-size: 6px;
+        right: 2px;
     }
     
     #text {
