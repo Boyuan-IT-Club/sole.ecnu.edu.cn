@@ -320,7 +320,6 @@ header {
 /* Logo区域样式 */
 header div[frag="窗口1"] {
     flex: 0 0 auto;
-    padding-left: 20px;
 }
 
 header .header-container {
@@ -334,7 +333,7 @@ header .logo {
 }
 
 header .logo img {
-    height: 50px;
+    height: 60px;
     width: auto;
 }
 
