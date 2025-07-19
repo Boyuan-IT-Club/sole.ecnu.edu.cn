@@ -5,34 +5,39 @@ document.addEventListener('DOMContentLoaded', function () {
   let isFixed = false;
   let lastScrollTop = 0;
 
-  // 初始位置记录
-  const initialTop = nav.offsetTop;
-
   window.addEventListener('scroll', function () {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     const scrollDirection = scrollTop > lastScrollTop ? 'down' : 'up';
+    const windowHeight = window.innerHeight;
+    const pageHeight = document.documentElement.scrollHeight;
 
-    // 滚动时的导航栏行为
+    // 固定导航栏逻辑
     if (scrollTop >= scrollThreshold) {
-      // 超过阈值，固定导航栏
       if (!isFixed) {
         nav.classList.add('nav-fixed');
         isFixed = true;
       }
     } else {
-      // 未超过阈值，恢复导航栏
       if (isFixed) {
         nav.classList.remove('nav-fixed');
         isFixed = false;
       }
     }
 
-    // 下滑时导航栏逐渐消失（未达到阈值时）
+    // 下滑时透明渐隐
     if (scrollTop > 0 && scrollTop < scrollThreshold) {
       const opacity = 1 - (scrollTop / scrollThreshold);
       nav.style.opacity = opacity;
     } else {
       nav.style.opacity = 1;
+    }
+
+    // ***新增：滑到页面底部隐藏导航栏，往上滑时显示***
+    const isBottom = windowHeight + scrollTop >= pageHeight - 10; // 离底部10px以内
+    if (scrollDirection === 'down' && isBottom) {
+      nav.classList.add('nav-hidden');
+    } else if (scrollDirection === 'up') {
+      nav.classList.remove('nav-hidden');
     }
 
     lastScrollTop = scrollTop;
