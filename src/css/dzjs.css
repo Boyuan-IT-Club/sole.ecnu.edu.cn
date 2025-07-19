@@ -54,7 +54,7 @@ header .logo img {
 
 .hero-img {
     width: 100%;
-    height: 300px;
+    height: auto;
     object-fit: cover;
     display: block;
 }
@@ -309,10 +309,11 @@ header .logo img {
     .activity-item {
         flex-direction: column;
     }
+
     
     .activity-img {
         width: 100%;
-        height: 150px;
+        height: auto;
         margin-right: 0;
         margin-bottom: 10px;
     }
