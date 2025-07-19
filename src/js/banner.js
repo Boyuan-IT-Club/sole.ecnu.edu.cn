@@ -5,39 +5,34 @@ document.addEventListener('DOMContentLoaded', function () {
   let isFixed = false;
   let lastScrollTop = 0;
 
+  // 初始位置记录
+  const initialTop = nav.offsetTop;
+
   window.addEventListener('scroll', function () {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     const scrollDirection = scrollTop > lastScrollTop ? 'down' : 'up';
-    const windowHeight = window.innerHeight;
-    const pageHeight = document.documentElement.scrollHeight;
 
-    // 固定导航栏逻辑
+    // 滚动时的导航栏行为
     if (scrollTop >= scrollThreshold) {
+      // 超过阈值，固定导航栏
       if (!isFixed) {
         nav.classList.add('nav-fixed');
         isFixed = true;
       }
     } else {
+      // 未超过阈值，恢复导航栏
       if (isFixed) {
         nav.classList.remove('nav-fixed');
         isFixed = false;
       }
     }
 
-    // 下滑时透明渐隐
+    // 下滑时导航栏逐渐消失（未达到阈值时）
     if (scrollTop > 0 && scrollTop < scrollThreshold) {
       const opacity = 1 - (scrollTop / scrollThreshold);
       nav.style.opacity = opacity;
     } else {
       nav.style.opacity = 1;
-    }
-
-    // ***新增：滑到页面底部隐藏导航栏，往上滑时显示***
-    const isBottom = windowHeight + scrollTop >= pageHeight - 10; // 离底部10px以内
-    if (scrollDirection === 'down' && isBottom) {
-      nav.classList.add('nav-hidden');
-    } else if (scrollDirection === 'up') {
-      nav.classList.remove('nav-hidden');
     }
 
     lastScrollTop = scrollTop;
@@ -131,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 设置最大展示数量
   const maxCardsPerType = isMobile ? 4 : 12;
-  if (!isMobile) {// 初始：每类最多展示 3 个卡片
+  if (!isMobile) {// 初始：每类最多展示 6 个卡片
     typeMap.forEach(type => {
       let shown = 0;
       allCards.forEach(card => {
@@ -218,10 +213,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const tomodifyimg = el.previousElementSibling;
     const tomodifyclass = el.closest('.brand-item');
 
-    if (text === '教师培训') {
+    if (text.includes('教师培训')) {
       tomodifyimg.src = '/_upload/tpl/17/77/6007/template6007/icons/brand-icon/icon-blue.png';
       tomodifyclass.classList.add('teacher');
-    } else if (text === '社会培训') {
+    } else if (text.includes('社会培训')) {
       tomodifyimg.src = '/_upload/tpl/17/77/6007/template6007/icons/brand-icon/icon-red.png';
       tomodifyclass.classList.add('social');
     }

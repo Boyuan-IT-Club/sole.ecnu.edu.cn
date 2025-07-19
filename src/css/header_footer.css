@@ -255,12 +255,6 @@
   transform: translateX(-50%);
 }
 
-.nav-hidden {
-  transform: translateY(-100%);
-  opacity: 0;
-    /* transition: opacity 0.5s ease, transform 0.5s ease; */
-}
-
 /* 底部容器 */
 .footer {
   margin: 0 auto;
