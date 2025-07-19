@@ -13,8 +13,18 @@ header {
     height: 84px;
 }
 
+header .logo img {
+    margin-left: 0!important;
+}
+
 .header-container {
     margin-left: calc(50vw - 600px);
+}
+
+@media (max-width: 952px) {
+    header {
+        height: fit-content;
+    }
 }
 
 @media (max-width: 1300px) {

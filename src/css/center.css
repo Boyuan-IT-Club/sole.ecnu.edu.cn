@@ -3,8 +3,6 @@
 }
 
 .titles{
-    border-bottom: #408AE1 4px solid;
-    margin-bottom: 20px;
     margin-top: 20px;
     display: flex;
     flex-direction: column;
@@ -13,9 +11,9 @@
 }
 
 .title-info {
-    font-size: 25px;
+    font-size: 18px;
     font-weight: bold;
-    color: #408AE1;
+    color: #333;
     margin-left: auto;
     margin-right: auto;
     border-bottom: none;
@@ -24,7 +22,7 @@
 
 .time {
     font-size: 14px;
-    color: #000;
+    color: #999;
     margin-left: auto;
     margin-right: auto;
 }

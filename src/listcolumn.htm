@@ -57,7 +57,9 @@
         </div>
     </div>
 </header>
-
+    <div id="divider">
+        
+    </div>
     <div id="content">
         <div frag="窗口41" class="img" portletmode="simpleArticleAttri" style="display: none">
             <div frag="窗口内容">
@@ -78,6 +80,13 @@
 <!--                            <span frag="窗口内容">位置栏目>></span>-->
 <!--                        </div>-->
 <!--                    </div>-->
+                    <div class="column-current-title">
+                        <div frag="窗口55" portletmode="simpleColumnAttri">
+                            <div frag="窗口内容" class="column-current-title-content">
+                                {栏目名称}
+                            </div>
+                        </div>
+                    </div>
                     <div class="column-body">
                         <div frag="窗口4" portletmode="simpleColumnList">
                             <div frag="窗口内容">
@@ -86,7 +95,7 @@
                                     <!--[ColumnCycleBegin]-->
                                     <li class="column-item {级别样式} {选中样式}">
                                         <a title="{栏目名称}" class="column-item-link {选中样式}" href="{栏目URL}" target="{打开方式}">
-                                            <span class="column-name">{栏目名称}>></span>
+                                            <span class="column-name">{栏目名称}</span>
                                         </a>
                                         <!--[SubColumnStructBegin]-->
                                         <ul class="sub-list">
@@ -112,11 +121,11 @@
                     <div frag="窗口5" portletmode="simpleColumnAttri">
                         <div frag="窗口内容">
                             <div class="list-head">
-                                <span class="current-path">
-                                    {当前位置}
-                                </span>
                                 <div class="list-path">
                                     <span class="path-name">当前位置：{当前位置}</span>
+                                </div>
+                                <div class="back-button">
+                                    <a href="javascript:history.back(-1);" target="_self">返回</a>
                                 </div>
                             </div>
                         </div>

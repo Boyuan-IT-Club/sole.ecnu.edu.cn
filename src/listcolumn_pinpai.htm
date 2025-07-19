@@ -57,7 +57,8 @@
         </div>
     </div>
 </header>
-
+    <div id="divider">     
+    </div>
     <div id="content">
         <div frag="窗口41" class="img" portletmode="simpleArticleAttri" style="display: none">
             <div frag="窗口内容">
@@ -73,50 +74,57 @@
         <div id="text">
             <div class="column">
                 <div class="column-left">
-<!--                    <div frag="窗口31" portletmode="simpleColumnAnchor" id="column-title">-->
-<!--                        <div class="column-title">-->
-<!--                            <span frag="窗口内容">位置栏目>></span>-->
-<!--                        </div>-->
-<!--                    </div>-->
-                    <div class="column-body">
-                        <div frag="窗口4" portletmode="simpleColumnList">
-                            <div frag="窗口内容">
-                                <!--[ColumnStructBegin]-->
-                                <ul class="column-list-wrap">
-                                    <!--[ColumnCycleBegin]-->
-                                    <li class="column-item {级别样式} {选中样式}">
-                                        <a title="{栏目名称}" class="column-item-link {选中样式}" href="{栏目URL}" target="{打开方式}">
-                                            <span class="column-name">{栏目名称}>></span>
-                                        </a>
-                                        <!--[SubColumnStructBegin]-->
-                                        <ul class="sub-list">
-                                            <!--[ColumnCycleBegin]-->
-                                            <li class="sub-item {级别样式} {选中样式}">
-                                                <a title="{栏目名称}" class="sub-item-link {选中样式}" href="{栏目URL}" target="{打开方式}">
-                                                    <span class="column-name"> {栏目名称} </span>
-                                                </a>
-                                                <!--[SubColumnList]-->
-                                            </li>
-                                            <!--[ColumnCycleEnd]-->
-                                        </ul>
-                                        <!--[SubColumnStructEnd]-->
-                                    </li>
-                                    <!--[ColumnCycleEnd]-->
-                                </ul>
-                                <!--[ColumnStructEnd]-->
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    <!--                    <div frag="窗口31" portletmode="simpleColumnAnchor" id="column-title">-->
+                    <!--                        <div class="column-title">-->
+                    <!--                            <span frag="窗口内容">位置栏目>></span>-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
+                                        <div class="column-current-title">
+                                            <div frag="窗口55" portletmode="simpleColumnAttri">
+                                                <div frag="窗口内容" class="column-current-title-content">
+                                                    {栏目名称}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="column-body">
+                                            <div frag="窗口4" portletmode="simpleColumnList">
+                                                <div frag="窗口内容">
+                                                    <!--[ColumnStructBegin]-->
+                                                    <ul class="column-list-wrap">
+                                                        <!--[ColumnCycleBegin]-->
+                                                        <li class="column-item {级别样式} {选中样式}">
+                                                            <a title="{栏目名称}" class="column-item-link {选中样式}" href="{栏目URL}" target="{打开方式}">
+                                                                <span class="column-name">{栏目名称}</span>
+                                                            </a>
+                                                            <!--[SubColumnStructBegin]-->
+                                                            <ul class="sub-list">
+                                                                <!--[ColumnCycleBegin]-->
+                                                                <li class="sub-item {级别样式} {选中样式}">
+                                                                    <a title="{栏目名称}" class="sub-item-link {选中样式}" href="{栏目URL}" target="{打开方式}">
+                                                                        <span class="column-name"> {栏目名称} </span>
+                                                                    </a>
+                                                                    <!--[SubColumnList]-->
+                                                                </li>
+                                                                <!--[ColumnCycleEnd]-->
+                                                            </ul>
+                                                            <!--[SubColumnStructEnd]-->
+                                                        </li>
+                                                        <!--[ColumnCycleEnd]-->
+                                                    </ul>
+                                                    <!--[ColumnStructEnd]-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                 <div class="column-right">
                     <div frag="窗口5" portletmode="simpleColumnAttri">
                         <div frag="窗口内容">
                             <div class="list-head">
-                                <span class="current-path">
-                                    {当前位置}
-                                </span>
                                 <div class="list-path">
                                     <span class="path-name">当前位置：{当前位置}</span>
+                                </div>
+                                <div class="back-button">
+                                    <a href="javascript:history.back(-1);" target="_self">返回</a>
                                 </div>
                             </div>
                         </div>
@@ -134,8 +142,10 @@
                                         <img src="{图片路径}" alt="{标题}" />
                                     </div>
                                     <div class="pinpai-card-content">
-                                        <h3 class="pinpai-card-title">{标题}</h3>
-                                        <span class="pinpai-card-time">{发布时间}</span>
+                                        <div class="pinpai-card-title-container">
+                                            <h3 class="pinpai-card-title">{标题}</h3>
+                                            <span class="pinpai-card-time">{发布时间}</span>
+                                        </div>
                                         <p class="pinpai-card-summary">{内容}</p>
                                     </div>
                                 </div>

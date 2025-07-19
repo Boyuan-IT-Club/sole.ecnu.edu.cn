@@ -1,6 +1,30 @@
 .list-head {
     display: flex;
     border-bottom: #e0e0e0 1px solid;
+    padding: 10px 30px;
+    height: 53px;
+}
+
+.column-current-title {
+    font-size: 20px;
+    margin: 0;
+    border-bottom: 1px #ccc solid;
+    font-weight: bold;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.column-current-title>div {
+    border-left: 3px #408AE1 solid;
+    padding-left: 5px;
+}
+
+.column-current-title-content {
+    border-left: 3px #408AE1 solid;
+    padding-left: 8px;
+    font-size: 20px;
+    height: 22px;
 }
 
 a {
@@ -15,7 +39,7 @@ header {
 }
 
 nav {
-    margin-left: 10px;
+    margin-left: 30px;
     background-color: #fff;
     color: #333;
     padding: 0;
@@ -32,16 +56,13 @@ nav ul {
 }
 
 nav ul li {
-    padding: 15px 15px;
+    padding: 15px 28px;
     display: inline-block;
     transition: all 0.3s ease-in-out;
     position: relative;
     cursor: pointer;
 }
 
-nav ul li:not(:last-child) {
-    margin-right: 8px;
-}
 
 nav ul li a {
     color: #333;
@@ -58,7 +79,7 @@ nav ul li:hover a {
     color: #fff;
 }
 
-nav ul li.active::after {
+/* nav ul li.active::after {
     content: '';
     display: block;
     width: 100%;
@@ -67,13 +88,13 @@ nav ul li.active::after {
     position: absolute;
     bottom: 0;
     left: 0;
-}
+} */
 
 .dropdown {
     position: relative;
 }
 
-.dropdown::after {
+.dropdown:has(.dropdown-menu)::after {
     content: '▼';
     position: absolute;
     right: 5px;
@@ -165,21 +186,28 @@ nav ul li.active::after {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px  solid #e0e0e0;
+    padding: 10px 30px;
+    border-bottom: 1px dashed #e0e0e0;
 }
 
 .news-title {
     font-size: 16px;
-    font-weight: 600;
     color: #333;
     margin: 0;
     line-height: 1.4;
 }
 
+.news-time {
+    font-size: 12px;
+    color: #777;
+    margin: 0;
+}
+
 
 .list-path {
-    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
 }
 
 .current-path {
@@ -194,6 +222,21 @@ nav ul li.active::after {
     text-decoration: none;
 }
 
+.back-button {
+    font-size: 14px;
+    background-color: #408AE1;
+    text-decoration: none;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.back-button>a {
+    color: #fff;
+}
+
 .list-news {
     display: flex;
     padding: 12px;
@@ -205,6 +248,16 @@ nav ul li.active::after {
 .list-news a {
     color: black;
     text-decoration: none;
+}
+
+.column-news {
+    padding: 20px 30px;
+}
+
+.selected>a {
+    background-color: #0089ff;
+    color: #fff;
+    font-weight: bold;
 }
 
 /* 网格布局新闻样式 */
@@ -357,6 +410,8 @@ nav ul li.active::after {
 
 .column-right {
     border-bottom: none;
+    border-left: solid #eeeeee 2px;
+    padding-bottom: 120px;
 }
 
 /* 统一左侧栏目样式 */
@@ -371,17 +426,6 @@ nav ul li.active::after {
     margin-bottom: 10px;
 }
 
-.column-item-link {
-    display: block;
-    text-decoration: none;
-    padding: 8px 0;
-    border-bottom: 1px solid #e0e0e0;
-    transition: background-color 0.3s ease;
-}
-
-.column-item-link:hover {
-    background-color: #f8f9fa;
-}
 
 .sub-list {
     padding-left: 15px;
@@ -393,24 +437,20 @@ nav ul li.active::after {
     list-style: none;
     margin-bottom: 5px;
 }
-
+.column-item-link, 
 .sub-item-link {
+    height: 42px;
+    font-size: 16px;
     display: block;
     text-decoration: none;
-    padding: 5px 0;
+    padding: 10px 0;
     transition: background-color 0.3s ease;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: center;
 }
 
-.sub-item-link:hover {
-    background-color: #f8f9fa;
-}
 
 .column-name {
-    font-size: 18px;
-    color: #408AE1;
-}
-
-.sub-item .column-name {
     font-size: 16px;
 }
 
@@ -423,17 +463,8 @@ nav ul li.active::after {
 .column-left {
     width: 20%;
     flex-shrink: 0;
-    margin-right: 10px;
 }
 
-.column-body {
-    padding: 10px;
-    border-left: #408AE1 1.2vw solid;
-    border-right: #408AE1 2px solid;
-    border-bottom: #408AE1 2px solid;
-    border-top: #408AE1 2px solid;
-    background-color: white;
-}
 
 .column-body ul {
     padding: 0;
@@ -454,9 +485,9 @@ header {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    height: 70px;
+    height: 84px;
     position: relative;
-    border-bottom: 1px solid #e0e0e0;
+    margin-top: 15px;
 }
 
 /* Logo区域样式 */
@@ -468,6 +499,10 @@ header .header-container {
     display: inline-block;
 }
 
+#divider {
+    border-bottom: #09f 2px solid;
+}
+
 header .logo {
     position: static;
     width: auto;
@@ -475,10 +510,28 @@ header .logo {
 }
 
 header .logo img {
+    margin-left: calc(50vw - 600px);
     height: 60px;
     width: auto;
 }
 
+@media (min-width: 1800px) {
+    header .logo img {
+        margin-left: calc(50vw - 1200px);
+    }
+}
+
+@media (max-width: 1200px) {
+    header .logo img {
+        margin-left: 40px;
+    }
+
+}
+@media (max-width: 768px) {
+    header .logo img {
+        margin-left: 0;
+    }
+}
 
 /* 响应式设计 */
 @media (min-width: 1400px) {
@@ -565,7 +618,7 @@ header .logo img {
         transform: translateX(-50%) translateY(0);
     }
     
-    .dropdown::after {
+    .dropdown:has(.dropdown-menu)::after {
         font-size: 8px;
         right: 3px;
     }
@@ -579,7 +632,7 @@ header .logo img {
         color: #fff;
     }
     
-    .dropdown.active::after {
+    .dropdown.active:has(.dropdown-menu)::after {
         color: #fff;
     }
     
@@ -621,7 +674,7 @@ header .logo img {
         padding: 8px 10px;
     }
     
-    .dropdown::after {
+    .dropdown:has(.dropdown-menu)::after {
         font-size: 6px;
         right: 2px;
     }
