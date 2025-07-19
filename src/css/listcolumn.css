@@ -1,3 +1,7 @@
+
+
+
+
 .list-head {
     display: flex;
     border-bottom: #e0e0e0 1px solid;
@@ -603,7 +607,6 @@ header .logo img {
     
     header nav ul li a {
         padding: 10px 15px;
-        font-size: 14px;
     }
     
     /* 移动端下拉菜单样式调整 */
@@ -661,7 +664,6 @@ header .logo img {
 @media (max-width: 480px) {
     header nav ul li a {
         padding: 8px 12px;
-        font-size: 12px;
     }
     
     /* 小屏幕下拉菜单进一步调整 */

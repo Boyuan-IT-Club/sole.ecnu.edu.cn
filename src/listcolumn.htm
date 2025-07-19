@@ -9,12 +9,15 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/displayinfo.css" />
     <link rel="stylesheet" href="css/listcolumn.css" />
+    <link rel="stylesheet" href="css/mobileNav.css" />
     <link rel="stylesheet" href="css/header_footer.css">
     <script src="js/listcolumn.js"></script>
+    <script src="js/mobileNav.js"></script>
 </head>
 
 <body>
     <header>
+    <div class="header-first-line">
     <div frag="窗口1" portletmode="simpleSiteAttri">
         <div frag="窗口内容">
             <a href="{站点URL}" title="华东师范大学" class="header-container">
@@ -22,9 +25,12 @@
             </a>
         </div>
     </div>
+    <span class="mobile-nav-toggle" id="mobileNavToggle" aria-label="切换导航菜单">
+        ☰
+    </span>
+    </div>
 
-
-    <div frag="窗口44">
+    <div frag="窗口44" id="mainNav">
         <div frag="窗口内容">
             <nav>
                 <!--[NaviStructBegin]-->
