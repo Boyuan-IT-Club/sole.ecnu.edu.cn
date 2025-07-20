@@ -83,7 +83,6 @@ a {
   .header {
     display: grid;
     place-items: center;
-    width: 120%;
     }
 
     .header .bg {
@@ -93,9 +92,9 @@ a {
     }
 
     .desc{
-    width: 85%;
+    width: fit-content;
     height: 30px;
-    background: #f7c0c0;
+    background: #fedee0;
     border-radius: 20px;
     position: relative;
     margin-top: 15px;
@@ -104,8 +103,7 @@ a {
     .phone{
     width: 20px;
     height: 20px;
-    position: absolute;
-    left:85px;
+    margin-left: 15px;
     }
 
 .zsdh{
@@ -113,8 +111,6 @@ a {
     color:#e16d6d;
     font-size:13px;
     font-weight: 500;
-    position: absolute;
-    left:38px;
 }
 
 .phone-num
@@ -136,19 +132,16 @@ a {
     height: auto;
     font-family: Source Han Sans SC, Source Han Sans SC;
     font-weight: 400;
-    font-size: 11px;
     color: #303133;
     text-align: left;
-    margin-left: 32px;
+    margin-left: 0;
     display:block;
-    right:2px;
-    position: absolute;
-    right: 18px;
+    margin-right: 15px;
 }
 
 .division{
     font-weight: bold;
-    color:#f47a74
+    color:#f47a74;
     }
 }
 
@@ -236,7 +229,6 @@ a {
 
 @media (max-width: 600px) {
     .main-content {
-        width: 120%;
         height:auto;
         padding: 0 1%;
         margin: 30px auto;
@@ -259,6 +251,8 @@ a {
     position: absolute;
     bottom:-35px;
     left: 1vw;
+    padding-left: 5px;
+    border-left: 4px solid #7294d9;
 }
 
 .section-btn {
@@ -374,7 +368,7 @@ a {
     transition: all 0.3s ease;
     cursor: pointer;
     border-bottom: 1px solid transparent;
-    border:0.5px solid #787777;
+    border:0.5px solid #eaeaea;
 }
 .enrollment-card:nth-child(n+4) {
     display: none; /* 隐藏第4个及以后的卡片 */
@@ -523,7 +517,15 @@ a {
 /*???*/
 }
 
+.time {
+    color: #d2d2d1
+}
 
+.time-icon {
+    width: 12px;
+    height: 12px;
+    margin-right: 2px;
+}
 
 
 
@@ -594,7 +596,7 @@ a {
     transition: all 0.3s ease;
     cursor: pointer;
     border-bottom: 1px solid transparent;
-    border:0.5px solid #787777;
+    border:0.5px solid #eaeaea;
 }
 
 .training-card:nth-child(n+4) {
@@ -713,7 +715,7 @@ a {
     height: 195px;
     background: #FFFFFF;
     border-radius: 3px;
-    
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
     cursor: pointer;
     position: relative;
@@ -751,7 +753,7 @@ a {
     height: 18vh; 
     background: hsl(0, 0%, 100%);
     border-radius: 8px;
-    
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     cursor: pointer;
     position: relative;
@@ -824,12 +826,8 @@ a {
 
 @media (max-width: 600px) {
 .premium-card img{
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 60%;
-    object-fit: cover;
 }
 .premium-title {
     width: 80%;
@@ -842,17 +840,15 @@ a {
     display: -webkit-box;
     -webkit-line-clamp: 2; 
     -webkit-box-orient: vertical;
-    position: absolute;
-    top:66px;
-    left:3px;
+    position: relative;
+    margin-left: 8px;
 }
 
 
 .premium-content{
     width: 17.5vm;
-    height: 84px;
+    height: 100%;
     border-radius: 0px 0px 0px 0px;
-    margin:10px;
 }
 
 
@@ -862,15 +858,14 @@ a {
     font-family: PingFang SC, PingFang SC;
     font-weight: 400;
     font-size: 9px;
-    color: #909399;
+    color: #818483;
     text-align: left;
-    position:absolute;
-    left:12px;
-    bottom:-3px;
+    position:relative;
     overflow: hidden; 
     text-overflow: ellipsis; 
     display: -webkit-box;
     -webkit-line-clamp: 1; 
     -webkit-box-orient: vertical;
+    margin-left: 8px;
 }
 }
