@@ -68,29 +68,29 @@ document.addEventListener('DOMContentLoaded', () => {
   const isMobile = window.innerWidth <= 768;
 
   // 设置最大展示数量
-  const maxCardsPerType = isMobile ? 6 : 9;
-  if (!isMobile) {// 初始：每类最多展示 3 个卡片
-    typeMap.forEach(type => {
-      let shown = 0;
-      allCards.forEach(card => {
-        if (card.classList.contains(type)) {
-          card.style.display = shown < 3 ? 'flex' : 'none';
-          shown++;
-        }
-      });
-    });
-  } else {
-    // 移动端：每类最多展示 2 个卡片
-    typeMap.forEach(type => {
-      let shown = 0;
-      allCards.forEach(card => {
-        if (card.classList.contains(type)) {
-          card.style.display = shown < 2 ? 'flex' : 'none';
-          shown++;
-        }
-      });
-    });
-  }
+  // const maxCardsPerType = isMobile ? 6 : 9;
+  // if (!isMobile) {// 初始：每类最多展示 3 个卡片
+  //   typeMap.forEach(type => {
+  //     let shown = 0;
+  //     allCards.forEach(card => {
+  //       if (card.classList.contains(type)) {
+  //         card.style.display = shown < 3 ? 'flex' : 'none';
+  //         shown++;
+  //       }
+  //     });
+  //   });
+  // } else {
+  //   // 移动端：每类最多展示 2 个卡片
+  //   typeMap.forEach(type => {
+  //     let shown = 0;
+  //     allCards.forEach(card => {
+  //       if (card.classList.contains(type)) {
+  //         card.style.display = shown < 2 ? 'flex' : 'none';
+  //         shown++;
+  //       }
+  //     });
+  //   });
+  // }
 
   // 绑定每个按钮点击事件
   buttons.forEach((button, index) => {
@@ -124,30 +124,30 @@ document.addEventListener('DOMContentLoaded', () => {
   // 判断是否是移动端（宽度小于等于 768px）
   const isMobile = window.innerWidth <= 768;
 
-  // 设置最大展示数量
-  const maxCardsPerType = isMobile ? 4 : 12;
-  if (!isMobile) {// 初始：每类最多展示 6 个卡片
-    typeMap.forEach(type => {
-      let shown = 0;
-      allCards.forEach(card => {
-        if (card.classList.contains(type)) {
-          card.style.display = shown < 6 ? 'flex' : 'none';
-          shown++;
-        }
-      });
-    });
-  } else {
-    // 移动端：每类最多展示 2 个卡片
-    typeMap.forEach(type => {
-      let shown = 0;
-      allCards.forEach(card => {
-        if (card.classList.contains(type)) {
-          card.style.display = shown < 2 ? 'flex' : 'none';
-          shown++;
-        }
-      });
-    });
-  }
+  // // 设置最大展示数量
+  // const maxCardsPerType = isMobile ? 4 : 12;
+  // if (!isMobile) {// 初始：每类最多展示 6 个卡片
+  //   typeMap.forEach(type => {
+  //     let shown = 0;
+  //     allCards.forEach(card => {
+  //       if (card.classList.contains(type)) {
+  //         card.style.display = shown < 6 ? 'flex' : 'none';
+  //         shown++;
+  //       }
+  //     });
+  //   });
+  // } else {
+  //   // 移动端：每类最多展示 2 个卡片
+  //   typeMap.forEach(type => {
+  //     let shown = 0;
+  //     allCards.forEach(card => {
+  //       if (card.classList.contains(type)) {
+  //         card.style.display = shown < 2 ? 'flex' : 'none';
+  //         shown++;
+  //       }
+  //     });
+  //   });
+  // }
 
   // 绑定每个按钮点击事件
   buttons.forEach((button, index) => {
