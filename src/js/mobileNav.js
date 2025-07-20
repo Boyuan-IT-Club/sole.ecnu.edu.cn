@@ -16,3 +16,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    //点击名字为党政建设的导航栏栏目跳转到对应页面
+    const menulink = document.querySelectorAll('.menu-link');
+    menulink.forEach(link => {
+        console.log(link.textContent.trim());
+        if (link.textContent.trim() === '党政建设') {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                window.location.href = '/_s952/dzjs/main.psp';
+            });
+        }
+    });
+});
