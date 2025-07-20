@@ -155,8 +155,8 @@
                     <ul class="nav-list">
                         <li><a href="#top" target="_self" class="nav-item-home"><img src="icons/nav-btn/sy.png"
                                     class="nav-btn-icon">&nbsp;&nbsp;&nbsp;&nbsp;首页&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-                        <li><a href="/_s952/49606/list.psp" target="_blank" class="nav-item-profile"><img src="icons/nav-btn/xy.png"
-                                    class="nav-btn-icon">学院概况</a></li>
+                        <li><a href="/_s952/49606/list.psp" target="_blank" class="nav-item-profile"><img
+                                    src="icons/nav-btn/xy.png" class="nav-btn-icon">学院概况</a></li>
                         <li><a href="/_s952/dzjs/main.psp" target="_blank" class="nav-item-party"><img
                                     src="icons/nav-btn/dz.png" class="nav-btn-icon">党政建设</a></li>
                         <li><a href="https://solezs.ecnu.edu.cn/" target="_blank" class="nav-item-degree"><img
@@ -205,21 +205,19 @@
                 <div class="news-list" frag="窗口1">
                     <div frag="窗口内容">
                         <!--[InfoCycleBegin]-->
-                        <div class="news-card">
-                            <a href="{文章URL}" class="link">
-                                <div class="news-pic-container">
-                                    <img src="{图片路径}" alt="{标题}" />
-                                </div>
-                                <div class="content">
-                                    <h2>{标题}</h2>
-                                    <div class="meta-info">
-                                        <div class="tags-box-wrapper">
-                                            <div class="tags-box" data-tags="{扩展字段1}"></div>
-                                        </div>
-                                        <span class="time">{发布时间}</span>
+                        <div class="news-card" id="{文章URL}">
+                            <div class="news-pic-container">
+                                <img src="{图片路径}" alt="{标题}" />
+                            </div>
+                            <div class="content">
+                                <h2>{标题}</h2>
+                                <div class="meta-info">
+                                    <div class="tags-box-wrapper">
+                                        <div class="tags-box" data-tags="{扩展字段1}"></div>
                                     </div>
+                                    <span class="time">{发布时间}</span>
                                 </div>
-                            </a>
+                            </div>
                         </div>
                         <!--[InfoCycleEnd]-->
                     </div>
@@ -323,20 +321,18 @@
                 <div class="enrollment-grid" frag="窗口2">
                     <div frag="窗口内容">
                         <!--[InfoCycleBegin]-->
-                        <div class="enrollment">
+                        <div class="enrollment" id="{文章URL}">
                             <figure>
                                 <img class="enrollment-badge" src="">
                                 <span class="text">{栏目}</span>
                             </figure>
-                            <a href="{文章URL}" class="link">
-                                <div class="enrollment-content">
-                                    <div class="enrollment-date">
-                                        <h2 class="month-date">{发布时间}</h2>
-                                        <h5 class="year">{发布时间}</h5>
-                                    </div>
-                                    <h3 class="enrollment-title">{标题}</h3>
+                            <div class="enrollment-content">
+                                <div class="enrollment-date">
+                                    <h2 class="month-date">{发布时间}</h2>
+                                    <h5 class="year">{发布时间}</h5>
                                 </div>
-                            </a>
+                                <h3 class="enrollment-title">{标题}</h3>
+                            </div>
                         </div>
                         <!--[InfoCycleEnd]-->
                     </div>
@@ -371,22 +367,20 @@
                 <div class="brand-grid" frag="窗口3">
                     <div frag="窗口内容">
                         <!--[InfoCycleBegin]-->
-                        <div class="brand-item">
-                            <a href="{文章URL}" class="link">
-                                <div class="brand-pic-container">
-                                    <img class="brand-pic" src="{图片路径}" alt="{标题}" />
-                                </div>
-                                <figure class="badge">
-                                    <img class="brand-badge" src="">
-                                    <span class="text2">{栏目}</span>
-                                </figure>
-                                <h2 class="brand-title">{标题}</h2>
-                                <p class="brand-subtitle">{副标题}</p>
-                                <div class="brand-footer">
-                                    <span class="brand-date">{发布时间}</span>
-                                    <img class="brand-arrow" src="icons/brand-icon/view.png">
-                                </div>
-                            </a>
+                        <div class="brand-item" id="{文章URL}">
+                            <div class="brand-pic-container">
+                                <img class="brand-pic" src="{图片路径}" alt="{标题}" />
+                            </div>
+                            <figure class="badge">
+                                <img class="brand-badge" src="">
+                                <span class="text2">{栏目}</span>
+                            </figure>
+                            <h2 class="brand-title">{标题}</h2>
+                            <p class="brand-subtitle">{副标题}</p>
+                            <div class="brand-footer">
+                                <span class="brand-date">{发布时间}</span>
+                                <img class="brand-arrow" src="icons/brand-icon/view.png">
+                            </div>
                         </div>
                         <!--[InfoCycleEnd]-->
                     </div>

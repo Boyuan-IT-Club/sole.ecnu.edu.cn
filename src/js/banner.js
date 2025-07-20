@@ -222,3 +222,30 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const pinpaiCards = document.querySelectorAll('.news-card'); 
+  pinpaiCards.forEach(card => {
+    card.addEventListener('click', function () {
+      window.location.href = card.id;
+    });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const pinpaiCards = document.querySelectorAll('.enrollment'); 
+  pinpaiCards.forEach(card => {
+    card.addEventListener('click', function () {
+      window.location.href = card.id;
+    });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const pinpaiCards = document.querySelectorAll('.brand-item'); 
+  pinpaiCards.forEach(card => {
+    card.addEventListener('click', function () {
+      window.location.href = card.id;
+    });
+  });
+});
