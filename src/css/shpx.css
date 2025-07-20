@@ -3,6 +3,12 @@ body{
     font-size: 16px; 
 }
 
+@media (max-width: 600px) {
+  body {
+    background-color: rgb(255, 255, 255);
+    padding: 2px;
+  }
+}
 
 a {
   text-decoration: none;
@@ -19,7 +25,6 @@ a {
 .header .bg {
     width: 100%;
     height: auto;
-    
 }
 
 .desc{
@@ -40,6 +45,10 @@ a {
     margin-left: -70px;
 }
 
+.zsdh
+{
+    display: none;
+}
 .phone-num
 {
     width: auto;
@@ -52,10 +61,97 @@ a {
     margin-left: 32px;
 }
 
+.phone-num-2
+{
+    width: auto;
+    height: auto;
+    font-family: Source Han Sans SC, Source Han Sans SC;
+    font-weight: bold;
+    font-size: clamp(12px, 2vw, 16px);
+    color: #303133;
+    text-align: left;
+    margin-left: 32px;
+    display:none;
+}
+
 .division{
     font-weight: lighter;
     color:#ebecef
 }
+
+@media (max-width: 600px) {
+  .header {
+    display: grid;
+    place-items: center;
+    width: 120%;
+    }
+
+    .header .bg {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    }
+
+    .desc{
+    width: 85%;
+    height: 30px;
+    background: #f7c0c0;
+    border-radius: 20px;
+    position: relative;
+    margin-top: 15px;
+    }
+
+    .phone{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left:85px;
+    }
+
+.zsdh{
+    display:block;
+    color:#e16d6d;
+    font-size:13px;
+    font-weight: 500;
+    position: absolute;
+    left:38px;
+}
+
+.phone-num
+{
+    width: auto;
+    height: auto;
+    font-family: Source Han Sans SC, Source Han Sans SC;
+    font-weight: bold;
+    font-size:16px;
+    color: #303133;
+    text-align: left;
+    margin-left: 32px;
+    display:none;
+}
+
+.phone-num-2
+{
+    width: auto;
+    height: auto;
+    font-family: Source Han Sans SC, Source Han Sans SC;
+    font-weight: 400;
+    font-size: 11px;
+    color: #303133;
+    text-align: left;
+    margin-left: 32px;
+    display:block;
+    right:2px;
+    position: absolute;
+    right: 18px;
+}
+
+.division{
+    font-weight: bold;
+    color:#f47a74
+    }
+}
+
 
 
 
@@ -79,7 +175,6 @@ a {
 }
 
 .section-title {
-    width: 15vw;
     height: auto;
     font-family: Source Han Sans SC, Source Han Sans SC;
     font-weight: bold;
@@ -108,11 +203,27 @@ a {
     font-weight: 200;
     font-size: 0.8em;
 }
+.section-btn-2 {
+    width: 5vw;
+    height: 1.9vw;
+    background: #D2203C;
+    border-radius: 9px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    right: 0;
+    font-weight: 200;
+    font-size: 0.8em;
+    display:none;
+}
 
 .section-btn:hover {
     background: #b21f35;
 }
-
 
 .arrow {
     margin-left: 4px ;
@@ -121,6 +232,84 @@ a {
     align-items: center; 
     width:0.9vw;
 }
+
+
+@media (max-width: 600px) {
+    .main-content {
+        width: 120%;
+        height:auto;
+        padding: 0 1%;
+        margin: 30px auto;
+    }
+    .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+    .section-title {
+    font-family: Source Han Sans SC, Source Han Sans SC;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+    text-align: left;
+    position: absolute;
+    bottom:-35px;
+    left: 1vw;
+}
+
+.section-btn {
+    width: 20vw;
+    height: 1.9vw;
+    background: #ffffff;
+    border-radius: 9px;
+    color: #ce1515;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    right: 0;
+    font-weight: 500;
+    font-size: 18px;
+    display:none;
+}
+
+.section-btn-2 {
+    width: 14vw;
+    height: 1vw;
+    background: #ffffff;
+    border-radius: 9px;
+    color: #f73d3d;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    right: 0;
+    font-weight: 500;
+    font-size: 13px;
+    display: block;
+}
+
+.arrow {
+    width:20px;
+    position:absolute;
+    right:10px;
+}
+/*arrow*/
+}
+
+
+
+
+
+
 
 
 
@@ -158,6 +347,44 @@ a {
     border-bottom:2px solid #D2203C;
 }
 
+
+
+@media (max-width: 600px) {
+    .enroll-section {
+    width: 100%;
+    margin-top: -10px;
+    padding-top: 1px;
+}
+.enrollment-grid {
+    width:100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(30px, auto);
+    column-gap: 0;
+    row-gap: 6px;
+    margin-top: 25px;
+}
+
+.enrollment-card {
+    width: 100%;
+    height: 10vw;
+    background: #FFFFFF;
+    border-radius: 5px;
+    position:relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    border:0.5px solid #787777;
+}
+.enrollment-card:nth-child(n+4) {
+    display: none; /* 隐藏第4个及以后的卡片 */
+}
+
+.enrollment-card:hover {
+    border-bottom:2px solid #D2203C;
+}
+
+}
 
 .enrollment-content {
     margin-top: 17px;
@@ -229,6 +456,73 @@ a {
     z-index: 999;
 }
 
+.arrow2 
+{
+    display:none;
+}
+
+
+@media (max-width: 600px) {
+.enrollment-content {
+    margin-top: 1px;
+    width: 100%;
+    height:80%;
+    display: flex;
+   /* gap: 15px;*/
+   position:relative;
+}
+
+.enrollment-title {
+    width: 80vw;
+    height: auto;
+    font-family: Source Han Sans SC, Source Han Sans SC;
+    font-weight: 400;
+    font-size: 12px;
+    color: #303133;
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    display: -webkit-box;
+    -webkit-line-clamp: 1; 
+    -webkit-box-orient: vertical;
+    position:absolute;
+    left:2vw;
+    top:-2vw;
+
+}
+
+.enrollment-date{
+    display: none;
+}
+
+.newsign {
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    font-family: PingFang SC, PingFang SC;
+    font-weight: 400;
+    font-size: 11px;
+    color: #dc112f;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    position: absolute;
+    right: 10vw;
+    top:2vw;
+    z-index: 999;
+}
+
+.arrow2{
+    display:block;
+    position:absolute;
+    width: 15px;
+    height: auto;
+    right: 10px;
+    top:6px;
+    background-color: transparent;
+}
+/*???*/
+}
+
 
 
 
@@ -275,8 +569,49 @@ a {
     display:block;
 }
 
+@media (max-width: 600px) {
+    .training-section {
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+.training-grid {
+    width:100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(30px, auto);
+    column-gap: 0;
+    row-gap: 5kpx;
+    margin-top: 30px;
+}
+
+.training-card {
+    width: 100%;
+    height: 18vw;
+    background: #FFFFFF;
+    border-radius: 10px;
+    position:relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    border:0.5px solid #787777;
+}
+
+.training-card:nth-child(n+4) {
+    display: none; /* 隐藏第4个及以后的卡片 */
+}
+
+/*图片实现遮挡？*/
+.training-card img{
+    width:30%;
+    height:auto;
+    display:block;
+}
+
+}
+
 .training-title {
-    width: 200px;
+    width: 180px;
     font-family: Source Han Sans SC, Source Han Sans SC;
     font-weight: 500;
     font-size: 12px;
@@ -293,7 +628,7 @@ a {
 .content{
     width: 336px;
     height: 84px;
-    border-radius: 0px 0px 0px 0px;
+
     margin:10px;
 }
 
@@ -310,6 +645,49 @@ a {
     left:12px;
     bottom:8px;
 }
+
+
+@media (max-width: 600px) {
+    .training-title {
+    width: 65vw;
+    font-family: Source Han Sans SC, Source Han Sans SC;
+    font-weight: 400;
+    font-size: 12px;
+    color: #303133;
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    display: -webkit-box;
+    -webkit-line-clamp: 1; 
+    -webkit-box-orient: vertical;
+    position: absolute;
+    top:3px;
+    left:34vw;
+}
+
+.content{
+    width: 100%;
+    height: 84px;
+    border-radius: 0px 0px 0px 0px;
+    margin:10px;
+}
+
+.training-date{
+    width: 308px;
+    height: 21px;
+    font-family: PingFang SC, PingFang SC;
+    font-weight: 400;
+    font-size: 10px;
+    color: #b1b2b5;
+    text-align: left;
+    position:absolute;
+    left:40vw;
+    top:10vw;
+
+}
+}
+
+
+
 
 
 
@@ -349,6 +727,49 @@ a {
 }
 
 
+
+
+@media (max-width: 600px) {
+.premium-section {
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    padding-top:2px;
+}
+
+.premium-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+    grid-auto-rows: minmax(20px, auto);
+    column-gap: 8px;
+    row-gap: 8px;
+    margin-top: 25px;
+}
+
+.premium-card {
+    width: 18vm;
+    height: 18vh; 
+    background: hsl(0, 0%, 100%);
+    border-radius: 8px;
+    
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+}
+.premium-card:nth-child(n+7) {
+    display: none;
+}
+
+
+.premium-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
+}
+}
+
+
 .premium-title {
     width: 200px;
     font-family: Source Han Sans SC, Source Han Sans SC;
@@ -381,7 +802,7 @@ a {
 
 
 .line{
-    width: 200px;
+    width: 180px;
     height: 15px;
     font-family: PingFang SC, PingFang SC;
     font-weight: 400;
@@ -396,4 +817,60 @@ a {
     display: -webkit-box;
     -webkit-line-clamp: 1; 
     -webkit-box-orient: vertical;
+}
+
+
+
+
+@media (max-width: 600px) {
+.premium-card img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+}
+.premium-title {
+    width: 80%;
+    font-family: Source Han Sans SC, Source Han Sans SC;
+    font-weight: 500;
+    font-size: 12px;
+    color: #303133;
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical;
+    position: absolute;
+    top:66px;
+    left:3px;
+}
+
+
+.premium-content{
+    width: 17.5vm;
+    height: 84px;
+    border-radius: 0px 0px 0px 0px;
+    margin:10px;
+}
+
+
+.line{
+    width: 80%;
+    height: auto;
+    font-family: PingFang SC, PingFang SC;
+    font-weight: 400;
+    font-size: 9px;
+    color: #909399;
+    text-align: left;
+    position:absolute;
+    left:12px;
+    bottom:-3px;
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    display: -webkit-box;
+    -webkit-line-clamp: 1; 
+    -webkit-box-orient: vertical;
+}
 }
