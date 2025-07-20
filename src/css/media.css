@@ -245,7 +245,7 @@
 
     .news-list {
         display: grid;
-        grid-template-columns: 368px;
+        grid-template-columns: repeat(1, 0px);
         grid-template-rows: repeat(5, 85px);
         gap: 0px;
         row-gap: 18px;
