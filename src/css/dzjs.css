@@ -153,13 +153,13 @@ header .logo img {
     line-height: 22px;
     font-weight: normal;
     color: #000 !important;
-    margin-bottom: 18px;
+    margin-bottom: 13px;
 }
 
 .activity-desc {
     font-size: 14px;
     color: #808080;
-    line-height: 23px;
+    line-height: 25px;
     margin-bottom: 10px;
     height: 80px;
     overflow: hidden;
