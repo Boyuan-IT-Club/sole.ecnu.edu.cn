@@ -153,13 +153,13 @@ header .logo img {
     line-height: 22px;
     font-weight: normal;
     color: #000 !important;
-    margin-bottom: 18px;
+    margin-bottom: 13px;
 }
 
 .activity-desc {
     font-size: 14px;
     color: #808080;
-    line-height: 23px;
+    line-height: 25px;
     margin-bottom: 10px;
     height: 80px;
     overflow: hidden;
@@ -243,8 +243,6 @@ header .logo img {
     justify-content: space-between;
     height: 28px;
     overflow: hidden;
-    line-height: 2px;
-    margin-top: -4px;
 }
 
 .system-item,
@@ -271,10 +269,11 @@ header .logo img {
 .study-title {
     font-size: 14px;
     color: #333;
-    line-height: 1.4;
     margin-right: 10px;
     overflow: hidden;
     width: 100%;
+    line-height: 2;
+    margin-top: -4px;
 }
 
 .system-time,
@@ -311,7 +310,6 @@ header .logo img {
     .activity-item {
         flex-direction: column;
     }
-
     
     .activity-img {
         width: 100%;

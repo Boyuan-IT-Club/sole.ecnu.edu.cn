@@ -93,7 +93,7 @@ li {
 
 .news-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(228px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(227px, 1fr));
   grid-template-rows: 310px;
   gap: 18px;
   max-width: 100%;
@@ -134,7 +134,7 @@ li {
 
 .business-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(311px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(309px, 1fr));
   grid-template-rows: 130px 130px;
   gap: 17px;
 }
@@ -273,7 +273,7 @@ li {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(311px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(309px, 1fr));
   justify-items: left;
   gap: 17px;
   height: auto;
@@ -502,7 +502,7 @@ li {
 
 /* 普通卡片的内容样式 */
 .news-card:not(:first-child) .content {
-  padding: 25px 13px;
+  padding: 14px 13px;
   flex: 1;
 }
 
@@ -521,4 +521,5 @@ li {
   margin-bottom: 13px;
   color: #333;
   overflow: hidden;
+  height: 90px;
 }
