@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
       let shown = 0;
       allCards.forEach(card => {
         if (card.classList.contains(type)) {
-          card.style.display = shown < 3 ? 'flex' : 'none';
+          card.style.display = shown < 2 ? 'flex' : 'none';
           shown++;
         }
       });
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
       let shown = 0;
       allCards.forEach(card => {
         if (card.classList.contains(type)) {
-          card.style.display = shown < 2 ? 'flex' : 'none';
+          card.style.display = shown < 1 ? 'flex' : 'none';
           shown++;
         }
       });
