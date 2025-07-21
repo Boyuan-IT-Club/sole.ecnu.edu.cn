@@ -153,7 +153,7 @@ header .logo img {
     line-height: 22px;
     font-weight: normal;
     color: #000 !important;
-    margin-bottom: 18px;
+    margin-bottom: 13px;
 }
 
 .activity-desc {
@@ -269,10 +269,11 @@ header .logo img {
 .study-title {
     font-size: 14px;
     color: #333;
-    line-height: 1.4;
     margin-right: 10px;
     overflow: hidden;
     width: 100%;
+    line-height: 2;
+    margin-top: -4px;
 }
 
 .system-time,
@@ -309,7 +310,6 @@ header .logo img {
     .activity-item {
         flex-direction: column;
     }
-
     
     .activity-img {
         width: 100%;
