@@ -21,6 +21,8 @@ a {
     display: grid;
     place-items: center;
     width: 100%;
+    height: 40%;
+    overflow:hidden;
 }
 
 .header .bg {
@@ -30,13 +32,13 @@ a {
 
 .desc{
     width: 100%;
-    height: 130%;
+    height: 70px;
     background: #FFFFFF;
     border-radius: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -0.9375rem;
+
     max-width: 1920px;
 }
 
@@ -328,7 +330,7 @@ a {
     width: 100%;
     border-radius: 0px ;
     margin-top: 50px;
-    padding-top: 50px;
+    padding-top: 1.5vw;
 }
 
 
@@ -337,9 +339,9 @@ a {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(100px, auto);
-    column-gap: 1.6vw;
-    row-gap: 10px;
-    margin-top: 35px;
+    column-gap: 1.4vw;
+    row-gap: 16px;
+    margin-top: 20px;
 }
 
 .enrollment-card {
@@ -372,12 +374,12 @@ a {
     grid-auto-rows: minmax(30px, auto);
     column-gap: 0;
     row-gap: 6px;
-    margin-top: 25px;
+    margin-top: 15px;
 }
 
 .enrollment-card {
     width: 100%;
-    height: 10vw;
+    height: 8vw;
     background: #FFFFFF;
     border-radius: 5px;
     position:relative;
@@ -430,10 +432,9 @@ a {
 }
 
 
-
 .enrollment-title {
     width: 13vw;
-    height: 2.9vw;
+    height:auto;
     font-family: Source Han Sans SC, Source Han Sans SC;
     font-weight: 500;
     font-size: 16px;
@@ -475,7 +476,7 @@ a {
 
 @media (max-width: 600px) {
 .enrollment-content {
-    margin-top: 1px;
+    margin-top: 3px;
     width: 100%;
     height:80%;
     display: flex;
@@ -517,8 +518,8 @@ a {
     justify-content: center; 
     align-items: center; 
     position: absolute;
-    right: 10vw;
-    top:2vw;
+    right: 6vw;
+    top:-2vw;
     z-index: 999;
 }
 
@@ -528,7 +529,7 @@ a {
     width: 15px;
     height: auto;
     right: 10px;
-    top:6px;
+    top: -1.5vw;
     background-color: transparent;
 }
 /*???*/
@@ -607,7 +608,7 @@ a {
 
 .training-card {
     width: 100%;
-    height: 18vw;
+    height: 12vw;
     background: #FFFFFF;
     border-radius: 10px;
     position:relative;
@@ -623,7 +624,7 @@ a {
 
 /*图片实现遮挡？*/
 .training-card img{
-    width:30%;
+    width:25%;
     height:auto;
     display:block;
 }
@@ -680,8 +681,8 @@ a {
     -webkit-line-clamp: 1; 
     -webkit-box-orient: vertical;
     position: absolute;
-    top:3px;
-    left:34vw;
+    top:-1.5px;
+    left:25vw;
 }
 
 .content{
@@ -700,8 +701,8 @@ a {
     color: #b1b2b5;
     text-align: left;
     position:absolute;
-    left:40vw;
-    top:10vw;
+    left:29vw;
+    top:6.5vw;
 
 }
 }
@@ -848,7 +849,7 @@ a {
     height: 60%;
 }
 .premium-title {
-    width: 80%;
+    width: 90%;
     font-family: Source Han Sans SC, Source Han Sans SC;
     font-weight: 500;
     font-size: 12px;
@@ -856,10 +857,11 @@ a {
     overflow: hidden; 
     text-overflow: ellipsis; 
     display: -webkit-box;
-    -webkit-line-clamp: 2; 
+    -webkit-line-clamp: 1; 
     -webkit-box-orient: vertical;
     position: static;
     margin-left: 8px;
+    margin-top: 6px;
 }
 
 
@@ -878,12 +880,18 @@ a {
     font-size: 9px;
     color: #818483;
     text-align: left;
-    position:static;
+    position:absolute;
     overflow: hidden; 
     text-overflow: ellipsis; 
     display: -webkit-box;
     -webkit-line-clamp: 1; 
     -webkit-box-orient: vertical;
-    margin-left: 8px;
+    left: 2vw;
+    bottom: -1vw;
 }
+
+.line:empty {
+  display: none;
+}
+
 }
