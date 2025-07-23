@@ -464,7 +464,7 @@ a {
     align-items: center; 
     position: absolute;
     top: 30px;
-    right: 180px;
+    right: 70%;
     z-index: 999;
 }
 
