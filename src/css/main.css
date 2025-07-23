@@ -395,26 +395,34 @@ li {
   z-index: 1;
 }
 
+.brand-content{
+  margin-left: 8%;
+  height: 20%;
+  width: 90%;
+  /* mamargin-top: 5px; */
+}
 .brand-title {
-  margin: 20px 28px 5px 28px;
+  /* margin: 20px 28px 5px 28px; */
+  margin-top: 6.5%;
   font-size: 17px;
   font-weight: 600;
   color: #333;
-  height: 55px;
 }
 
 .brand-subtitle {
-  margin: 0 28px;
-  font-size: 14px;
-  color: #666;
+  /* margin: 0 28px; */
+  margin-top: 1%;
+  font-size: 13px;
+  color: #666666e0;
 }
 
 .brand-footer {
   display: flex;
   justify-content: space-between;
-  margin: 20px 28px;
+  margin-top: 8%;
   align-items: center;
 }
+
 
 .brand-date {
   font-size: 14px;
