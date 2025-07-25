@@ -17,3 +17,14 @@ document.addEventListener('DOMContentLoaded', function () {
         element.textContent = year;
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const newsigns = document.querySelectorAll(".newsign");
+    
+    // 最多显示 3 个
+    if (newsigns.length > 3) {
+        for (let i = 3; i < newsigns.length; i++) {
+            newsigns[i].style.display = "none";
+        }
+    }
+});
