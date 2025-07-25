@@ -100,6 +100,7 @@
     width: 70%;
     position: relative;
     border-bottom: #408AE1 4px solid;
+    padding: 0 30px;
 }
 
 .path {
@@ -222,6 +223,13 @@
     .column-body {
         padding: 8px;
     }
+
+    .column-left {
+        width: 100%;
+        margin-bottom: 20px;
+        order: 1;
+        display: none;
+    }
     
     .column-name {
         font-size: 14px;
@@ -244,6 +252,7 @@
     .footer {
         flex-direction: column;
         padding: 20px 10px;
+        display: none;
     }
     
     .footer-left,
@@ -252,6 +261,7 @@
         width: 100%;
         margin-bottom: 20px;
         text-align: left;
+        display: none;
     }
     
     .contact-info {

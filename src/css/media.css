@@ -612,6 +612,7 @@
         color: #333;
         line-height: 1.6;
         flex: 1;
+        white-space: nowrap;
     }
 
     /* 品牌项目样式优化 */
@@ -675,6 +676,7 @@
         color: #333;
         margin: 2px 0;
         height: 23px;
+        white-space: nowrap;
     }
 
     .brand-subtitle {
