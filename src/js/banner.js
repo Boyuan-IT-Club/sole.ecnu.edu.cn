@@ -59,114 +59,6 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM fully loaded!');
-
-    // 设置观察目标元素（通常是包含所有卡片的容器）
-    const targetNode = document.body; // 或者更具体的容器元素
-
-    // 配置观察选项
-    const config = {
-        childList: true,
-        subtree: true,
-        attributes: false,
-        characterData: false
-    };
-
-    // 创建观察者实例
-    const observer = new MutationObserver((mutationsList, observer) => {
-        // 检查是否已经存在'on-job'类的元素
-        const hasOnJobCards = document.querySelectorAll('.on-job').length > 0;
-
-        if (hasOnJobCards) {
-            // 如果找到了目标元素，停止观察并执行主逻辑
-            observer.disconnect();
-            executeMainLogic();
-        }
-    });
-
-    // 开始观察目标节点
-    observer.observe(targetNode, config);
-
-    // 设置超时作为后备方案（防止元素永远不出现）
-    const timeout = setTimeout(() => {
-        observer.disconnect();
-        console.warn('Timeout reached, executing logic anyway');
-        executeMainLogic();
-    }, 5000); // 5秒超时
-
-    // 主逻辑函数
-    function executeMainLogic() {
-        clearTimeout(timeout); // 清除超时
-
-        const buttons = document.querySelectorAll('.section-part-enroll-btn');
-        const allCards = document.querySelectorAll('.enrollment');
-        console.log('Total cards found:', allCards.length);
-
-        allCards.forEach(card => {
-            console.log('Card classes:', card.classList);
-        });
-
-        const typeMap = ['international', 'on-job', 'training'];
-        const isMobile = window.innerWidth <= 768;
-
-        setTimeout(() => console.log("0.2 秒后打印"), 200);
-
-        const maxCardsPerType = isMobile ? 6 : 9;
-
-        if (!isMobile) {
-            typeMap.forEach(type => {
-                let shown = 0;
-                allCards.forEach(card => {
-                    console.log(card.classList, type, card.classList.contains(type));
-                    console.log('Class list:', Array.from(card.classList));
-                    console.log(card.className);
-                    if (card.classList.contains(type)) {
-                        card.style.display = shown < 3 ? 'flex' : 'none';
-                        console.log('shown');
-                        shown++;
-                    }
-                });
-            });
-        } else {
-            typeMap.forEach(type => {
-                let shown = 0;
-                allCards.forEach(card => {
-                    if (card.classList.contains(type)) {
-                        card.style.display = shown < 2 ? 'flex' : 'none';
-                        shown++;
-                    }
-                });
-            });
-        }
-        buttons.forEach((button, index) => {
-            button.addEventListener('click', () => {
-                const selectedType = typeMap[index];
-
-                // 切换按钮高亮
-                buttons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-
-                // 显示选中的卡片，隐藏其他
-                let shown = 0;
-                allCards.forEach(card => {
-                    if (card.classList.contains(selectedType)) {
-                        card.style.display = shown < maxCardsPerType ? 'flex' : 'none';
-                        shown++;
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            });
-        });
-    }
-
-    // 初始检查，以防元素已经存在
-    if (document.querySelectorAll('.on-job').length > 0) {
-        observer.disconnect();
-        executeMainLogic();
-    }
-});
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM fully loaded for brand section!');
@@ -223,35 +115,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const maxCardsPerType = isMobile ? 4 : 12;
 
-        if (!isMobile) {
-            typeMap.forEach(type => {
-                let shown = 0;
-                allCards.forEach(card => {
-                    console.log(card.classList, type, card.classList.contains(type));
-                    console.log('Brand class list:', Array.from(card.classList));
-                    console.log(card.className);
-                    if (card.classList.contains(type)) {
-                        card.style.display = shown < 6 ? 'flex' : 'none';
-                        console.log('brand shown');
-                        shown++;
-                    }
+        function renderDefault() {
+            if (!isMobile) {
+                typeMap.forEach(type => {
+                    let shown = 0;
+                    allCards.forEach(card => {
+                        console.log(card.classList, type, card.classList.contains(type));
+                        console.log('Brand class list:', Array.from(card.classList));
+                        console.log(card.className);
+                        if (card.classList.contains(type)) {
+                            card.style.display = shown < 6 ? 'flex' : 'none';
+                            console.log('brand shown');
+                            shown++;
+                        }
+                    });
                 });
-            });
-        } else {
-            typeMap.forEach(type => {
-                let shown = 0;
-                allCards.forEach(card => {
-                    if (card.classList.contains(type)) {
-                        card.style.display = shown < 2 ? 'flex' : 'none';
-                        shown++;
-                    }
+            } else {
+                typeMap.forEach(type => {
+                    let shown = 0;
+                    allCards.forEach(card => {
+                        if (card.classList.contains(type)) {
+                            card.style.display = shown < 2 ? 'flex' : 'none';
+                            shown++;
+                        }
+                    });
                 });
-            });
+            }
         }
+
+        renderDefault();
 
         buttons.forEach((button, index) => {
             button.addEventListener('click', () => {
                 const selectedType = typeMap[index];
+
+                // 如果按钮本身已经是 active，则恢复初始状态
+                if (button.classList.contains('active')) {
+                    button.classList.remove('active');
+                    renderDefault();  // 恢复三类卡片初始展示
+                    return;
+                }
 
                 // 切换按钮高亮
                 buttons.forEach(btn => btn.classList.remove('active'));
