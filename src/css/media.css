@@ -544,7 +544,7 @@
         z-index: 1;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(6, 90px);
+        grid-template-rows: repeat(auto-fix, 90px);
         gap: 12px;
         height: auto;
     }
@@ -612,7 +612,6 @@
         color: #333;
         line-height: 1.6;
         flex: 1;
-        white-space: nowrap;
     }
 
     /* 品牌项目样式优化 */
@@ -623,7 +622,7 @@
     .brand-grid {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 77px);
+        grid-template-rows: repeat(auto-fix, 77px);
         gap: 10px;
         height: auto;
     }
@@ -676,7 +675,6 @@
         color: #333;
         margin: 2px 0;
         height: 23px;
-        white-space: nowrap;
     }
 
     .brand-subtitle {
