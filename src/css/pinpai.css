@@ -61,6 +61,7 @@
     flex-direction: column;
     justify-content: space-between;
     height: 140px;
+    position: relative;
 }
 
 /* 品牌卡片标题 */
@@ -81,7 +82,9 @@
 .pinpai-card-time {
     font-size: 12px;
     color: #999;
-    margin: 0 0 8px 0;
+    margin: 8px 0 0px 0;
+    position: absolute;
+    bottom: 8px;
 }
 
 /* 品牌卡片摘要 */
@@ -214,6 +217,7 @@
     
     .pinpai-card-content {
         padding: 8px;
+        height: 75px;
     }
     
     .pinpai-card-title {
@@ -253,6 +257,6 @@
     
     .pinpai-card-summary {
         font-size: 12px;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 1;
     }
 } 
