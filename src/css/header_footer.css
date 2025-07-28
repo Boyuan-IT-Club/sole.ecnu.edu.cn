@@ -398,6 +398,17 @@
   display: none;
 }
 
+@media (max-width: 768px) {
+  .copyright-media {
+    display: block;
+    font-size: 12px;
+    text-align: center;
+  }
+  .copyright {
+    display: none;
+  }
+}
+
 .contact-info-media {
   display: none;
 }
