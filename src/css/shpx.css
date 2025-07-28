@@ -764,16 +764,13 @@ a {
 }
 
 .training-title {
-    width: 90%;
-    font-family: Source Han Sans SC, Source Han Sans SC;
+    width: 100%;
     font-weight: 500;
     font-size: 13px;
     color: #303133;
+    white-space: nowrap;
     overflow: hidden; 
     text-overflow: ellipsis; 
-    display: -webkit-box;
-    -webkit-line-clamp: 1; 
-    -webkit-box-orient: vertical;
     position: absolute;
     top:120px;
 }
@@ -789,7 +786,6 @@ a {
 .training-date{
     width: 308px;
     height: 21px;
-    font-family: PingFang SC, PingFang SC;
     font-weight: 400;
     font-size: 10px;
     color: #909399;
@@ -978,11 +974,9 @@ a {
     position:absolute;
     left: 0.8vw;
     bottom: 0vw;
+    white-space: nowrap;
     overflow: hidden; 
     text-overflow: ellipsis; 
-    display: -webkit-box;
-    -webkit-line-clamp: 1; 
-    -webkit-box-orient: vertical;
 }
 
 .line a{
@@ -1027,9 +1021,7 @@ a {
     position:absolute;
     overflow: hidden; 
     text-overflow: ellipsis; 
-    display: -webkit-box;
-    -webkit-line-clamp: 1; 
-    -webkit-box-orient: vertical;
+    white-space: nowrap;
     left: 2vw;
     bottom: -1vw;
 } 
