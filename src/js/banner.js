@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     // 如果按钮不是激活状态，添加高亮并显示对应类型的卡片
                     buttons.forEach(btn => btn.classList.remove('active'));
                     button.classList.add('active');
-                    
+
                     let shown = 0;
                     allCards.forEach(card => {
                         if (card.classList.contains(selectedType)) {
@@ -280,7 +280,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     // 如果按钮不是激活状态，添加高亮并显示对应类型的卡片
                     buttons.forEach(btn => btn.classList.remove('active'));
                     button.classList.add('active');
-                    
+
                     let shown = 0;
                     allCards.forEach(card => {
                         if (card.classList.contains(selectedType)) {
@@ -382,3 +382,16 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+function updateImage() {
+    const img = document.getElementById('arrow');
+    if (window.innerWidth <= 768) {
+        img.src = 'icons/homepage/view-comment2.png';
+    } else {
+        img.src = 'icons/homepage/view-common.png';
+    }
+}
+
+// 页面加载和窗口变化时触发
+window.addEventListener('load', updateImage);
+window.addEventListener('resize', updateImage);

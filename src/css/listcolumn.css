@@ -39,7 +39,7 @@ header {
 }
 
 nav {
-    margin-left: 30px;
+    margin-left: 20px;
     background-color: #fff;
     color: #333;
     padding: 0;
@@ -65,7 +65,7 @@ nav ul li {
 
 
 nav ul li a {
-    padding: 15px 31px;
+    padding: 15px 15px;
     display: inline-block;
     position: relative;
     color: #333;
@@ -514,7 +514,7 @@ header .logo {
 }
 
 header .logo img {
-    margin-left: max(0px, calc(50vw - 600px));
+    margin-left: max(0px, calc(50vw - 650px));
     height: 60px;
     width: auto;
 }
