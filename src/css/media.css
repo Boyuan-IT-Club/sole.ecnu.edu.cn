@@ -347,6 +347,13 @@
         overflow: hidden;
     }
 
+    .news-card:nth-child(2) {order: 3;}
+    .news-card:nth-child(3) {order: 5;}
+    .news-card:nth-child(4) {order: 7;}
+    .news-card:nth-child(5) {order: 2;}
+    .news-card:nth-child(6) {order: 4;}
+    .news-card:nth-child(7) {order: 6;}
+
     /* 通用 meta-info 样式 */
     .meta-info {
         display: flex;
