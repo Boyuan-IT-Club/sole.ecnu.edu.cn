@@ -616,6 +616,7 @@
         color: #333;
         line-height: 1.6;
         flex: 1;
+        -webkit-line-clamp: 1;
     }
 
     /* 品牌项目样式优化 */
@@ -692,6 +693,7 @@
         justify-content: right;
         align-items: center;
         margin-right: 0;
+        margin-top: 0;
     }
 
     .brand-date {
