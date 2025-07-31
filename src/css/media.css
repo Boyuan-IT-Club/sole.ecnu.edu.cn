@@ -856,3 +856,9 @@
         text-align: center;
     }
 }
+.mobile-img { display: none; }
+
+@media (max-width: 768px) {
+  .desktop-img { display: none; }
+  .mobile-img { display: block; }
+}
