@@ -8,6 +8,7 @@
     }
     .news {
         padding: 10px 5px;
+        gap: 4px;
     }
 
     .news-title {
@@ -15,6 +16,7 @@
     }
     .news-time {
         font-size: 12px;
+        white-space: nowrap;
     }
 
     nav>ul>li {
