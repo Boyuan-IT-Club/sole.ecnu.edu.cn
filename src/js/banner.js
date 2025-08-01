@@ -383,15 +383,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-function updateImage() {
-    const img = document.getElementById('arrow');
-    if (window.innerWidth <= 768) {
-        img.src = 'icons/homepage/view-comment2.png';
-    } else {
-        img.src = 'icons/homepage/view-common.png';
-    }
-}
-
 // 页面加载和窗口变化时触发
 window.addEventListener('load', updateImage);
 window.addEventListener('resize', updateImage);
