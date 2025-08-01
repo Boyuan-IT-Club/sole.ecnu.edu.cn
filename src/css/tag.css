@@ -1,0 +1,45 @@
+.tag-content {
+    display: none;
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tag-item {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    color: #333;
+    font-size: 12px;
+    cursor: pointer;
+    white-space: nowrap;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.tag-item:hover {
+    background-color: #e0e0e0;
+}
+
+.tag-item.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.tag-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.tag-item a:hover {
+    text-decoration: none;
+}
