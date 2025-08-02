@@ -27,6 +27,15 @@ document.addEventListener('DOMContentLoaded', function() {
             tagContentVisible.innerHTML = `<ul class="tag-list">${tagListHTML}</ul>`;
         });
     }
+
+
+    let currentTag = document.querySelector('.column-current-title').children[0].textContent;
+    const tagItems = document.querySelectorAll('.tag-item');
+    tagItems.forEach(tagItem => {
+        if (tagItem.children[0].textContent === currentTag) {
+            tagItem.classList.add('active');
+        }
+    });
 });
 
 

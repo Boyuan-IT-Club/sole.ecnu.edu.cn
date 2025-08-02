@@ -17,7 +17,8 @@
 .tag-item {
     padding: 5px 10px;
     border-radius: 5px;
-    background-color: #f0f0f0;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
     color: #333;
     font-size: 12px;
     cursor: pointer;
@@ -27,12 +28,13 @@
 }
 
 .tag-item:hover {
-    background-color: #e0e0e0;
+    border: 1px solid #007bff;
+    color: #007bff;
 }
 
 .tag-item.active {
-    background-color: #007bff;
-    color: white;
+    color: #007bff;
+    border: 1px solid #007bff;
 }
 
 .tag-item a {
@@ -46,6 +48,7 @@
 
 .mobile-tag-content {
     display: none;
+    margin-top: 5px;
 }
 
 @media (max-width: 768px) {
