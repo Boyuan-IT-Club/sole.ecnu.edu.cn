@@ -11,8 +11,10 @@
     <link rel="stylesheet" href="css/listcolumn.css" />
     <link rel="stylesheet" href="css/mobileNav.css" />
     <link rel="stylesheet" href="css/header_footer.css">
+    <link rel="stylesheet" href="css/tag.css">
     <script src="js/listcolumn.js"></script>
     <script src="js/mobileNav.js"></script>
+    <script src="js/tag.js"></script>
 </head>
 
 <body>
@@ -30,7 +32,7 @@
     </span>
     </div>
 
-    <div frag="窗口44" id="mainNav">
+    <div frag="窗口444" id="mainNav">
         <div frag="窗口内容">
             <nav>
                 <!--[NaviStructBegin]-->
@@ -93,7 +95,26 @@
                             </div>
                         </div>
                     </div>
-                    <div class="column-body">
+                                        <!-- 标签列表virtual -->
+                                        <div frag="窗口51" portletmode="simpleColumnList">
+                                            <div frag="窗口内容">
+                                                <!--[ColumnStructBegin]-->
+                                                <ul class="tag-content">
+                                                    <!--[ColumnCycleBegin]-->
+                                                    <li class="tag-item {级别样式} {选中样式}">
+                                                        <a title="{栏目名称}" class="{选中样式}" href="{栏目URL}" target="{打开方式}">
+                                                            <span class="tag-name">{栏目名称}</span>
+                                                        </a>
+                                                    </li>
+                                                    <!--[ColumnCycleEnd]-->
+                                                </ul>
+                                                <!--[ColumnStructEnd]-->
+                                            </div>
+                                         </div>
+                                         <!--标签列表visible-->
+                                         <div id="tag-content-visible">
+                                         </div>
+                    <div class="column-body" style="display: none;">
                         <div frag="窗口4" portletmode="simpleColumnList">
                             <div frag="窗口内容">
                                 <!--[ColumnStructBegin]-->
@@ -135,6 +156,8 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div id="tag-content-visible" class="mobile-tag-content">
                     </div>
                     <div class="column-news">
                         <div

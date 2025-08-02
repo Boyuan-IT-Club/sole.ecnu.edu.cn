@@ -43,3 +43,13 @@
 .tag-item a:hover {
     text-decoration: none;
 }
+
+.mobile-tag-content {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-tag-content {
+        display: block;
+    }
+}
