@@ -28,14 +28,25 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-
-    let currentTag = document.querySelector('.column-current-title').children[0].textContent;
+    const pathName = document.querySelector('.path-name');
+    let currentTag = pathName.children[4].textContent.trim();
     const tagItems = document.querySelectorAll('.tag-item');
     tagItems.forEach(tagItem => {
-        if (tagItem.children[0].textContent === currentTag) {
+        if (currentTag === tagItem.children[0].textContent) {
+            tagItem.classList.add('active');
+        }
+    });
+
+});
+
+document.addEventListener('click', function() {
+    const pathName = document.querySelector('.path-name');
+    let currentTag = pathName.children[4].textContent;
+    const tagItems = document.querySelectorAll('.tag-item');
+    tagItems.forEach(tagItem => {
+        if (currentTag.includes(tagItem.children[0].textContent)) {
             tagItem.classList.add('active');
         }
     });
 });
-
 

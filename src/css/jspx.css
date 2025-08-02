@@ -182,8 +182,7 @@ a {
     font-size: 1.5rem;
     color: #4B6DDB;
     margin-left: 4.5vw;
-    margin-bottom:10vh;
-    position: absolute;
+    bottom:1px;
 }
 /*
 .section-subtitle {
@@ -238,15 +237,14 @@ a {
     display: grid;
     grid-template-columns: repeat(3, minmax(200px, 1fr));
     grid-auto-rows: minmax(200px, auto);
-    column-gap: 25px;
+    column-gap: 3%;
     margin-top: 10px;
     background-color: #ffffff;
-    padding: 25px;
-    padding-bottom: 20px
+    padding: 3%;
 }
 
 .t-card {
-    height: 35vh;
+    height: 30vh;
     background: #FFFFFF;
     cursor: pointer;
     position: relative;
@@ -267,7 +265,7 @@ a {
 .t-title {
     width: 100%;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 1.3em;
     color: #606266;
     overflow: hidden; 
     text-overflow: ellipsis; 
@@ -469,7 +467,7 @@ a {
 @media (max-width: 600px) {
     /*联系方式*/
  .desc{
-    width: fit-content;
+    width: 80%;
     height: 30px;
     background: #fedee0;
     border-radius: 20px;
@@ -483,13 +481,14 @@ a {
     .phone{
     width: 20px;
     height: 20px;
-    margin-left: 15px;
+    margin-left: 0px;
+    margin-right: 10px;
     }
 
 .zsdh0{
     display:block;
     color:#e16d6d;
-    font-size:13px;
+    font-size:10px;
     font-weight: 500;
 }
 
@@ -498,7 +497,7 @@ a {
     width: auto;
     height: auto;
     font-weight: 400;
-    font-size:16px;
+    font-size:10px;
     color: #303133;
     margin-left: 0;
     display:block;
