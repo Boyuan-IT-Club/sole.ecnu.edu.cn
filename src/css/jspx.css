@@ -310,7 +310,7 @@ a {
 
 
 @media (max-width: 600px) {
-.body {
+body {
     background-color: rgb(255, 255, 255);
     padding: 0px;
 }
@@ -396,8 +396,9 @@ a {
 
 .arrow-mobile{
     display: block;
-    right: 0;
-    width:8px;
+    margin-left: 4px;
+    margin-right: 0px;
+    width:9px;
 }
 
 /*卡片样式*/
