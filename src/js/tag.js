@@ -37,16 +37,61 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-});
+    // const activeTag = document.querySelectorAll('.active')[2];
+    // const activeTagLink = activeTag.querySelector('a');
 
-document.addEventListener('click', function() {
+    // if (activeTagLink) {
+    // activeTagLink.href = '/_s952/49608/list.psp';
+
+    // activeTagLink.addEventListener('click', function(e) {
+    //     e.preventDefault(); // 防止默认跳转
+    //     window.location.href = '/_s952/49608/list.psp';
+    // });
+    const activeTag = document.querySelectorAll('.active')[2];
+console.log('activeTag:', activeTag);
+
+if (!activeTag) {
+    console.warn('activeTag is not found.');
+} else {
+    const activeTagLink = activeTag.querySelector('a');
+    console.log('activeTagLink:', activeTagLink);
+
+    if (!activeTagLink) {
+        console.warn('activeTagLink <a> not found inside activeTag.');
+    } else {
+        // 打印原始 href
+        console.log('Original href:', activeTagLink.href);
+
+        // 修改 href
+        activeTagLink.href = '/_s952/49608/list.psp';
+        console.log('Modified href:', activeTagLink.href);
+
+        
+
+        // 添加点击事件
+        activeTagLink.addEventListener('click', function(e) {
+            e.preventDefault(); // 阻止默认跳转
+            console.log('Link clicked. Redirecting...');
+            window.location.href = '/_s952/49608/list.psp';
+        });
+    }
+}
+}
+
+);
+
+document.addEventListener('click', function(event) {
     const pathName = document.querySelector('.path-name');
     let currentTag = pathName.children[4].textContent;
     const tagItems = document.querySelectorAll('.tag-item');
+
     tagItems.forEach(tagItem => {
-        if (currentTag.includes(tagItem.children[0].textContent)) {
+        if (currentTag === tagItem.children[0].textContent) {
             tagItem.classList.add('active');
         }
     });
+
+    
 });
+
 
