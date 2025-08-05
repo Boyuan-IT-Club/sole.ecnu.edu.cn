@@ -108,6 +108,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         const typeMap = ['international', 'on-job', 'training'];
+
+        const linkMap = ['/_s952/49615/list.psp', '/_s952/49618/list.psp', '/_s952/49619/list.psp'];
+        const initialLink = '/_s952/49615/list.psp';
         const isMobile = window.innerWidth <= 768;
 
         setTimeout(() => console.log("0.2 秒后打印"), 200);
@@ -148,11 +151,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
             button.addEventListener('click', () => {
                 const selectedType = typeMap[index];
+                const link = linkMap[index];
+
+                const moreBtn = document.getElementById('enrollment-more-btn');
+                moreBtn.href = link;
 
                 if (isActive) {
                     // 如果按钮已经是激活状态，取消高亮并恢复初始显示
                     button.classList.remove('active');
                     showInitialCards();
+                    moreBtn.href = initialLink;
                 } else {
                     // 如果按钮不是激活状态，添加高亮并显示对应类型的卡片
                     buttons.forEach(btn => btn.classList.remove('active'));
@@ -231,6 +239,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         const typeMap = ['teacher', 'social'];
+        const linkMap = ['/_s952/49616/list.psp', '/_s952/49621/list.psp'];
+        const initialLink = '/_s952/49616/list.psp';
         const isMobile = window.innerWidth <= 768;
 
         setTimeout(() => console.log("0.2 秒后打印品牌部分"), 200);
@@ -271,14 +281,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
             button.addEventListener('click', () => {
                 const selectedType = typeMap[index];
+                const link = linkMap[index];
+                const moreBtn = document.getElementById('brand-more-btn');
+                moreBtn.href = link;
 
                 if (isActive) {
                     // 如果按钮已经是激活状态，取消高亮并恢复初始显示
                     button.classList.remove('active');
                     showInitialCards();
+                    moreBtn.href = initialLink;
                 } else {
                     // 如果按钮不是激活状态，添加高亮并显示对应类型的卡片
                     buttons.forEach(btn => btn.classList.remove('active'));
+
                     button.classList.add('active');
 
                     let shown = 0;
