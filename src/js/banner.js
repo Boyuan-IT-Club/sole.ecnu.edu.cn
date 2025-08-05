@@ -327,7 +327,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const tomodifyimg = el.previousElementSibling;
         const tomodifyclass = el.closest('.enrollment');
 
-        if (text.includes('国际合作办学')) {
+        if (text.includes('国际本科')) {
             tomodifyimg.src = '/_upload/tpl/17/77/6007/template6007/icons/enrollment-icon/icon-blue.png';
             tomodifyclass.classList.add('international');
         } else if (text.includes('在职研修')) {
@@ -383,6 +383,40 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// 页面加载和窗口变化时触发
-window.addEventListener('load', updateImage);
-window.addEventListener('resize', updateImage);
+document.addEventListener('DOMContentLoaded', function () {
+    const buttons = document.querySelectorAll('.section-part-enroll-btn');
+    const viewAllLink = document.querySelector('.section-btn');
+    let currentLink = '/_s952/49615/list.psp'; // 默认链接
+
+    buttons.forEach(button => {
+        button.addEventListener('click', function () {
+            buttons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            currentLink = this.dataset.link; // 记录当前跳转链接
+        });
+    });
+
+    viewAllLink.addEventListener('click', function (e) {
+        window.location.href = currentLink;
+        e.preventDefault();
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const buttons = document.querySelectorAll('.section-part-brand-btn');
+    const viewAllLink = document.querySelector('.section-btn');
+    let currentLink = '/_s952/49616/list.psp'; // 默认链接
+
+    buttons.forEach(button => {
+        button.addEventListener('click', function () {
+            buttons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            currentLink = this.dataset.link; // 记录当前跳转链接
+        });
+    });
+
+    viewAllLink.addEventListener('click', function (e) {
+        window.location.href = currentLink;
+        e.preventDefault();
+    });
+});
