@@ -60,7 +60,6 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM fully loaded!');
 
     // 设置观察目标元素（通常是包含所有卡片的容器）
     const targetNode = document.body; // 或者更具体的容器元素
@@ -101,10 +100,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const buttons = document.querySelectorAll('.section-part-enroll-btn');
         const allCards = document.querySelectorAll('.enrollment');
-        console.log('Total cards found:', allCards.length);
 
         allCards.forEach(card => {
-            console.log('Card classes:', card.classList);
+            // console.log('Card classes:', card.classList);
         });
 
         const typeMap = ['international', 'on-job', 'training'];
@@ -113,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const initialLink = '/_s952/49615/list.psp';
         const isMobile = window.innerWidth <= 768;
 
-        setTimeout(() => console.log("0.2 秒后打印"), 200);
+        //setTimeout(() => console.log("0.2 秒后打印"), 200);
 
         const maxCardsPerType = isMobile ? 6 : 9;
 
@@ -194,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM fully loaded for brand section!');
+    //console.log('DOM fully loaded for brand section!');
 
     // 设置观察目标元素
     const targetNode = document.body; // 或者更具体的容器元素
@@ -235,10 +233,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const buttons = document.querySelectorAll('.section-part-brand-btn');
         const allCards = document.querySelectorAll('.brand-item');
-        console.log('Total brand cards found:', allCards.length);
+        //console.log('Total brand cards found:', allCards.length);
 
         allCards.forEach(card => {
-            console.log('Brand card classes:', card.classList);
+            //console.log('Brand card classes:', card.classList);
         });
 
         const typeMap = ['teacher', 'social'];
@@ -246,7 +244,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const initialLink = '/_s952/49616/list.psp';
         const isMobile = window.innerWidth <= 768;
 
-        setTimeout(() => console.log("0.2 秒后打印品牌部分"), 200);
+        //setTimeout(() => console.log("0.2 秒后打印品牌部分"), 200);
 
         const maxCardsPerType = isMobile ? 4 : 12;
 
