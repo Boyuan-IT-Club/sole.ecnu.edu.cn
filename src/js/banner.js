@@ -154,13 +154,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 const link = linkMap[index];
 
                 const moreBtn = document.getElementById('enrollment-more-btn');
+                const moreBtnSmall = document.getElementById('enrollment-more-btn-small');
                 moreBtn.href = link;
+                moreBtnSmall.href = link;
 
                 if (isActive) {
                     // 如果按钮已经是激活状态，取消高亮并恢复初始显示
                     button.classList.remove('active');
                     showInitialCards();
                     moreBtn.href = initialLink;
+                    moreBtnSmall.href = initialLink;
                 } else {
                     // 如果按钮不是激活状态，添加高亮并显示对应类型的卡片
                     buttons.forEach(btn => btn.classList.remove('active'));
@@ -283,13 +286,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 const selectedType = typeMap[index];
                 const link = linkMap[index];
                 const moreBtn = document.getElementById('brand-more-btn');
+                const moreBtnSmall = document.getElementById('brand-more-btn-small');
                 moreBtn.href = link;
+                moreBtnSmall.href = link;
 
                 if (isActive) {
                     // 如果按钮已经是激活状态，取消高亮并恢复初始显示
                     button.classList.remove('active');
                     showInitialCards();
                     moreBtn.href = initialLink;
+                    moreBtnSmall.href = initialLink;
                 } else {
                     // 如果按钮不是激活状态，添加高亮并显示对应类型的卡片
                     buttons.forEach(btn => btn.classList.remove('active'));
