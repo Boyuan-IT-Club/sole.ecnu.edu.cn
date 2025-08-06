@@ -220,6 +220,9 @@ a {
     background: #b21f35;
 }
 
+.gd{
+    display:none;
+}
 .arrow {
     margin-left: 4px;
     width:0.5vw;
@@ -377,6 +380,14 @@ body {
     padding-left: 5px;
 }
 
+.ck{
+    display: none;
+}
+
+.gd{
+    display:block;
+}
+
 .section-btn {
     width: 16vw;
     background: transparent;
@@ -387,6 +398,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center; 
+    right: -2vh;
 }
 
 .arrow {
