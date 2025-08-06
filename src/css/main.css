@@ -87,6 +87,19 @@ li {
   transition: background-color 0.3s ease;
 }
 
+.section-btn-news {
+  text-decoration: none;
+  margin-bottom: 21px;
+  right: 0;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 11px;
+  background-color: rgb(64, 138, 225);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
 .news-section {
   margin-bottom: 70px;
 }

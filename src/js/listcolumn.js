@@ -61,3 +61,12 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const divs = document.querySelectorAll('.column-current-title > div');
+    divs.forEach(div => {
+        if (div.textContent.trim().length > 12) {
+            div.style.fontSize = 'large';
+        }
+    });
+});
