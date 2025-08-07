@@ -48,30 +48,30 @@ document.addEventListener('DOMContentLoaded', function() {
     //     window.location.href = '/_s952/49608/list.psp';
     // });
     const activeTag = document.querySelectorAll('.active')[2];
-console.log('activeTag:', activeTag);
+// console.log('activeTag:', activeTag);
 
 if (!activeTag) {
     console.warn('activeTag is not found.');
 } else {
     const activeTagLink = activeTag.querySelector('a');
-    console.log('activeTagLink:', activeTagLink);
+    //console.log('activeTagLink:', activeTagLink);
 
     if (!activeTagLink) {
         console.warn('activeTagLink <a> not found inside activeTag.');
     } else {
         // 打印原始 href
-        console.log('Original href:', activeTagLink.href);
+        //console.log('Original href:', activeTagLink.href);
 
         // 修改 href
         activeTagLink.href = '/_s952/49608/list.psp';
-        console.log('Modified href:', activeTagLink.href);
+        //console.log('Modified href:', activeTagLink.href);
 
         
 
         // 添加点击事件
         activeTagLink.addEventListener('click', function(e) {
             e.preventDefault(); // 阻止默认跳转
-            console.log('Link clicked. Redirecting...');
+            //console.log('Link clicked. Redirecting...');
             window.location.href = '/_s952/49608/list.psp';
         });
     }
