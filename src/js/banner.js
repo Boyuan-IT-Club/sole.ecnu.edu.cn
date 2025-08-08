@@ -152,8 +152,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 const link = linkMap[index];
 
                 const moreBtn = document.getElementById('enrollment-more-btn');
+                console.log(moreBtn);
                 const moreBtnSmall = document.getElementById('enrollment-more-btn-small');
                 moreBtn.href = link;
+                console.log(moreBtn.href);
                 moreBtnSmall.href = link;
 
                 if (isActive) {
@@ -434,8 +436,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    viewAllLink.addEventListener('click', function (e) {
-        window.location.href = currentLink;
-        e.preventDefault();
-    });
+    // viewAllLink.addEventListener('click', function (e) {
+    //     window.location.href = currentLink;
+    //     e.preventDefault();
+    // });
 });
