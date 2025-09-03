@@ -113,6 +113,12 @@ li {
   margin: 0 auto;
 }
 
+@media (min-width: 1025px) {
+  .news-list {
+    grid-template-columns: repeat(4, minmax(227px, 1fr));
+  }
+}
+
 /* 通用 meta-info 样式 */
 .meta-info {
   display: flex;
@@ -476,7 +482,7 @@ li {
 
 .news-card:not(:first-child) .news-pic-container {
   width: 230px;
-  height: 174px;
+  height: calc(230px * 9 / 16);
   overflow: hidden;
 }
 
@@ -537,7 +543,6 @@ li {
 /* 普通卡片标题样式 */
 .news-card:not(:first-child) .content h2 {
   font-size: 14px;
-  font-weight: 600;
   line-height: 1.6;
   margin-bottom: 13px;
   color: #333;
