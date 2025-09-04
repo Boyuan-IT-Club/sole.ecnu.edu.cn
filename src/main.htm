@@ -8,8 +8,11 @@
     <link rel="stylesheet" href="css/header_footer.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/banner.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">    
     <script src="js/banner.js"></script>
     <script src="js/time.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -122,6 +125,25 @@
     </div>
 
     <header class="header" id="top">
+        <div id="swiper-container">
+            <div id="banner" class="swiper swiper-banner">
+                <div frag="窗口444" class="swiper-wrapper" portletmode="simpleNews">
+                    <div frag="窗口内容">
+                        <!--[InfoCycleBegin]-->
+                        <div class="swiper-slide">
+                            <a href="{文章URL}" title="{标题}">
+                                <!--<div class="swiper-title">{标题}</div>-->
+                                <img src="{图片路径}" alt="{标题}" />
+                            </a>
+                        </div>
+                        <!--[InfoCycleEnd]-->
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
         <div><img src="icons/homepage/pic-bg.png" class="building-bg"></div>
         <section class="banner">
             <img src="icons/homepage/logo.png" alt="华东师范大学开放教育学院/教师发展学院" class="logo-pc" />
