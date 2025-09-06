@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     const nav = document.querySelector('.nav');
     const navContainer = document.querySelector('.nav-container');
     const scrollThreshold = window.innerHeight; // 滚动阈值为一屏高度
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // 初始位置记录
     const initialTop = nav.offsetTop;
 
-    window.addEventListener('scroll', function () {
+    window.addEventListener('scroll', function() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         const scrollDirection = scrollTop > lastScrollTop ? 'down' : 'up';
 
@@ -349,13 +349,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const tomodifyclass = el.closest('.enrollment');
 
         if (text.includes('国际本科')) {
-            tomodifyimg.src = '/_upload/tpl/17/77/6007/template6007/icons/enrollment-icon/icon-blue.png';
+            tomodifyimg.src = '/_upload/tpl/17/77/6007/template6007/icons/blue.png';
             tomodifyclass.classList.add('international');
         } else if (text.includes('在职研修')) {
-            tomodifyimg.src = '/_upload/tpl/17/77/6007/template6007/icons/enrollment-icon/icon-red.png';
+            tomodifyimg.src = '/_upload/tpl/17/77/6007/template6007/icons/red.png';
             tomodifyclass.classList.add('on-job');
         } else if (text.includes('社会培训')) {
-            tomodifyimg.src = '/_upload/tpl/17/77/6007/template6007/icons/enrollment-icon/icon-purple.png';
+            tomodifyimg.src = '/_upload/tpl/17/77/6007/template6007/icons/purple.png';
             tomodifyclass.classList.add('training');
         }
     });
@@ -377,59 +377,59 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     const pinpaiCards = document.querySelectorAll('.news-card');
     pinpaiCards.forEach(card => {
-        card.addEventListener('click', function () {
+        card.addEventListener('click', function() {
             window.location.href = card.id;
         });
     });
 });
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     const pinpaiCards = document.querySelectorAll('.enrollment');
     pinpaiCards.forEach(card => {
-        card.addEventListener('click', function () {
+        card.addEventListener('click', function() {
             window.location.href = card.id;
         });
     });
 });
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     const pinpaiCards = document.querySelectorAll('.brand-item');
     pinpaiCards.forEach(card => {
-        card.addEventListener('click', function () {
+        card.addEventListener('click', function() {
             window.location.href = card.id;
         });
     });
 });
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     const buttons = document.querySelectorAll('.section-part-enroll-btn');
     const viewAllLink = document.querySelector('.section-btn');
     let currentLink = '/_s952/49615/list.psp'; // 默认链接
 
     buttons.forEach(button => {
-        button.addEventListener('click', function () {
+        button.addEventListener('click', function() {
             buttons.forEach(btn => btn.classList.remove('active'));
             this.classList.add('active');
             currentLink = this.dataset.link; // 记录当前跳转链接
         });
     });
 
-    viewAllLink.addEventListener('click', function (e) {
+    viewAllLink.addEventListener('click', function(e) {
         window.location.href = currentLink;
         e.preventDefault();
     });
 });
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     const buttons = document.querySelectorAll('.section-part-brand-btn');
     const viewAllLink = document.querySelector('.section-btn');
     let currentLink = '/_s952/49616/list.psp'; // 默认链接
 
     buttons.forEach(button => {
-        button.addEventListener('click', function () {
+        button.addEventListener('click', function() {
             buttons.forEach(btn => btn.classList.remove('active'));
             this.classList.add('active');
             currentLink = this.dataset.link; // 记录当前跳转链接
