@@ -32,53 +32,30 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentTag = pathName.children[4].textContent.trim();
     const tagItems = document.querySelectorAll('.tag-item');
     tagItems.forEach(tagItem => {
+
+        let isActive = false;
         if (currentTag === tagItem.children[0].textContent) {
             tagItem.classList.add('active');
+            isActive = true;
         }
-    });
+        tagItem.addEventListener('click', function(event) {
 
-    // const activeTag = document.querySelectorAll('.active')[2];
-    // const activeTagLink = activeTag.querySelector('a');
-
-    // if (activeTagLink) {
-    // activeTagLink.href = '/_s952/49608/list.psp';
-
-    // activeTagLink.addEventListener('click', function(e) {
-    //     e.preventDefault(); // 防止默认跳转
-    //     window.location.href = '/_s952/49608/list.psp';
-    // });
-    const activeTag = document.querySelectorAll('.active')[2];
-console.log('activeTag:', activeTag);
-
-if (!activeTag) {
-    console.warn('activeTag is not found.');
-} else {
-    const activeTagLink = activeTag.querySelector('a');
-    console.log('activeTagLink:', activeTagLink);
-
-    if (!activeTagLink) {
-        console.warn('activeTagLink <a> not found inside activeTag.');
-    } else {
-        // 打印原始 href
-        console.log('Original href:', activeTagLink.href);
-
-        // 修改 href
-        activeTagLink.href = '/_s952/49608/list.psp';
-        console.log('Modified href:', activeTagLink.href);
-
+            if (isActive) {
+                tagItem.classList.remove('active');
+                isActive = false;
+                const activeTagLink = tagItem.querySelector('a');
+                if (activeTagLink) {
+                    activeTagLink.href = '/_s952/49608/list.psp';
+                }
+            }
+        })
         
-
-        // 添加点击事件
-        activeTagLink.addEventListener('click', function(e) {
-            e.preventDefault(); // 阻止默认跳转
-            console.log('Link clicked. Redirecting...');
-            window.location.href = '/_s952/49608/list.psp';
-        });
-    }
+        
+    });
 }
-}
-
 );
+
+
 
 document.addEventListener('click', function(event) {
     const pathName = document.querySelector('.path-name');
@@ -88,10 +65,16 @@ document.addEventListener('click', function(event) {
     tagItems.forEach(tagItem => {
         if (currentTag === tagItem.children[0].textContent) {
             tagItem.classList.add('active');
+
+            const activeTagLink = tagItem.querySelector('a');
+            if (activeTagLink) {
+                activeTagLink.href = '/_s952/49608/list.psp';
+            }
+        }
+        else {
+            tagItem.classList.remove('active');
         }
     });
 
     
 });
-
-
