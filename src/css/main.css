@@ -1,546 +1,570 @@
 /* style.css */
+
 body {
-  background-color: #FFFFFF;
-  line-height: 1.6;
+    background-color: #FFFFFF;
+    line-height: 1.6;
 }
 
 a {
-  text-decoration: none;
-  color: #333;
+    text-decoration: none;
+    color: #333;
 }
 
-
-
 img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  overflow: hidden;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
 }
 
 li {
-  list-style: none;
+    list-style: none;
 }
 
-.text > a {
-  color: white;
+.text>a {
+    color: white;
 }
 
-.text2 > a {
-  color: white;
+.text2>a {
+    color: white;
 }
+
 
 /* 中间内容样式优化 */
+
 .main-content {
-  position: relative;
-  width: 100%;
-  padding: 0 16%;
-  margin: 60px auto;
+    position: relative;
+    width: 100%;
+    padding: 0 16%;
+    margin: 60px auto;
 }
 
 .section-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-bottom: 25px;
-  z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 25px;
+    z-index: 10;
 }
 
 .section-header img {
-  position: relative;
-  width: 15px;
-  height: 15px;
-  left: 1px;
+    position: relative;
+    width: 15px;
+    height: 15px;
+    left: 1px;
 }
 
 .section-subtitle {
-  position: relative;
-  left: 6px;
-  bottom: 2px;
-  display: inline;
-  font-size: 14px;
-  color: #999999;
-  font-weight: 600;
+    position: relative;
+    left: 6px;
+    bottom: 2px;
+    display: inline;
+    font-size: 14px;
+    color: #999999;
+    font-weight: 600;
 }
 
 .section-title {
-  position: relative;
-  top: -10px;
-  font-size: 50px;
-  font-weight: 700;
-  color: #343434;
-  display: block;
-  align-items: center;
+    position: relative;
+    top: -10px;
+    font-size: 50px;
+    font-weight: 700;
+    color: #343434;
+    display: block;
+    align-items: center;
 }
 
 .section-btn {
-  text-decoration: none;
-  margin-bottom: 21px;
-  right: 0;
-  padding: 8px 14px;
-  border: none;
-  border-radius: 11px;
-  background-color: rgb(64, 138, 225);
-  color: #fff;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+    text-decoration: none;
+    margin-bottom: 21px;
+    right: 0;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 11px;
+    background-color: rgb(64, 138, 225);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .section-btn-news {
-  text-decoration: none;
-  margin-bottom: 21px;
-  right: 0;
-  padding: 8px 14px;
-  border: none;
-  border-radius: 11px;
-  background-color: rgb(64, 138, 225);
-  color: #fff;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+    text-decoration: none;
+    margin-bottom: 21px;
+    right: 0;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 11px;
+    background-color: rgb(64, 138, 225);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .news-section {
-  margin-bottom: 70px;
+    margin-bottom: 70px;
 }
 
 .news-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(227px, 1fr));
-  grid-template-rows: 310px;
-  gap: 18px;
-  max-width: 100%;
-  margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(227px, 1fr));
+    grid-template-rows: 310px;
+    gap: 18px;
+    max-width: 100%;
+    margin: 0 auto;
 }
+
 
 /* 通用 meta-info 样式 */
+
 .meta-info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 13px;
-  font-weight: 500;
-  color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 500;
+    color: #FFFFFF;
 }
 
+
 /* 特别处理 tags 和时间 */
+
 .tags-box span {
-  margin-right: 13px;
+    margin-right: 13px;
 }
 
 .meta-info .tags {
-  color: #4389E1;
+    color: #4389E1;
 }
 
 .news-card:not(:first-child) .content .meta-info .time {
-  color: #999;
+    color: #999;
 }
 
 .more-btn {
-  display: none;
+    display: none;
 }
 
+
 /* 学院业务样式优化 */
+
 .business-section {
-  margin-bottom: 70px;
+    margin-bottom: 70px;
 }
 
 .business-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(309px, 1fr));
-  grid-template-rows: 130px 130px;
-  gap: 17px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(309px, 1fr));
+    grid-template-rows: 130px 130px;
+    gap: 17px;
 }
 
 .business-item {
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 3px 3px 17px 6px rgb(246, 246, 246);
-  display: flex;
-  align-items: center;
-  text-decoration: none;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 3px 3px 17px 6px rgb(246, 246, 246);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 }
 
 .business-icon-container {
-  position: relative;
-  margin: 0px 14px;
-  border-radius: 12px;
-  width: 35%;
-  height: 84%;
-  background-color: #F1F4FB;
-  z-index: 1;
+    position: relative;
+    margin: 0px 14px;
+    border-radius: 12px;
+    width: 35%;
+    height: 84%;
+    background-color: #F1F4FB;
+    z-index: 1;
 }
 
 .icon1 {
-  width: 53%;
-  height: auto;
-  position: relative;
-  margin: 25% auto;
-  display: block;
-  z-index: 2;
+    width: 53%;
+    height: auto;
+    position: relative;
+    margin: 25% auto;
+    display: block;
+    z-index: 2;
 }
 
 .icon2 {
-  width: 38%;
-  height: auto;
-  position: relative;
-  margin: 25% auto;
-  display: block;
-  z-index: 2;
+    width: 38%;
+    height: auto;
+    position: relative;
+    margin: 25% auto;
+    display: block;
+    z-index: 2;
 }
 
 .icon3 {
-  width: 48%;
-  height: auto;
-  position: relative;
-  margin: 25% auto;
-  display: block;
-  z-index: 2;
+    width: 48%;
+    height: auto;
+    position: relative;
+    margin: 25% auto;
+    display: block;
+    z-index: 2;
 }
 
 .icon4 {
-  width: 43%;
-  height: auto;
-  position: relative;
-  margin: 25% auto;
-  display: block;
-  z-index: 2;
+    width: 43%;
+    height: auto;
+    position: relative;
+    margin: 25% auto;
+    display: block;
+    z-index: 2;
 }
 
 .icon5,
 .icon6 {
-  width: 45%;
-  height: auto;
-  position: relative;
-  margin: 25% auto;
-  display: block;
-  z-index: 2;
+    width: 45%;
+    height: auto;
+    position: relative;
+    margin: 25% auto;
+    display: block;
+    z-index: 2;
 }
 
 .box {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .business-item h4 {
-  color: #333333;
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 30px;
-  margin-left: 18px;
-  text-decoration: none;
+    color: #333333;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    margin-left: 18px;
+    text-decoration: none;
 }
 
 .business-item p {
-  position: relative;
-  display: block;
-  color: #B4B4B4;
-  font-size: 14px;
-  font-weight: 500;
-  margin-left: 18px;
-  margin-top: -17px;
-  text-decoration: none;
+    position: relative;
+    display: block;
+    color: #B4B4B4;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 18px;
+    margin-top: -17px;
+    text-decoration: none;
 }
 
+
 /* 招生公告样式优化 */
+
 .section-part-container {
-  display: flex;
-  gap: 15px;
-  align-items: center;
+    display: flex;
+    gap: 15px;
+    align-items: center;
 }
 
 .more-btn2 {
-  display: none;
+    display: none;
 }
 
-.section-part-enroll-btn, .section-part-brand-btn {
-  margin-bottom: 21px;
-  right: 0;
-  padding: 8px 14px;
-  border-radius: 11px;
-  border: 0.5px solid rgba(153, 153, 153, 0.2);
-  color: #999999;
-  font-weight: 700;
-  cursor: pointer;
-  background-color: #FFFFFF;
+.section-part-enroll-btn,
+.section-part-brand-btn {
+    margin-bottom: 21px;
+    right: 0;
+    padding: 8px 14px;
+    border-radius: 11px;
+    border: 0.5px solid rgba(153, 153, 153, 0.2);
+    color: #999999;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: #FFFFFF;
 }
 
-.section-part-enroll-btn.active, .section-part-brand-btn.active {
-  color: #4389E1;
-  border: 0.5px solid #4389E1;
+.section-part-enroll-btn.active,
+.section-part-brand-btn.active {
+    color: #4389E1;
+    border: 0.5px solid #4389E1;
 }
-
 
 .btn-box {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 75px;
 }
 
 .enrollment-section {
-  margin-bottom: 70px;
+    margin-bottom: 70px;
 }
 
 .enrollment-grid {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(309px, 1fr));
-  justify-items: left;
-  gap: 17px;
-  height: auto;
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(309px, 1fr));
+    justify-items: left;
+    gap: 17px;
+    height: auto;
 }
 
 .enrollment {
-  width: 312px;
-  height: 150px;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 2px 2px 6px 6px rgba(240, 240, 240, 0.6);
-  padding: 20px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
+    width: 312px;
+    height: 150px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 2px 2px 6px 6px rgba(240, 240, 240, 0.6);
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .enrollment span {
-  position: absolute;
-  top: 5px;
-  left: 9px;
-  font-size: 15px;
-  color: #fff;
-  z-index: 1;
+    position: absolute;
+    top: 10px;
+    left: 219px;
+    font-size: 13px;
+    color: #fff;
+    z-index: 1;
 }
 
 .enrollment-badge {
-  position: absolute;
-  top: 0;
-  left: -10px;
-  width: 129px;
-  height: 53px;
+    position: absolute;
+    top: 8px;
+    left: 200px;
+    width: 100px;
+    height: auto;
 }
 
 .enrollment-content {
-  margin-top: 38px;
-  display: flex;
-  gap: 15px;
+    margin-top: 38px;
+    display: flex;
+    gap: 15px;
 }
 
 .enrollment-date {
-  font-size: 14px;
-  width: 85px;
-  color: #666;
-  background: #f0f0f0;
-  padding: 6px 15px;
-  border-radius: 4px;
-  white-space: nowrap;
+    font-size: 14px;
+    width: 85px;
+    color: #666;
+    background: #f0f0f0;
+    padding: 6px 15px;
+    border-radius: 4px;
+    white-space: nowrap;
 }
 
 .enrollment-date h2 {
-  font-family: "Roboto", "Source Han Sans", sans-serif;
-  color: #323232;
+    font-family: "Roboto", "Source Han Sans", sans-serif;
+    color: #323232;
 }
 
 .enrollment-date h5 {
-  color: #989898;
+    color: #989898;
 }
 
 .enrollment-title {
-  font-size: 18px;
-  font-weight: 600;
-  color: #333;
-  line-height: 1.6;
-  flex: 1;
+    font-size: 17px;
+    font-weight: normal;
+    color: #333;
+    line-height: 1.6;
+    flex: 1;
 }
 
+
 /* 品牌项目样式优化 */
+
 .brand-section {
-  margin-bottom: 80px;
+    margin-bottom: 80px;
 }
 
 .brand-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  justify-items: left;
-  height: auto;
-  gap: 17px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: left;
+    height: auto;
+    gap: 17px;
 }
 
 .brand-item {
-  width: 300px;
-  height: 324px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  border: 0.5px solid rgba(153, 153, 153, 0.2);
+    width: 300px;
+    height: 324px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 0.5px solid rgba(153, 153, 153, 0.2);
 }
 
 .brand-pic-container {
-  position: relative;
-  width: 300px;
-  height: 186px;
-  overflow: hidden;
+    position: relative;
+    width: 300px;
+    height: 186px;
+    overflow: hidden;
 }
 
 .brand-pic {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .badge span {
-  position: absolute;
-  top: 3px;
-  left: 14px;
-  font-size: 15px;
-  color: #fff;
-  z-index: 1;
+    position: absolute;
+    top: 3px;
+    left: 14px;
+    font-size: 15px;
+    color: #fff;
+    z-index: 1;
 }
 
 .brand-badge {
-  position: absolute;
-  top: 0;
-  left: -8px;
-  width: 110px;
-  height: 50px;
-  z-index: 1;
+    position: absolute;
+    top: 0;
+    left: -8px;
+    width: 110px;
+    height: 50px;
+    z-index: 1;
 }
 
-.brand-content{
-  margin-left: 8%;
-  height: 20%;
-  width: 90%;
-  /* mamargin-top: 5px; */
+.brand-content {
+    margin-left: 8%;
+    height: 20%;
+    width: 90%;
+    /* mamargin-top: 5px; */
 }
+
 .brand-title {
-  /* margin: 20px 28px 5px 28px; */
-  margin-top: 6.5%;
-  font-size: 17px;
-  font-weight: 600;
-  color: #333;
+    /* margin: 20px 28px 5px 28px; */
+    margin-top: 6.5%;
+    font-size: 17px;
+    font-weight: 600;
+    color: #333;
 }
 
 .brand-subtitle {
-  /* margin: 0 28px; */
-  margin-top: 1%;
-  font-size: 13px;
-  color: #666666e0;
+    /* margin: 0 28px; */
+    margin-top: 1%;
+    font-size: 13px;
+    color: #666666e0;
 }
 
 .brand-footer {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 8%;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8%;
+    align-items: center;
 }
 
-
 .brand-date {
-  font-size: 14px;
-  color: #999;
+    font-size: 14px;
+    color: #999;
 }
 
 .brand-arrow {
-  width: 28px;
-  height: 28px;
+    width: 28px;
+    height: 28px;
 }
 
 
 /* 第一个 news-card 特别样式 */
+
 .news-card:first-child {
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 2px 6px rgb(240, 240, 240);
-  grid-column: 1 / 3;
-  grid-row: 1;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 6px rgb(240, 240, 240);
+    grid-column: 1 / 3;
+    grid-row: 1;
 }
 
+
 /* 遮罩效果 */
+
 .news-card:first-child::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 50%;
-  background: linear-gradient(to top,
-      rgba(1, 1, 1, 1) 0%,
-      rgba(1, 1, 1, 0) 80%,
-      rgba(1, 1, 1, 0) 100%);
-  z-index: 1;
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 50%;
+    background: linear-gradient(to top, rgba(1, 1, 1, 1) 0%, rgba(1, 1, 1, 0) 80%, rgba(1, 1, 1, 0) 100%);
+    z-index: 1;
 }
 
 .news-card:not(:first-child) .news-pic-container {
-  width: 230px;
-  height: 174px;
-  overflow: hidden;
+    width: 230px;
+    height: 174px;
+    overflow: hidden;
 }
+
 
 /* 第一张图样式 */
+
 .news-card:first-child img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
+
 
 /* 第一个 news-card 中的内容样式 */
+
 .news-card:first-child .content {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 17px;
-  padding-left: 16px;
-  padding-right: 34px;
-  color: #fff;
-  z-index: 2;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 17px;
+    padding-left: 16px;
+    padding-right: 34px;
+    color: #fff;
+    z-index: 2;
 }
+
 
 /* 第一个标题 */
+
 .news-card:first-child .content h2 {
-  font-size: 14px;
-  font-weight: 650;
-  line-height: 1.4;
-  margin: 5px 0px;
-  color: #fff;
+    font-size: 14px;
+    font-weight: 650;
+    line-height: 1.4;
+    margin: 5px 0px;
+    color: #fff;
 }
 
-.news-card:first-child .content h2 > a {
-  color: white;
+.news-card:first-child .content h2>a {
+    color: white;
 }
+
 
 /* 除第一个 news-card 外的样式 */
+
 .news-card:not(:first-child) {
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 2px 6px rgb(240, 240, 240);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 6px rgb(240, 240, 240);
 }
 
+
 /* 普通卡片的内容样式 */
+
 .news-card:not(:first-child) .content {
-  padding: 14px 13px;
-  flex: 1;
+    padding: 14px 13px;
+    flex: 1;
 }
 
 .news-card:not(:first-child) img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
+
 /* 普通卡片标题样式 */
+
 .news-card:not(:first-child) .content h2 {
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.6;
-  margin-bottom: 13px;
-  color: #333;
-  overflow: hidden;
-  height: 90px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.6;
+    margin-bottom: 13px;
+    color: #333;
+    overflow: hidden;
+    height: 90px;
 }

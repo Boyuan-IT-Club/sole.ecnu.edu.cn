@@ -521,7 +521,7 @@ header .logo img {
 
 @media (min-width: 1800px) {
     header .logo img {
-        margin-left: calc(50vw - 1200px);
+        margin-left: max(0px, calc(50vw - 1200px));
     }
 }
 
