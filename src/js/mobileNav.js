@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     //点击名字为党政建设的导航栏栏目跳转到对应页面
     const menulink = document.querySelectorAll('.menu-link');
     menulink.forEach(link => {
-        if (link.textContent.trim() === '党政建设') {
+        if (link.textContent.trim() === '党建工作') {
             link.addEventListener('click', function(event) {
                 event.preventDefault();
                 window.location.href = '/_s952/dzjs/main.psp';

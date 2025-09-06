@@ -8,8 +8,11 @@
     <link rel="stylesheet" href="css/header_footer.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/banner.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <script src="js/banner.js"></script>
     <script src="js/time.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -37,7 +40,7 @@
                     <li>学院概况</li>
                 </a>
                 <a href="/_s952/dzjs/main.psp" target="_blank">
-                    <li>党政建设</li>
+                    <li>党建工作</li>
                 </a>
                 <a href="https://solezs.ecnu.edu.cn/" target="_blank">
                     <li>学历教育</li>
@@ -48,10 +51,10 @@
                 <a href="https://solezs.ecnu.edu.cn/" target="_blank">
                     <li>在职研修</li>
                 </a>
-                <a href="/_s952/jspxejjm/main.psp" target="_blank">
+                <a href="/_s952/jspxejjm/main.psp">
                     <li>教师培训</li>
                 </a>
-                <a href="/_s952/shpxejym/main.psp" target="_blank">
+                <a href="/_s952/shpxejym/main.psp">
                     <li>社会培训</li>
                 </a>
                 <a href="https://px.ecnusole.com/portal/projectClassList/listUI?selectProjectType=&columnId=6479a26d5f90b50f23628b53&wfwfid=215034&pageId=643917&websiteId=366066&uid=343294798&mhType=1&publicId=02fb6b542fb6a111ed2839e2a3d41f37b056&mhEnc=f0efb4e9081ce22573d7b7ee926a4e39"
@@ -122,6 +125,25 @@
     </div>
 
     <header class="header" id="top">
+        <div id="swiper-container">
+            <div id="banner" class="swiper swiper-banner">
+                <div frag="窗口444" class="swiper-wrapper" portletmode="simpleNews">
+                    <div frag="窗口内容">
+                        <!--[InfoCycleBegin]-->
+                        <div class="swiper-slide">
+                            <a href="{文章URL}" title="{标题}">
+                                <!--<div class="swiper-title">{标题}</div>-->
+                                <img src="{图片路径}" alt="{标题}" />
+                            </a>
+                        </div>
+                        <!--[InfoCycleEnd]-->
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
         <div><img src="icons/homepage/pic-bg.png" class="building-bg"></div>
         <section class="banner">
             <img src="icons/homepage/logo.png" alt="华东师范大学开放教育学院/教师发展学院" class="logo-pc" />
@@ -151,7 +173,7 @@
                             <a href="/_s952/49606/list.psp" target="_blank" class="nav-item-profile"><img src="icons/nav-btn/xy.png" class="nav-btn-icon">学院概况</a>
                         </li>
                         <li>
-                            <a href="/_s952/dzjs/main.psp" target="_blank" class="nav-item-party"><img src="icons/nav-btn/dz.png" class="nav-btn-icon">党政建设</a>
+                            <a href="/_s952/dzjs/main.psp" target="_blank" class="nav-item-party"><img src="icons/nav-btn/dz.png" class="nav-btn-icon">党建工作</a>
                         </li>
                         <li>
                             <a href="https://solezs.ecnu.edu.cn/" target="_blank" class="nav-item-degree"><img src="icons/nav-btn/xl.png" class="nav-btn-icon">学历教育</a>
@@ -164,13 +186,6 @@
                         </li>
                         <li>
                             <a href="/_s952/jspxejjm/main.psp" target="_blank" class="nav-item-teacher"><img src="icons/nav-btn/js.png" class="nav-btn-icon">教师培训</a>
-                        </li>
-                        <li>
-                            <a href="/_s952/shpxejym/main.psp" target="_blank" class="nav-item-social"><img src="icons/nav-btn/sh.png" class="nav-btn-icon">社会培训</a>
-                        </li>
-                        <li>
-                            <a href="https://px.ecnusole.com/portal/projectClassList/listUI?selectProjectType=&columnId=6479a26d5f90b50f23628b53&wfwfid=215034&pageId=643917&websiteId=366066&uid=343294798&mhType=1&publicId=02fb6b542fb6a111ed2839e2a3d41f37b056&mhEnc=f0efb4e9081ce22573d7b7ee926a4e39"
-                                target="_blank" class="nav-item-family"><img src="icons/nav-btn/jt.png" class="nav-btn-icon">家庭教育</a>
                         </li>
                         <li>
                             <a href="https://ijec.ecnu.edu.cn/" target="_blank" class="nav-item-international"><img src="icons/nav-btn/gj.png" class="nav-btn-icon">国际本科</a>
@@ -393,13 +408,13 @@
                 <div class="contact-info">
                     <div class="contact-left">
                         <div class="contact-item">
-                            <p>招生热线: 021-62232037 / 021-62233921</p>
-                        </div>
-                        <div class="contact-item">
                             <p>学院地址: 上海市普陀区中山北路3663号</p>
                         </div>
                         <div class="contact-item">
-                            <p>学历继续教育咨询: 021-62232679 / hsdcj@189.cn</p>
+                            <p>学历继续教育: 021-62232037 / 021-62233921（报名咨询）</p>
+                        </div>
+                        <div class="contact-item">
+                            <p>学历继续教育: 021-62232679 / hsdcj@189.cn（在读咨询）</p>
                         </div>
                         <div class="contact-item">
                             <p>国际本科: 021-62233497</p>
@@ -414,6 +429,9 @@
                         </div>
                         <div class="contact-item">
                             <p>自学考试: 021-62234011 / 021-62234012</p>
+                        </div>
+                        <div class="contact-item">
+                            <p>家庭教育: 021-62233028 / feri@dec.ecnu.edu.cn</p>
                         </div>
                     </div>
                 </div>
