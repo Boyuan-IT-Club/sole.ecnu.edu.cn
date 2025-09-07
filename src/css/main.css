@@ -567,7 +567,7 @@ li {
 
 /* 普通卡片标题样式 */
 
-.news-card:not(:first-child) .content h2 {
+.news-card:not(:first-child) .content p {
     font-size: 14px;
     line-height: 1.6;
     margin-bottom: 13px;
