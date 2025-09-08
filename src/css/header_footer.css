@@ -171,9 +171,15 @@
   text-decoration: none;
   font-size: small;
   color: #fff;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
   white-space: nowrap;
   text-align: center;
+}
+
+/* 导航项鼠标悬停上浮效果 */
+.nav-list li:hover {
+  transform: translateY(-3px);
+  transition: transform 0.3s ease;
 }
 
 .nav-list li:not(:last-child) {
