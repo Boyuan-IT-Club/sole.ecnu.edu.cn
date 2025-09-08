@@ -268,14 +268,14 @@ a {
     transition: all 0.3s ease;
 }
 
-.t-card:nth-child(n+4) {
+.t-card:nth-child(n+5) {
     display: none;
 }
 
 .t-title {
     width: 100%;
     font-weight: 400;
-    font-size: 1.3em;
+    font-size: 1em;
     color: #606266;
     overflow: hidden; 
     text-overflow: ellipsis; 
