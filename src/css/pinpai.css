@@ -43,7 +43,7 @@
 
 .pinpai-card-image img {
     width: 100%;
-    height: 140px;
+    height: auto;
     object-fit: cover;
     object-position: center;
     transition: transform 0.3s ease;
@@ -213,7 +213,7 @@
     }
     
     .pinpai-card-image {
-        height: 100px;
+        height: 50%;
     }
     
     .pinpai-card-content {
