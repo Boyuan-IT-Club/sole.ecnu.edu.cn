@@ -533,8 +533,15 @@ li {
     color: #fff;
 }
 
-.news-card:first-child .content h2>a {
-    color: white;
+.news-card:first-child .content a {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 35px;
+    padding-left: 16px;
+    padding-right: 34px;
+    color: #fff !important;
+    z-index: 2;
 }
 
 
@@ -569,9 +576,9 @@ li {
 
 .news-card:not(:first-child) .content p {
     font-size: 14px;
-    line-height: 1.6;
-    margin-bottom: 13px;
+    line-height: 1.4;
+    /* margin-bottom: 13px; */
     color: #333;
     overflow: hidden;
-    height: 90px;
+    height: 61px;
 }

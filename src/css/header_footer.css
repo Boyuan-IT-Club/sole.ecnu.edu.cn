@@ -191,6 +191,10 @@
     transition: transform 0.3s ease;
 }
 
+.nav-list li a:hover {
+    background-color: #4BD0BF;
+}
+
 .nav-list li:not(:last-child) {
     margin-right: 4px;
 }
