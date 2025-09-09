@@ -6,18 +6,18 @@
     }
 }
 
+
 /* ------- 移动端适配样式 ------- */
+
 @media screen and (max-width: 768px) {
     .title {
         font-size: 1.1rem;
         line-height: 1.5;
     }
-
     .header {
         padding: 0 5%;
         background: linear-gradient(45deg, rgba(197, 222, 253, 1) 0%, rgba(218, 233, 255, 1) 40%, rgba(218, 233, 255, 1) 60%);
     }
-
     .logo-container {
         position: relative;
         width: 100%;
@@ -25,7 +25,6 @@
         display: flex;
         justify-content: space-between;
     }
-
     .logo {
         position: relative;
         padding-top: 0px;
@@ -33,24 +32,20 @@
         width: 30%;
         left: 1%;
     }
-
     .logo-pc {
         display: none;
     }
-
     .toggle-btn {
         display: block;
         background-color: #FFF;
         border: transparent;
     }
-
     .media-nav {
         display: block;
         width: 20px;
         height: 20px;
         cursor: pointer;
     }
-
     /* 被展开的页面面板（默认隐藏） */
     .side-panel {
         position: fixed;
@@ -62,7 +57,6 @@
         z-index: 999;
         display: none;
     }
-
     /* 导航面板内部结构 */
     .nav-panel {
         position: relative;
@@ -72,7 +66,6 @@
         /* ✅ 可滚动查看内容 */
         box-sizing: border-box;
     }
-
     /* 关闭按钮 */
     .close-btn {
         display: block;
@@ -80,17 +73,13 @@
         height: 20px;
         cursor: pointer;
     }
-
     /* 防止主页面滚动 */
     body.no-scroll {
         overflow: hidden;
     }
-
     .nav-list-media {
         margin: 0 18px;
-
     }
-
     .nav-list-media a li {
         list-style: none;
         padding: 21px 0;
@@ -100,7 +89,6 @@
         text-decoration: none;
         color: #303133;
     }
-
     .nav-list-media>li {
         list-style: none;
         padding: 21px 0;
@@ -112,14 +100,12 @@
         text-decoration: none;
         color: #303133;
     }
-
     .footer-media {
         margin: 0 18px;
         display: flex;
         flex-direction: column;
         gap: 20px;
     }
-
     .footer-media h2 {
         font-size: 0.95rem;
         position: relative;
@@ -127,7 +113,6 @@
         padding-bottom: 2px;
         margin-bottom: 10px;
     }
-
     .footer-middle-media h2::after {
         content: '';
         position: absolute;
@@ -138,27 +123,22 @@
         background-color: #007bff;
         /* 蓝色条 */
     }
-
     .footer-middle-media ul li {
         margin-bottom: 8px;
         list-style: none;
     }
-
     .footer-middle-media ul li a {
         font-size: 14px;
         font-weight: 300;
         text-decoration: underline;
         color: #606266;
     }
-
     .nav-container {
         display: none;
     }
-
     .desc {
         display: none;
     }
-
     .building-bg {
         position: absolute;
         width: 50%;
@@ -166,29 +146,24 @@
         top: 20%;
         z-index: 1;
     }
-
     .banner {
         padding-top: 10%;
         padding-bottom: 7%;
         width: 100%;
     }
-
     .banner-content {
         max-width: 600px;
         z-index: 2;
     }
-
     .btn-group {
         padding-top: 4%;
         gap: 8px;
     }
-
     .btn {
         padding: 2px 10px;
         font-size: 0.7rem;
         border-radius: 23px;
     }
-
     /* 第一个按钮样式（蓝底白字） */
     .btn.blue {
         border: 1px solid transparent;
@@ -196,7 +171,6 @@
         color: rgb(64, 138, 225);
         gap: 10px;
     }
-
     /* 第二个按钮样式（白底蓝字） */
     .btn.white {
         border: 0.5px solid rgb(64, 138, 225);
@@ -204,49 +178,38 @@
         color: rgb(64, 138, 225);
         gap: 10px;
     }
-
-
     .arrow {
         width: 8px;
         height: 8px;
     }
-
-
     .main-content {
         padding: 0 4%;
         margin: 40px auto;
     }
-
     .section-header {
         margin-bottom: 15px;
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
     }
-
     .section-subtitle {
         left: 0px;
         bottom: 2px;
     }
-
     .section-header img {
         display: none;
     }
-
     .section-title {
         top: -5px;
         font-size: 1.5rem;
         font-weight: 800;
     }
-
     .section-btn {
         display: none;
     }
-
     .news-section {
         margin-bottom: 40px;
     }
-
     .news-list {
         display: grid;
         grid-template-columns: repeat(1, 0px);
@@ -255,12 +218,10 @@
         row-gap: 18px;
         width: 100%;
     }
-
     /* 第一个 news-card 特别样式 */
     .news-card:first-child {
         grid-row: 1 / 3;
     }
-
     /* 遮罩效果 */
     .news-card:first-child::after {
         content: "";
@@ -269,13 +230,9 @@
         right: 0;
         bottom: 0;
         top: 50%;
-        background: linear-gradient(to top,
-                rgba(1, 1, 1, 1) 0%,
-                rgba(1, 1, 1, 0) 60%,
-                rgba(1, 1, 1, 0) 100%);
+        background: linear-gradient(to top, rgba(1, 1, 1, 1) 0%, rgba(1, 1, 1, 0) 60%, rgba(1, 1, 1, 0) 100%);
         z-index: 1;
     }
-
     /* 第一张图样式 */
     .news-card:first-child img {
         width: 100%;
@@ -283,7 +240,6 @@
         object-fit: cover;
         display: block;
     }
-
     /* 第一个 news-card 中的内容样式 */
     .news-card:first-child .content {
         position: absolute;
@@ -294,7 +250,21 @@
         color: #fff;
         z-index: 2;
     }
-
+    .news-card:first-child .content a {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 25px;
+        height: 22px;
+        color: #fff !important;
+        z-index: 2;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        padding: 0 7px;
+    }
     /* 第一个标题 */
     .news-card:first-child .content h2 {
         font-size: 14px;
@@ -308,7 +278,6 @@
         margin: 3px 0px;
         color: #fff;
     }
-
     /* 除第一个 news-card 外的样式 */
     .news-card:not(:first-child) {
         width: 100%;
@@ -317,21 +286,18 @@
         flex-direction: row;
         box-shadow: 0 2px 6px rgb(240, 240, 240);
     }
-
     /* 普通卡片的内容样式 */
     .news-card:not(:first-child) .content {
         padding: 2px 8px;
         flex: 1;
         height: 85px;
     }
-
     .news-card:not(:first-child) img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         display: block;
     }
-
     /* 普通卡片标题样式 */
     .news-card:not(:first-child) .content h2 {
         font-size: 0.8rem;
@@ -345,37 +311,29 @@
         -webkit-line-clamp: 2;
         text-overflow: ellipsis;
     }
-
     .news-card:not(:first-child) .news-pic-container {
         width: 110px;
         height: 85px;
         overflow: hidden;
     }
-
     .news-card:nth-child(2) {
         order: 3;
     }
-
     .news-card:nth-child(3) {
         order: 5;
     }
-
     .news-card:nth-child(4) {
         order: 7;
     }
-
     .news-card:nth-child(5) {
         order: 2;
     }
-
     .news-card:nth-child(6) {
         order: 4;
     }
-
     .news-card:nth-child(7) {
         order: 6;
     }
-
     /* 通用 meta-info 样式 */
     .meta-info {
         display: flex;
@@ -385,11 +343,9 @@
         font-weight: 500;
         color: #FFFFFF;
     }
-
     .time {
         font-weight: 400;
     }
-
     .more-btn {
         margin-top: 30px;
         text-decoration: none;
@@ -400,7 +356,6 @@
         color: #303133;
         text-align: center;
     }
-
     /* 学院业务样式优化 */
     .business-section {
         position: relative;
@@ -408,7 +363,6 @@
         padding: 30px 0;
         overflow: visible;
     }
-
     .business-section::before {
         content: '';
         position: absolute;
@@ -419,7 +373,6 @@
         background: url("/src/icons/media/bcg.png") no-repeat center / cover;
         z-index: -1;
     }
-
     .business-list {
         display: grid;
         grid-template-columns: repeat(2, 175px);
@@ -427,7 +380,6 @@
         gap: 0;
         justify-content: center;
     }
-
     .business-item {
         background-color: transparent;
         border-radius: 0;
@@ -436,23 +388,18 @@
         flex-direction: column;
         text-decoration: none;
     }
-
     .business-item:nth-child(1),
     .business-item:nth-child(3) {
         border-right: rgba(144, 147, 153, 0.3) 0.5px solid;
         border-bottom: rgba(144, 147, 153, 0.3) 0.5px solid;
     }
-
     .business-item:nth-child(2),
     .business-item:nth-child(4) {
         border-bottom: rgba(144, 147, 153, 0.3) 0.5px solid;
     }
-
     .business-item:nth-child(5) {
         border-right: rgba(144, 147, 153, 0.3) 0.5px solid;
     }
-
-
     .business-icon-container {
         position: relative;
         margin-top: 30px;
@@ -465,7 +412,6 @@
         z-index: 1;
         transition: all 0.3s ease;
     }
-
     .icon1,
     .icon2,
     .icon3,
@@ -478,37 +424,29 @@
         z-index: 2;
         transition: all 0.3s ease;
     }
-
     .icon1 {
         width: 73%;
     }
-
     .icon2 {
         width: 48%;
     }
-
     .icon3 {
         width: 57%;
     }
-
     .icon4 {
         width: 52%;
     }
-
     .icon5 {
         width: 60%;
     }
-
     .icon6 {
         width: 50%;
     }
-
     .box {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-
     .business-item h4 {
         color: #333333;
         font-size: 0.9rem;
@@ -520,7 +458,6 @@
         padding-top: 10%;
         margin: 0;
     }
-
     .business-item p {
         color: #909399;
         font-size: 0.8rem;
@@ -529,35 +466,29 @@
         text-decoration: none;
         white-space: nowrap;
     }
-
     /* 招生公告样式优化 */
     .section-part-container {
         display: flex;
         gap: 5px;
     }
-
     .small-header {
         width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
-
     }
-
     .more-btn2 {
         display: block;
         position: relative;
         width: 36px;
         height: 36px;
     }
-
     .more-btn2 img {
         position: relative;
         display: block;
         width: 36px;
         height: 36px;
     }
-
     .section-part-enroll-btn,
     .section-part-brand-btn {
         margin-bottom: 6px;
@@ -567,11 +498,9 @@
         font-weight: 700;
         font-size: 0.8rem;
     }
-
     .enrollment-section {
         margin-bottom: 70px;
     }
-
     .enrollment-grid {
         position: relative;
         z-index: 1;
@@ -581,7 +510,6 @@
         gap: 12px;
         height: auto;
     }
-
     .enrollment {
         width: 347px;
         height: 90px;
@@ -592,31 +520,27 @@
         display: flex;
         flex-direction: column;
     }
-
     .enrollment span {
         position: absolute;
-        top: 2px;
-        left: -3px;
+        top: 8px;
+        left: 268px;
         font-size: 0.65rem;
         font-weight: 300;
         color: #fff;
         z-index: 1;
     }
-
     .enrollment-badge {
         position: absolute;
-        top: 0;
-        left: -7px;
-        width: 70px;
-        height: 35px;
+        top: 6px;
+        left: 250px;
+        width: 76px;
+        height: auto;
     }
-
     .enrollment-content {
         margin-top: 22px;
         display: flex;
         gap: 6px;
     }
-
     .enrollment-date {
         width: 70px;
         height: 50px;
@@ -627,18 +551,15 @@
         white-space: nowrap;
         line-height: 1.5;
     }
-
     .enrollment-date h2 {
         font-size: 1.05rem;
         font-family: "Roboto", "Source Han Sans", sans-serif;
         color: #323232;
     }
-
     .enrollment-date h5 {
         font-size: 0.7rem;
         color: #989898;
     }
-
     .enrollment-title {
         font-size: 0.9rem;
         color: #333;
@@ -646,12 +567,10 @@
         flex: 1;
         -webkit-line-clamp: 1;
     }
-
     /* 品牌项目样式优化 */
     .brand-section {
         margin-bottom: 40px;
     }
-
     .brand-grid {
         display: grid;
         grid-template-columns: 1fr;
@@ -659,7 +578,6 @@
         gap: 10px;
         height: auto;
     }
-
     .brand-item {
         width: 347px;
         height: 100%;
@@ -669,21 +587,18 @@
         flex-direction: row;
         border: none;
     }
-
     .brand-pic-container {
         position: relative;
         width: 102px;
         height: 77px;
         overflow: hidden;
     }
-
     .brand-pic {
         width: 100%;
         height: 100%;
         object-fit: cover;
         display: block;
     }
-
     .badge span {
         position: absolute;
         top: 2px;
@@ -693,7 +608,6 @@
         color: #fff;
         z-index: 1;
     }
-
     .brand-badge {
         position: absolute;
         top: 0;
@@ -701,7 +615,6 @@
         width: 70px;
         height: 33px;
     }
-
     .brand-title {
         font-size: 1rem;
         font-weight: 600;
@@ -709,13 +622,11 @@
         margin: 2px 0;
         height: 23px;
     }
-
     .brand-subtitle {
         margin: 2px 0px;
         font-size: 14px;
         color: #909399;
     }
-
     .brand-footer {
         display: flex;
         justify-content: right;
@@ -723,16 +634,13 @@
         margin-right: 0;
         margin-top: 0;
     }
-
     .brand-date {
         font-size: 0.7rem;
         color: #999;
     }
-
     .brand-arrow {
         display: none;
     }
-
     .brand-content {
         margin: 0 10px;
         display: flex;
@@ -740,7 +648,6 @@
         height: 77px;
         flex: 1;
     }
-
     /* 底部容器 */
     .footer {
         padding-top: 8%;
@@ -752,7 +659,6 @@
         background-color: #00070F;
         color: #fff;
     }
-
     /* 左侧联系我们模块 */
     .footer-left h2,
     .footer-middle h2,
@@ -763,7 +669,6 @@
         padding-bottom: 2px;
         margin-bottom: 10px;
     }
-
     .footer-left h2::after,
     .footer-middle h2::after,
     .footer-right h2::after {
@@ -776,20 +681,16 @@
         background-color: #007bff;
         /* 蓝色条 */
     }
-
     .contact-info {
         display: none;
     }
-
     .contact-info-media {
         display: block;
     }
-
     .contact-item {
         margin-bottom: 20px;
         line-height: 1;
     }
-
     .contact-item p {
         margin: 0;
         font-size: small;
@@ -797,18 +698,15 @@
         font-family: 'Microsoft YaHei', sans-serif;
         opacity: 0.8;
     }
-
     /* 中间友情链接模块 */
     .footer-middle {
         margin-top: 15px;
         margin-bottom: 20px;
     }
-
     .footer-middle ul li {
         margin-bottom: 5px;
         transition: color 0.3s;
     }
-
     .footer-middle ul li a {
         font-family: 'Microsoft YaHei', sans-serif;
         font-size: small;
@@ -818,19 +716,16 @@
         color: #ffffff;
         opacity: 0.8;
     }
-
     /* 右侧官方微信模块 */
     .qrcode-box {
         display: flex;
         gap: 15px;
     }
-
     .qrcode-img {
         border: 5px solid #FFF;
         width: 100px;
         height: 100px;
     }
-
     .qrcode-item p {
         display: block;
         text-align: center;
@@ -840,7 +735,6 @@
         font-weight: 200;
         opacity: 0.8;
     }
-
     /* 底部版权栏 */
     .footer-bottom {
         margin: 0 auto;
@@ -851,23 +745,18 @@
         background-color: #000000;
         display: block;
     }
-
     .footer-line-container {
         display: none;
     }
-
     .footer-line {
         display: none;
     }
-
     .logo-bottom {
         display: none;
     }
-
     .copyright {
         display: none;
     }
-
     .copyright-media {
         display: block;
         font-size: 0.8rem;
@@ -886,7 +775,6 @@
     .desktop-img {
         display: none;
     }
-
     .mobile-img {
         display: block;
     }
