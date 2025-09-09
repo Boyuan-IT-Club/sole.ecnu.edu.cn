@@ -108,7 +108,7 @@ li {
 .news-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(227px, 1fr));
-    grid-template-rows: 310px;
+    grid-template-rows: 239.18px;
     gap: 18px;
     max-width: 100%;
     margin: 0 auto;
@@ -495,6 +495,12 @@ li {
 .news-card:not(:first-child) .news-pic-container {
     width: 230px;
     height: calc(230px * 9 / 16);
+    overflow: hidden;
+}
+
+.news-card:first-child .news-pic-container {
+    width: 474px;
+    height: 239.18px;
     overflow: hidden;
 }
 
