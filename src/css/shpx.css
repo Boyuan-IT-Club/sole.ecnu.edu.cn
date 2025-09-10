@@ -36,13 +36,12 @@ a {
     display: none;
 }
 
-
 .logo {
-  position: absolute;
-  top: 2vh;
-  left: 5vw;
-  width: 20vw;
-  z-index: 99;
+    position: absolute;
+    top: 2vh;
+    left: 5vw;
+    width: 20vw;
+    z-index: 99;
 }
 
 .desc {
@@ -944,6 +943,9 @@ a {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    position: relative;
+    bottom: -2vw;
+    left: 10px;
 }
 
 .line a {
@@ -981,12 +983,12 @@ a {
         font-size: 9px;
         color: #818483;
         text-align: left;
-        position: absolute;
+        position: relative;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
         left: 2vw;
-        bottom: -1vw;
+        bottom: 2vw;
     }
     .line:empty {
         display: none;
