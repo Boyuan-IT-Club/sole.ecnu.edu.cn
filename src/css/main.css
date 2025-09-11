@@ -493,16 +493,17 @@ li {
 }
 
 .news-card:not(:first-child) .news-pic-container {
-    width: 230px;
+    /* width: 230px; */
     height: calc(230px * 9 / 16);
     overflow: hidden;
 }
 
-.news-card:first-child .news-pic-container {
+
+/* .news-card:first-child .news-pic-container {
     width: 474px;
     height: 239.18px;
     overflow: hidden;
-}
+} */
 
 
 /* 第一张图样式 */

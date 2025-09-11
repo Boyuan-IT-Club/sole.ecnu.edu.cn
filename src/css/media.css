@@ -15,6 +15,7 @@
         line-height: 1.5;
     }
     .header {
+        aspect-ratio: 25/9;
         padding: 0 5%;
         background: linear-gradient(45deg, rgba(197, 222, 253, 1) 0%, rgba(218, 233, 255, 1) 40%, rgba(218, 233, 255, 1) 60%);
     }
