@@ -494,16 +494,17 @@ li {
 
 .news-card:not(:first-child) .news-pic-container {
     /* width: 230px; */
-    height: calc(230px * 9 / 16);
+    /* height: calc(230px * 9 / 16); */
+    aspect-ratio: 16 / 9;
     overflow: hidden;
 }
 
-
-/* .news-card:first-child .news-pic-container {
-    width: 474px;
-    height: 239.18px;
-    overflow: hidden;
-} */
+.news-card:first-child .news-pic-container {
+    /* width: 474px;
+    height: 239.18px; */
+    overflow: auto;
+    aspect-ratio: 18 / 9;
+}
 
 
 /* 第一张图样式 */
