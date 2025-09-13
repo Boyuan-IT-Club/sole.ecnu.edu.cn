@@ -502,8 +502,7 @@ li {
 .news-card:first-child .news-pic-container {
     /* width: 474px;
     height: 239.18px; */
-    overflow: auto;
-    aspect-ratio: 18 / 9;
+    overflow: hidden;
 }
 
 
