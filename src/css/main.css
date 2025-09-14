@@ -363,7 +363,7 @@ li {
 }
 
 .enrollment-title {
-    font-size: 17px;
+    font-size: 15px;
     font-weight: normal;
     color: #333;
     line-height: 1.6;
@@ -588,4 +588,83 @@ li {
     color: #333;
     overflow: hidden;
     height: 61px;
+}
+
+@media screen and (max-width: 1000px) {
+    .scroll-box {
+        padding: 10px;
+        overflow: hidden;
+    }
+}
+
+.recommended-container {
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.recommended-container::-webkit-scrollbar {
+    display: none;
+}
+
+.recommended-list {
+    display: grid;
+    /* 固定5列，每列最小宽度200px */
+    grid-template-columns: repeat(5, minmax(173px, 1fr));
+    gap: 25px;
+    /* 防止内容被挤压 */
+    min-width: max-content;
+}
+
+.recommended-item {
+    width: 173px;
+    height: 400px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 0.5px solid rgba(153, 153, 153, 0.2);
+}
+
+.recommended-pic-container {
+    position: relative;
+    width: 173px;
+    height: 270px;
+    overflow: hidden;
+}
+
+.recommended-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    overflow: hidden;
+}
+
+.recommended-content {
+    margin: 0 4%;
+    height: 20%;
+    width: 90%;
+}
+
+.recommended-title {
+    margin-top: 6.5%;
+    font-size: 17px;
+    font-weight: 600;
+    color: #333;
+}
+
+.recommended-subtitle {
+    margin-top: 1%;
+    font-size: 13px;
+    color: #999;
+    white-space: nowrap;
+    /* 2. 隐藏超出容器的内容 */
+    overflow: hidden;
+    /* 3. 超出部分显示省略号 */
+    text-overflow: ellipsis;
+}
+
+.recommended-date {
+    margin-top: 8%;
+    font-size: 14px;
+    color: #999;
 }
