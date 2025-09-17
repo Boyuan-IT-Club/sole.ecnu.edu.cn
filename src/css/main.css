@@ -358,11 +358,11 @@ li {
 }
 
 .enrollment-title {
-  font-size: 15px;
-  font-weight: normal;
-  color: #333;
-  line-height: 1.6;
-  flex: 1;
+    font-size: 15px;
+    font-weight: normal;
+    color: #333;
+    line-height: 1.6;
+    flex: 1;
 }
 
 /* 品牌项目样式优化 */
