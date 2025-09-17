@@ -370,7 +370,7 @@ nav ul li:hover a {
 .list-news-image {
     flex-shrink: 0;
     width: 150px;
-    /*height: 80px;*/
+    /* height: 80px; */
     aspect-ratio: 16/9;
     overflow: hidden;
     border-radius: 4px;

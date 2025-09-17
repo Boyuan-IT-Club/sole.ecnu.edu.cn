@@ -242,8 +242,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         const typeMap = ['teacher', 'social'];
-        const linkMap = ['/_s952/49616/list.psp', '/_s952/49621/list.psp'];
-        const initialLink = '/_s952/49616/list.psp';
+        const linkMap = ['/_s952/49620/list.psp', '/_s952/49621/list.psp'];
+        const initialLink = '/_s952/49620/list.psp';
         const isMobile = window.innerWidth <= 768;
 
         //setTimeout(() => console.log("0.2 秒后打印品牌部分"), 200);
@@ -426,7 +426,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     const buttons = document.querySelectorAll('.section-part-brand-btn');
     const viewAllLink = document.querySelector('.section-btn');
-    let currentLink = '/_s952/49616/list.psp'; // 默认链接
+    let currentLink = '/_s952/49620/list.psp'; // 默认链接
 
     buttons.forEach(button => {
         button.addEventListener('click', function() {
@@ -444,21 +444,61 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-$(function () {
+$(function() {
     var swiper = new Swiper(".swiper-banner", {
-      loop: true,
-      speed: 1000,
-      autoplay: {
-        delay: 4000,
-        stopOnLastSlide: false,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
+        loop: true,
+        speed: 1000,
+        autoplay: {
+            delay: 4000,
+            stopOnLastSlide: false,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
     });
-  });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // 获取元素
+    const newsList = document.querySelector('.news-list'); // 目标元素
+    const lastImage = document.querySelector('.news-card:last-child img'); // 最后一个图片元素
+
+    // 计算并设置news-list的grid-template-rows
+    function setNewsListGridRows() {
+        if (!lastImage || !newsList) return; // 元素不存在则退出
+
+        // 获取图片实际宽度（考虑响应式变化）
+        const imageWidth = lastImage.offsetWidth;
+
+        // 按16:9宽高比计算图片应有的高度（宽度 ÷ 16 × 9）
+        const calculatedImageHeight = (imageWidth / 16) * 9;
+
+        // 计算最终高度：图片计算高度 + 109.8px
+        const targetRowHeight = calculatedImageHeight + 109.8;
+
+        // 设置grid-template-rows
+        newsList.style.gridTemplateRows = `${targetRowHeight}px`;
+
+        // 控制台输出计算过程（调试用）
+        console.log(`图片宽度: ${imageWidth}px`);
+        console.log(`16:9比例计算高度: ${calculatedImageHeight}px`);
+        console.log(`最终grid行高: ${targetRowHeight}px`);
+    }
+
+    // 初始化时计算
+    window.addEventListener('load', setNewsListGridRows);
+
+    // 窗口大小变化时重新计算（确保响应式）
+    window.addEventListener('resize', setNewsListGridRows);
+
+    // 图片加载完成后计算（处理图片异步加载）
+    if (lastImage) {
+        lastImage.addEventListener('load', setNewsListGridRows);
+    }
+});

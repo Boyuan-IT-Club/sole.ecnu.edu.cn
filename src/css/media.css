@@ -15,6 +15,7 @@
         line-height: 1.5;
     }
     .header {
+        aspect-ratio: 25/9;
         padding: 0 5%;
         background: linear-gradient(45deg, rgba(197, 222, 253, 1) 0%, rgba(218, 233, 255, 1) 40%, rgba(218, 233, 255, 1) 60%);
     }
@@ -205,6 +206,9 @@
         font-weight: 800;
     }
     .section-btn {
+        display: none;
+    }
+    .section-btn-news {
         display: none;
     }
     .news-section {
@@ -763,6 +767,66 @@
         margin: 20px 10px;
         color: #ffffff;
         text-align: center;
+    }
+    .recommended-list {
+        display: grid;
+        /* 固定5列，每列最小宽度200px */
+        grid-template-columns: repeat(5, minmax(116px, 1fr));
+        gap: 10px;
+        /* 防止内容被挤压 */
+        min-width: max-content;
+    }
+    .recommended-item {
+        width: 116px;
+        height: 220px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        border: 0.5px solid rgba(153, 153, 153, 0.2);
+    }
+    .recommended-pic-container {
+        position: relative;
+        width: 116px;
+        height: 120px;
+        overflow: hidden;
+    }
+    .recommended-pic {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        overflow: hidden;
+    }
+    .recommended-content {
+        margin: 0 4%;
+        height: 20%;
+        width: 90%;
+    }
+    .recommended-title {
+        margin-top: 4.5%;
+        font-size: 14px;
+        font-weight: 600;
+        color: #333;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .recommended-subtitle {
+        margin-top: 0;
+        font-size: 13px;
+        color: #999;
+        white-space: nowrap;
+        /* 2. 隐藏超出容器的内容 */
+        overflow: hidden;
+        /* 3. 超出部分显示省略号 */
+        text-overflow: ellipsis;
+    }
+    .recommended-date {
+        margin-top: 8%;
+        font-size: 11px;
+        color: #999;
     }
 }
 

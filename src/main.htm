@@ -134,10 +134,10 @@
                     <div frag="窗口内容">
                         <!--[InfoCycleBegin]-->
                         <div class="swiper-slide">
-                            <a href="{文章URL}" title="{标题}">
-                                <!--<div class="swiper-title">{标题}</div>-->
-                                <img src="{图片路径}" alt="{标题}" />
-                            </a>
+                            <!-- <a href="{文章URL}" title="{标题}"> -->
+                            <!--<div class="swiper-title">{标题}</div>-->
+                            <img src="{图片路径}" alt="{标题}" />
+                            <!-- </a> -->
                         </div>
                         <!--[InfoCycleEnd]-->
                     </div>
@@ -150,7 +150,7 @@
         <!--<div><img src="icons/homepage/pic-bg.png" class="building-bg"></div>-->
         <section class="banner">
             <img src="icons/homepage/logo.png" alt="华东师范大学开放教育学院/教师发展学院" class="logo-pc" />
-        <!--<div class="banner-content">
+            <!--<div class="banner-content">
                 <h1 class="title">华东师范大学<br>开放教育学院/教师发展学院</h1>
                 <p class="desc">学院自成立伊始就确立了 “有科研引领、有技术支撑、有质量保障、有社会影响、有文化自信” 的发展愿景。</p>
                  <div class="btn-group">
@@ -214,10 +214,13 @@
         <!-- 学院新闻 -->
         <section class="news-section">
             <div class="section-header">
-                <div>
-                    <img src="icons/icon-collegen.png">
-                    <p class="section-subtitle">COLLEGE NEWS</p>
-                    <p class="section-title">学院新闻</p>
+                <div class="small-header">
+                    <div>
+                        <img src="icons/icon-collegen.png">
+                        <p class="section-subtitle">COLLEGE NEWS</p>
+                        <p class="section-title">学院新闻</p>
+                    </div>
+                    <a href="/_s952/49608/list.psp" class="more-btn2"><img src="icons/media/more.png" alt="更多" /></a>
                 </div>
                 <a href="/_s952/49608/list.psp" class="section-btn-news">
                     查看全部
@@ -364,6 +367,47 @@
             </div>
         </section>
 
+        <!-- 重点推荐 -->
+        <section class="recommended-section">
+            <div class="section-header">
+                <div class="small-header">
+                    <div>
+                        <img src="icons/icon-collegen.png">
+                        <p class="section-subtitle">HIGHLY RECOMMENDED</p>
+                        <p class="section-title">重点推荐</p>
+                    </div>
+                    <a href="/_s952/zdtj/list.psp" class="more-btn2"><img src="icons/media/more.png" alt="更多" /></a>
+                </div>
+                <a href="/_s952/zdtj/list.psp" class="section-btn">
+                    查看全部
+                    <!-- <img src="icons/homepage/view-common.png" class="arrow" /> -->
+                </a>
+            </div>
+            <!-- 这里配置展示最大数量为5-->
+            <div frag="面板4">
+                <div class="scroll-box">
+                    <div class="recommended-container">
+                        <div class="recommended-list" frag="窗口4">
+                            <div frag="窗口内容">
+                                <!--[InfoCycleBegin]-->
+                                <div class="recommended-item" id="{文章URL}">
+                                    <div class="recommended-pic-container">
+                                        <img class="recommended-pic" src="{图片路径}" alt="{标题}" />
+                                    </div>
+                                    <div class="recommended-content">
+                                        <h2 class="recommended-title">{标题}</h2>
+                                        <p class="recommended-subtitle">{副标题}</p>
+                                        <span class="recommended-date">{发布时间}</span>
+                                    </div>
+                                </div>
+                                <!--[InfoCycleEnd]-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <!-- 品牌项目 -->
         <section class="brand-section">
             <div class="section-header">
@@ -373,14 +417,14 @@
                         <p class="section-subtitle">BRAND PROJECT</p>
                         <p class="section-title">品牌项目</p>
                     </div>
-                    <a href="/_s952/49616/list.psp" id="brand-more-btn-small" class="more-btn2"><img src="icons/media/more.png" alt="更多" /></a>
+                    <a href="/_s952/49620/list.psp" id="brand-more-btn-small" class="more-btn2"><img src="icons/media/more.png" alt="更多" /></a>
                 </div>
                 <div class="btn-box">
                     <div class="section-part-container">
-                        <button class="section-part-brand-btn" data-link="/_s952/49616/list.psp">&nbsp;&nbsp;&nbsp;&nbsp;教师培训&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                        <button class="section-part-brand-btn" data-link="/_s952/49620/list.psp">&nbsp;&nbsp;&nbsp;&nbsp;教师培训&nbsp;&nbsp;&nbsp;&nbsp;</button>
                         <button class="section-part-brand-btn" data-link="/_s952/49621/list.psp">&nbsp;&nbsp;&nbsp;&nbsp;社会培训&nbsp;&nbsp;&nbsp;&nbsp;</button>
                     </div>
-                    <a href="/_s952/49616/list.psp" class="section-btn" id="brand-more-btn">查看全部
+                    <a href="/_s952/49620/list.psp" class="section-btn" id="brand-more-btn">查看全部
                         <!-- <img src="icons/homepage/view-common.png"
                             class="arrow"> -->
                         </a>
@@ -413,6 +457,7 @@
                 </div>
             </div>
         </section>
+
     </main>
     <footer>
         <div class="footer">
