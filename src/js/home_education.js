@@ -75,25 +75,63 @@ function populateEventPreview(data) {
     
     // 获取所有栏目
     const categories = Object.keys(groupedData);
+    console.log('所有可用的栏目:', categories);
+    console.log('分组后的数据:', groupedData);
     
-    // 渲染初始内容（第一个栏目）
-    if (categories.length > 0) {
-        renderEventPreviewContent(groupedData[categories[0]]);
+    // 获取左侧标题项
+    const titleItems = document.querySelectorAll('.event-preview-title-item');
+    
+    // 找到第一个有数据的栏目并渲染
+    let firstCategoryWithData = null;
+    titleItems.forEach((titleItem) => {
+        const titleElement = titleItem.querySelector('.title');
+        const categoryName = titleElement ? titleElement.textContent.trim() : '';
+        if (!firstCategoryWithData && groupedData[categoryName]) {
+            firstCategoryWithData = categoryName;
+        }
+    });
+    
+    if (firstCategoryWithData) {
+        console.log('初始加载的栏目:', firstCategoryWithData);
+        renderEventPreviewContent(groupedData[firstCategoryWithData]);
+        // 给第一个有数据的栏目添加 active 类
+        titleItems.forEach((titleItem) => {
+            const titleElement = titleItem.querySelector('.title');
+            const categoryName = titleElement ? titleElement.textContent.trim() : '';
+            if (categoryName === firstCategoryWithData) {
+                titleItem.classList.add('active');
+            } else {
+                titleItem.classList.remove('active');
+            }
+        });
     }
     
     // 绑定标题项点击事件
-    const titleItems = document.querySelectorAll('.event-preview-title-item');
-    titleItems.forEach((titleItem, index) => {
+    titleItems.forEach((titleItem) => {
         titleItem.addEventListener('click', function() {
-            // 移除所有active类
-            titleItems.forEach(item => item.classList.remove('active'));
-            // 添加当前active类
-            this.classList.add('active');
+            // 获取当前点击的栏目名称（从 HTML 中读取）
+            const titleElement = this.querySelector('.title');
+            const categoryName = titleElement ? titleElement.textContent.trim() : '';
             
-            // 根据索引获取对应的栏目数据
-            const categoryName = categories[index];
-            if (categoryName && groupedData[categoryName]) {
+            console.log('当前选中的栏目:', categoryName);
+            console.log('该栏目的数据:', groupedData[categoryName]);
+            
+            // 检查该栏目是否有数据
+            if (groupedData[categoryName]) {
+                // 移除所有active类
+                titleItems.forEach(item => item.classList.remove('active'));
+                // 添加当前active类
+                this.classList.add('active');
+                
+                // 渲染对应的内容
                 renderEventPreviewContent(groupedData[categoryName]);
+            } else {
+                console.warn('栏目"' + categoryName + '"没有数据');
+                // 可选：清空内容区域或显示"暂无数据"
+                const contentList = document.querySelector('.event-preview-content-list');
+                if (contentList) {
+                    contentList.innerHTML = '<div style="text-align: center; padding: 40px; color: #999;">暂无数据</div>';
+                }
             }
         });
     });
@@ -117,7 +155,7 @@ function renderEventPreviewContent(items) {
         
         contentItem.innerHTML = `
             <div class="event-preview-content-item-title">${item.title}</div>
-            <div class="event-preview-content-item-description">${item.content || item.subtitle || ''}</div>
+            <div class="event-preview-content-item-description">${item.content.slice(0, 42) + '...'}</div>
             ${item.image ? `<div class="event-preview-content-item-image"><img src="${item.image}" alt="${item.title}"></div>` : '<div class="event-preview-content-item-image"></div>'}
             <div class="event-preview-content-item-more">查看更多 →</div>
         `;
@@ -160,7 +198,7 @@ function populateAllianceNews(data) {
     if (data[1]) {
         const centerSection = newsBody.querySelector('.alliance-news-center');
         const centerContent = newsBody.querySelector('.alliance-news-center-content');
-        const centerImage = newsBody.querySelector('.alliance-news-center-image');
+        const centerImage = newsBody.querySelector('.alliance-news-center-image').children[0];
         
         if (centerSection) {
             centerSection.onclick = () => window.location.href = data[1].url;
@@ -346,8 +384,8 @@ function populateIdenticalExamples(data) {
         // 清空现有内容
         itemList.innerHTML = '';
         
-        // 取第2-9条数据
-        const listData = data.slice(1, 9);
+        // 取第2-5条数据
+        const listData = data.slice(1, 5);
         
         listData.forEach(item => {
             const listItem = document.createElement('div');

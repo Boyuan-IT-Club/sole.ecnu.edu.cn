@@ -1,12 +1,13 @@
 html {
-     font-size: 16px; 
+    font-size: 16px; 
+    font-family: '阿里巴巴普惠体';
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "黑体";
+    font-family: '阿里巴巴普惠体';
 }
 
 body {
@@ -248,7 +249,7 @@ header {
 }
 
 .event-preview-title-item-content-right {
-    font-size: 1.6rem;
+    font-size: 4rem;
     color: #d4d4d4;
 }
 
@@ -290,13 +291,13 @@ header {
 }
 
 .event-preview-content-item-title {
-    font-size: 1.75rem;
+    font-size: 1.6rem;
     color: #666666;
 }
 
 
 .event-preview-content-item-description {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #a4a4a4;
 }
 
@@ -330,13 +331,31 @@ header {
     border-radius: 0.5rem;
     background-color: #fff;
     
+    position: relative;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .alliance-news-left:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transform: translateY(-0.5rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.alliance-news-left::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(83, 150, 229, 0);
+    border-radius: 0.5rem;
+    pointer-events: none;
+    transition: background-color 0.3s ease;
+}
+
+.alliance-news-left:hover::after {
+    background-color: rgba(83, 150, 229, 0.7);
 }
 
 .alliance-news-left-image {
@@ -344,6 +363,23 @@ header {
     height: 50%;
     border-radius: 0.5rem 0.5rem 0 0;
     background-color: #dcdcdc;
+    transition: height 0.3s ease, border-radius 0.3s ease;
+}
+
+.alliance-news-left:hover .alliance-news-left-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 0.5rem;
+}
+
+.alliance-news-left-image img {
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.alliance-news-left:hover .alliance-news-left-image img {
+    border-radius: 0.5rem;
 }
 
 .alliance-news-left-content {
@@ -354,33 +390,85 @@ header {
     justify-content: space-between;
 
     padding: 2.375rem 2.375rem 3.625rem 2.375rem;
+    
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s ease, padding 0.3s ease, height 0.3s ease;
+}
+
+.alliance-news-left:hover .alliance-news-left-content {
+    height: 100%;
+    padding: 3.625rem 2.375rem;
+    color: #fff;
 }
 
 .alliance-news-left-content-first-line {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 1rem;
+}
+
+.alliance-news-left:hover .alliance-news-left-content-first-line {
+    margin-bottom: 1.5rem;
 }
 
 .alliance-news-left-content-tag {
     font-size: 1rem;
     color: #4d91e4;
+    transition: color 0.3s ease;
+}
+
+.alliance-news-left:hover .alliance-news-left-content-tag {
+    color: #fff;
 }
 
 .alliance-news-left-content-time {
     font-size: 1rem;
     color: #999999;
+    transition: color 0.3s ease;
+}
+
+.alliance-news-left:hover .alliance-news-left-content-time {
+    color: #fff;
 }
 
 .alliance-news-left-content-title {
     margin-left: 0.3rem;
     font-size: 1.44rem;
+    font-weight: 700;
     color: #333333;
+    padding-left: 0.3rem;
+    transition: font-weight 0.3s ease, padding-bottom 0.3s ease, border-bottom 0.3s ease, color 0.3s ease;
+}
+
+.alliance-news-left:hover .alliance-news-left-content-title {
+    font-weight: 700;
+    padding-bottom: 3.75rem;
+    border-bottom: 0.1rem rgba(256,256,256,0.3) solid;
+    color: #fff;
+}
+
+.alliance-news-left-content-divide-line {
+    height: 0;
+    width: 0;
+    border-bottom: 0.1rem rgba(256,256,256) solid;
+    margin-top: -0.05rem;
+    transition: width 0.3s ease;
+}
+
+.alliance-news-left:hover .alliance-news-left-content-divide-line {
+    width: 4.25rem;
 }
 
 .alliance-news-left-content-more {
     font-size: 1rem;
     color: #999999;
+    transition: color 0.3s ease;
+}
+
+.alliance-news-left:hover .alliance-news-left-content-more {
+    color: #fff;
 }
 
 
@@ -389,7 +477,7 @@ header {
     width: 29.2rem;
     height: 38.125rem;
     border-radius: 0.5rem;
-    background-color: #fafafa;
+    background-color: #fff;
 
     position: relative;
     cursor: pointer;
@@ -397,8 +485,8 @@ header {
 }
 
 .alliance-news-center:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transform: translateY(-0.5rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
 .alliance-news-center::after {
@@ -408,73 +496,129 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(83, 150, 229, 0.7);
+    background-color: rgba(83, 150, 229, 0);
     border-radius: 0.5rem;
     pointer-events: none;
+    transition: background-color 0.3s ease;
+}
+
+.alliance-news-center:hover::after {
+    background-color: rgba(83, 150, 229, 0.7);
 }
 
 .alliance-news-center-image {
+    width: 100%;
+    height: 50%;
+    border-radius: 0.5rem 0.5rem 0 0;
+    background-color: #dcdcdc;
+    transition: height 0.3s ease, border-radius 0.3s ease;
+}
+
+.alliance-news-center:hover .alliance-news-center-image {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
     height: 100%;
-    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.alliance-news-center-image img {
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.alliance-news-center:hover .alliance-news-center-image img {
     border-radius: 0.5rem;
 }
 
 .alliance-news-center-content {
     width: 100%;
-    height: 100%;
+    height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
-    padding: 3.625rem 2.375rem;
+    padding: 2.375rem 2.375rem 3.625rem 2.375rem;
 
-    color: #fff;
+    color: #333333;
     position: relative;
     z-index: 1;
+    transition: color 0.3s ease, padding 0.3s ease, height 0.3s ease;
+}
+
+.alliance-news-center:hover .alliance-news-center-content {
+    height: 100%;
+    padding: 3.625rem 2.375rem;
+    color: #fff;
 }
 
 .alliance-news-center-content-first-line {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 2.25rem;
+    margin-bottom: 1rem;
+}
+
+.alliance-news-center:hover .alliance-news-center-content-first-line {
+    margin-bottom: 1.5rem;
 }
 
 .alliance-news-center-content-tag {
     font-size: 1rem;
+    color: #4d91e4;
+    transition: color 0.3s ease;
+}
+
+.alliance-news-center:hover .alliance-news-center-content-tag {
+    color: #fff;
 }
 
 
 .alliance-news-center-content-time {
     font-size: 1rem;
+    color: #999999;
+    transition: color 0.3s ease;
+}
+
+.alliance-news-center:hover .alliance-news-center-content-time {
+    color: #fff;
 }
 
 
 .alliance-news-center-content-title {
     font-size: 1.44rem;
     font-weight: 700;
+    margin-left: 0.3rem;
     padding-left: 0.3rem;
+    transition: font-weight 0.3s ease, padding-bottom 0.3s ease, border-bottom 0.3s ease;
+}
 
+.alliance-news-center:hover .alliance-news-center-content-title {
+    font-weight: 700;
     padding-bottom: 3.75rem;
     border-bottom: 0.1rem rgba(256,256,256,0.3) solid;
 }
 
 .alliance-news-cneter-content-divide-line {
-
     height: 0;
-    width: 4.25rem;
+    width: 0;
     border-bottom: 0.1rem rgba(256,256,256) solid;
     margin-top: -0.05rem;
+    transition: width 0.3s ease;
+}
 
+.alliance-news-center:hover .alliance-news-cneter-content-divide-line {
+    width: 4.25rem;
 }
 
 
 .alliance-news-center-content-more {
     font-size: 1rem;
+    color: #999999;
+    transition: color 0.3s ease;
+}
+
+.alliance-news-center:hover .alliance-news-center-content-more {
+    color: #fff;
 }
 
 
@@ -496,7 +640,7 @@ header {
 }
 
 .alliance-news-right-item:hover {
-    transform: translateY(-4px);
+    transform: translateY(-0.25rem);
 }
 
 .alliance-news-right-item-image {
@@ -781,7 +925,7 @@ footer {
     height: 24.1875rem;
     padding-left: 12%;
     padding-right: 12%;
-    padding-top: 64px;
+    padding-top: 5.875rem;
     background: #000;
     color: white;
 
@@ -796,16 +940,24 @@ footer {
 }
 
 .footer-icon {
-    width: 162px;
-    height: 48px;
+    width: 15.625rem;
+    height: 4.875rem;
+}
+
+.footer-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .footer-address {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    font-weight: 200;
+    font-family: 'Microsoft YaHei', sans-serif;
 }
 
 .footer-address div {
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
 }
 
 .footer-Qrcode {
@@ -829,6 +981,8 @@ footer {
 
 .footer-Qrcode-item p {
     text-align: center;
+    font-family: 'Microsoft YaHei', sans-serif;
+    font-weight: 200;
 }
 
 .footer-Qrcode-item img {
@@ -848,5 +1002,7 @@ footer {
 }
 
 .copyright {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    font-family: 'Microsoft YaHei', sans-serif;
+    font-weight: 200;
 }
