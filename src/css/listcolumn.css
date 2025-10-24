@@ -512,9 +512,8 @@ header div[frag="窗口1"] {
     flex: 0 0 auto;
 }
 
-header .header-container {
-    display: inline-block;
-}
+
+
 
 #divider {
     border-bottom: #09f 2px solid;
@@ -526,11 +525,13 @@ header .logo {
     height: auto;
 }
 
+
 header .logo img {
     margin-left: max(0px, calc(50vw - 650px));
     height: 60px;
     width: auto;
 }
+
 
 .section-part-container_list {
     display: none;
