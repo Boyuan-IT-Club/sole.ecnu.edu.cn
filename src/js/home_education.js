@@ -145,20 +145,42 @@ function renderEventPreviewContent(items) {
     // 清空现有内容
     contentList.innerHTML = '';
     
+    // 检测是否只有一条内容
+    const isSingleItem = items.length === 1;
+    
     // 取前3条数据
     const displayData = items.slice(0, 3);
     
     displayData.forEach(item => {
         const contentItem = document.createElement('div');
         contentItem.className = 'event-preview-content-item';
+        
+        // 如果只有一条内容，添加特殊样式类
+        if (isSingleItem) {
+            contentItem.classList.add('single-item');
+        }
+        
         contentItem.onclick = () => window.location.href = item.url;
         
-        contentItem.innerHTML = `
-            <div class="event-preview-content-item-title">${item.title}</div>
-            <div class="event-preview-content-item-description">${item.content.slice(0, 42) + '...'}</div>
-            ${item.image ? `<div class="event-preview-content-item-image"><img src="${item.image}" alt="${item.title}"></div>` : '<div class="event-preview-content-item-image"></div>'}
-            <div class="event-preview-content-item-more">查看更多 →</div>
-        `;
+        // 根据是否为单条内容决定HTML结构
+        if (isSingleItem) {
+            // 单条内容：照片 → 标题 → 查看更多
+            contentItem.innerHTML = `
+                ${item.image ? `<div class="event-preview-content-item-image"><img src="${item.image}" alt="${item.title}"></div>` : '<div class="event-preview-content-item-image"></div>'}
+                <div class="event-preview-content-single-item-content">
+                <div class="event-preview-content-item-title">${item.title}</div>
+                <div class="event-preview-content-item-more">查看更多 →</div>
+                </div>
+            `;
+        } else {
+            // 多条内容：保持原有结构
+            contentItem.innerHTML = `
+                <div class="event-preview-content-item-title">${item.title}</div>
+                <div class="event-preview-content-item-description">${item.content}</div>
+                ${item.image ? `<div class="event-preview-content-item-image"><img src="${item.image}" alt="${item.title}"></div>` : '<div class="event-preview-content-item-image"></div>'}
+                <div class="event-preview-content-item-more">查看更多 →</div>
+            `;
+        }
         
         contentList.appendChild(contentItem);
     });
@@ -191,6 +213,7 @@ function populateAllianceNews(data) {
             leftContent.querySelector('.alliance-news-left-content-tag').textContent = data[0].category || '新闻速递';
             leftContent.querySelector('.alliance-news-left-content-time').textContent = formatDate(data[0].time);
             leftContent.querySelector('.alliance-news-left-content-title').textContent = data[0].title;
+            leftContent.querySelector('.alliance-news-left-content-description').textContent = data[0].content || data[0].subtitle || '';
         }
     }
     
@@ -213,6 +236,7 @@ function populateAllianceNews(data) {
             centerContent.querySelector('.alliance-news-center-content-tag').textContent = data[1].category || '新闻速递';
             centerContent.querySelector('.alliance-news-center-content-time').textContent = formatDate(data[1].time);
             centerContent.querySelector('.alliance-news-center-content-title').textContent = data[1].title;
+            centerContent.querySelector('.alliance-news-center-content-description').textContent = data[1].content || data[1].subtitle || '';
         }
     }
     
