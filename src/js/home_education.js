@@ -18,12 +18,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const enrollmentData = getDataFromWindow(2); // 窗口2 - 招生/新闻速递
     const brandData = getDataFromWindow(3); // 窗口3 - 品牌/卓越服务
     const recommendedData = getDataFromWindow(4); // 窗口4 - 推荐/典型案例
-
+    const academicData = getDataFromWindow(5);
+    
     // 填充各个内容区域
     populateEventPreview(newsData);
     populateAllianceNews(enrollmentData);
     populateCollegeBusiness(brandData);
     populateIdenticalExamples(recommendedData);
+    populateAcademicExamples(academicData);
 });
 
 // 从指定窗口获取数据
@@ -57,6 +59,35 @@ function stripHtmlTags(html) {
     const div = document.createElement('div');
     div.innerHTML = html;
     return div.textContent || div.innerText || '';
+}
+
+// 填充学术成果区域
+function populateAcademicExamples(data) {
+    if (!data || data.length === 0) return;
+
+    const academicList = document.querySelector('.academic-content');
+    if (!academicList) return;
+
+    const displayData = data.slice(0, 4); // 取前4条数据
+
+    academicList.innerHTML = ''; // 清空现有内容
+
+    displayData.forEach(item => {
+        return academicList.innerHTML += `
+        <div class="academic-item">
+            <img class="academic-img" src="${item.image}" alt="" />
+            <div class="academic-text">
+              <div class="academic-title">
+                ${item.title}
+              </div>
+              <div class="academic-subtitle">
+                ${item.subtitle || item.content || ''}
+              </div>
+              <div class="academic-date">${item.time}</div>
+            </div>
+          </div>
+        `
+    });
 }
 
 // 填充活动预告区域
