@@ -433,29 +433,50 @@ function populateIdenticalExamples(data) {
         }
     }
     
-    // 填充列表项（第2-9条）
+    // 填充列表项（包含所有数据，包括第一条）
     const itemList = document.querySelector('.identical-examples-item-list');
     if (itemList) {
         // 清空现有内容
         itemList.innerHTML = '';
         
-        // 取第2-5条数据
-        const listData = data.slice(1, 5);
-        
-        listData.forEach(item => {
+        // 显示所有数据（包括第一条）
+        data.forEach((item, index) => {
             const listItem = document.createElement('div');
             listItem.className = 'identical-examples-item';
-            listItem.onclick = () => window.location.href = item.url;
             
             listItem.innerHTML = `
                 <div class="identical-examples-item-title">${item.title}</div>
                 <div class="identical-examples-item-more">→</div>
             `;
             
+            // 绑定点击事件：点击列表项时更新上方显示的内容
+            listItem.addEventListener('click', function() {
+                const firstItem = document.querySelector('.identical-examples-first-item');
+                if (firstItem) {
+                    // 更新点击事件
+                    firstItem.onclick = () => window.location.href = item.url;
+                    
+                    // 更新图片
+                    const img = firstItem.querySelector('.identical-examples-first-item-image img');
+                    if (img && item.image) {
+                        img.src = item.image;
+                        img.alt = item.title;
+                    }
+                    
+                    // 更新标题和描述
+                    firstItem.querySelector('.identical-examples-first-item-content-title').textContent = item.title;
+                    firstItem.querySelector('.identical-examples-first-item-content-description').textContent = item.content || item.subtitle || '';
+                }
+            });
+            
             itemList.appendChild(listItem);
         });
     }
 }
+
+
+
+
 
 // 格式化日期
 function formatDate(dateStr) {

@@ -210,25 +210,12 @@
               </div>
             </div>
             <div class="column-news">
-              <div
-                class="column-news-list"
-                frag="窗口9"
-                portletmode="simpleList"
-              >
-                <div frag="窗口内容">
-                  <!--[InfoCycleBegin]-->
-                  <li class="list-news list-news-with-image">
-                    <div class="list-news-image">
-                      <img src="{图片路径}" alt="{标题}" />
-                    </div>
-                    <div class="list-news-content">
-                      <h3 class="list-news-title">{标题}</h3>
-                      <span class="list-news-time">{发布时间}</span>
-                      <p class="list-news-summary">{简介}</p>
-                    </div>
-                  </li>
-                  <!--[InfoCycleEnd]-->
+              <div frag="窗口9" portletmode="simpleArticleAttri">
+                <div class="titles">
+                  <div class="title-info">{标题}</div>
+                  <p class="time">发布时间：{发布时间}</p>
                 </div>
+                <div class="article">{内容}</div>
               </div>
             </div>
           </div>
