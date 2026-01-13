@@ -22,11 +22,11 @@ li {
   list-style: none;
 }
 
-.text > a {
+.text>a {
   color: white;
 }
 
-.text2 > a {
+.text2>a {
   color: white;
 }
 
@@ -358,11 +358,11 @@ li {
 }
 
 .enrollment-title {
-    font-size: 15px;
-    font-weight: normal;
-    color: #333;
-    line-height: 1.6;
-    flex: 1;
+  font-size: 15px;
+  font-weight: normal;
+  color: #333;
+  line-height: 1.6;
+  flex: 1;
 }
 
 /* 品牌项目样式优化 */
@@ -480,12 +480,10 @@ li {
   right: 0;
   bottom: 0;
   top: 50%;
-  background: linear-gradient(
-    to top,
-    rgba(1, 1, 1, 1) 0%,
-    rgba(1, 1, 1, 0) 80%,
-    rgba(1, 1, 1, 0) 100%
-  );
+  background: linear-gradient(to top,
+      rgba(1, 1, 1, 1) 0%,
+      rgba(1, 1, 1, 0) 80%,
+      rgba(1, 1, 1, 0) 100%);
   z-index: 1;
 }
 
@@ -611,7 +609,7 @@ li {
 }
 
 .recommended-item {
-  width: 173px;
+  width: 183px;
   height: 400px;
   position: relative;
   display: flex;
@@ -621,7 +619,7 @@ li {
 
 .recommended-pic-container {
   position: relative;
-  width: 173px;
+  width: 183px;
   height: 270px;
   overflow: hidden;
 }
