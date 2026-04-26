@@ -14,11 +14,11 @@ header {
 }
 
 header .logo img {
-    margin-left: 0!important;
+    margin-top: -20px;
 }
 
 .header-container {
-    margin-left: calc(50vw - 600px);
+    margin-left: calc(50vw - 590px);
 }
 
 @media (max-width: 952px) {
@@ -32,7 +32,7 @@ header .logo img {
         padding: 0 40px;
     }
     .header-container {
-        margin-left: 40px;
+        margin-left: 50px;
     }
 }
 
@@ -41,7 +41,7 @@ header .logo img {
         padding: 0 25px;
     }
     .header-container {
-        margin-left: 25px;
+        margin-left: 35px;
     }
 }
 
