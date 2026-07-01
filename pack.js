@@ -8,8 +8,8 @@ const log = (/** @type {any[]} */ ...args) => {
 }
 
 const args = process.argv.slice(2)
+const isBuild = args && args[0] === '--build'
 
-const watcher = watch('./src', { recursive: true })
 const zip = new JSZip()
 
 const addDir = async (/** @type{string} */ dir) => {
@@ -38,9 +38,11 @@ await fs.writeFile(
 
 log('Packaged!')
 
-if (args && args[0] === '--build') {
+if (isBuild) {
   process.exit(0)
 }
+
+const watcher = watch('./src', { recursive: true })
 
 log('Start watching for changes...')
 

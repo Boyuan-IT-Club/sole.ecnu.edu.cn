@@ -358,7 +358,8 @@ document.addEventListener("DOMContentLoaded", () => {
       tomodifyimg.src = "/_upload/tpl/17/77/6007/template6007/icons/blue.png";
       tomodifyclass.classList.add("international");
     } else if (text.includes("国际预科")) {
-      tomodifyimg.src = "/_upload/tpl/17/77/6007/template6007/icons/purple.png";
+      tomodifyimg.src =
+        "/_upload/tpl/17/77/6007/template6007/icons/prep-green.png";
       tomodifyclass.classList.add("international-prep");
     } else if (text.includes("同等学力")) {
       tomodifyimg.src = "/_upload/tpl/17/77/6007/template6007/icons/red.png";
